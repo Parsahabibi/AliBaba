@@ -1,12 +1,19 @@
+@font-face {
+    font-family: Alibaba;
+    src: url(../../assets/fonts/Alibaba-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Alibaba;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+///////////////////////
+@import "./color.scss";
+@import "./font.scss";
+@import "./ButtonSearch/ButtonSearch";
 @import "./StyleHeader/StyleHeader";
-
-
-
-
-
-
-
-
-
-
-

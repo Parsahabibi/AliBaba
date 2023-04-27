@@ -1,8 +1,11 @@
 import React from 'react'
+import ButtonSearch from '../ButtonSearch/ButtonSearch'
 
 const Header = () => {
   return (
-    <div className='header'>Header</div>
+    <div>
+      <ButtonSearch />
+    </div>
   )
 }
 
