@@ -1,0 +1,133 @@
+footer {
+    @include flex(column,flex-start,center);
+    border-top: solid 1px $grays-150;
+    .footer-mobile {
+        @include flex(row,space-around,center);
+        width: 100%;
+        height: 52px;
+        box-shadow: 0 -1px 0 0 rgba(0, 0, 0, .08), 0 -2px 8px 8px rgba(0, 0, 0, .04);
+        svg{
+            transform: translateY(5px);
+        }
+    }
+    .footer-desktop{
+        @include flex(column,flex-start,center);
+        display: none;
+        width: 1200px;
+        padding: 8px 16px 0 16px;
+        .top-footer-desktop{
+            @include flex();
+            padding: 32px 0 64px 0;
+            .d-top-footer-desktop{
+                @include flex();
+                margin: 0 4px;
+                img{
+                    width: 89px;
+                    height: 89px;
+                    margin-left: 8px;
+                }
+                div{
+                    text-align: start;
+                    h3{
+                        color: $grays-500;
+                        font-size: 1rem;
+                        margin-bottom: 8px;
+                    }
+                    p{
+                        color: $grays-400;
+                        font-size: 0.875rem;
+
+
+                    }
+                }
+            }
+        }
+        .middle-footer-desktop{
+            padding: 32px 0 24px 0 ;
+            border-top: 1px solid rgba(0, 0, 0, .12);
+            border-bottom: 1px solid rgba(0, 0, 0, .12);
+            width: 100%;
+            .top-middle-footer-desktop{
+                @include flex(row,center,flex-start);
+                .d-top-middle-footer-desktop{
+                    @include flex(column,flex-start,flex-start);
+                    width: 100%;
+                    h4{
+                        margin: 8px 0 18.6px 0;
+                        font-weight: 700;
+                        font-size: .875rem;
+                    }
+                    a{
+                        font-size: .875rem;
+                        margin-bottom: 8px;
+                    }
+                   
+                }
+                .d4-top-middle-footer-desktop{
+                    @include flex(column,flex-start,flex-end);
+                    min-width: 560px;
+                    >img{
+                        width: 189.375px;
+                        height: 30px;
+                        margin-bottom: 24px;
+                    }
+                    .address-alibaba{
+                        text-align: end;
+                        margin-bottom: 48px;
+                        color: $grays-600;
+                        h6:nth-child(1){
+                            margin-bottom: 12px;
+                        }
+                        h6:nth-child(2){
+                            color: $grays-500;
+
+                        }
+                    }
+                    .namads-alibaba{
+                        @include flex(row,flex-end,center);
+                        flex-wrap: wrap;
+                        div{
+                            @include flex();
+                            width: 85px;
+                            height: 79px;
+                            border: 1px solid rgba(0, 0, 0, .12);
+                            border-radius: 8px;
+                            margin:0 8px 8px 0;
+                            img{
+                                width: 69px;
+                                height: 69px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom-middle-footer-desktop{
+
+            }
+        }
+        .bottom-footer-desktop{
+            @include flex(row,space-between,center);
+            color: $grays-400;
+            height: 61px;
+            width: 100%;
+            .d1-bottom-footer-desktop{
+                flex-wrap: wrap;
+                text-align: start;
+                p{
+                     font-size: 0.75rem;
+                    span{
+                     font-size: 0.75rem;
+
+                    }
+                }
+            }
+            .d2-bottom-footer-desktop{
+                @include flex();
+                a{
+                    margin: 0 16px;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Alibaba;
+    src: url(../../assets/fonts/Alibaba-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Alibaba;
+    box-sizing: border-box;
+}
+body,html{
+    direction: rtl;
+    width: 100%;
+    height: 100%;
+}
+body{
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(196, 196, 196,0.9);
+        border-radius: 10px;
+    }
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+a{
+    color: inherit;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+input{
+    border: none;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        font-family: Alibaba;
+    }
+}
