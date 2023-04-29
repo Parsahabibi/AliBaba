@@ -1,0 +1,38 @@
+.bgColorHeader {
+    background-color: $primary;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .imageMobileHeader {
+        padding-top: 24px;
+        padding-bottom: 35px;
+        img {
+            width: 100px;
+            height: 16px;
+        }
+
+    }
+
+    .iconMobileHeader {
+        width: 90%;
+        height: 44px;
+        background-color: $white;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        top: 50px;
+
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+}
