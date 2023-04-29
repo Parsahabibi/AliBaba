@@ -1,0 +1,69 @@
+.OtherService {
+    // background-color: red;
+    width: 95%;
+
+    h6 {
+        font-weight: 700;
+    }
+
+    .title {
+        padding-bottom: 20px;
+    }
+
+    .items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .bgColor {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5px;
+                background: linear-gradient(180deg,$grays-100 0%,$grays-150 200%);
+                width: 56px;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+
+                .itemImage {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            .itemTitle {
+                h5 {
+                    color: $grays-500;
+                }
+
+                // text-align: center;
+            }
+        }
+    }
+
+    .items:last-child {
+        position: relative;
+        &::after {
+            font-size: 15px;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            border-radius: 9999px;
+            padding: 0.125rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 400;
+            content: 'جدید';
+            background-color: $success-300;
+        }
+    }
+}
