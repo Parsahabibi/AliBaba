@@ -8,7 +8,7 @@ const MobileHeader = () => {
     const icon = [{id:1 ,title: <Airplane />}, {id:2 ,title: <Train />}, {id:3 ,title: <Bus />}, {id:4 ,title: <Hotel />}, {id:5 ,title: <Tour />}, {id:6 ,title: <Camp />}]
 
     return (
-        <div>
+        <div className='MobileHeader'>
             <div className='bgColorHeader'>
                 <div className='imageMobileHeader'>
                     {/* img */}
