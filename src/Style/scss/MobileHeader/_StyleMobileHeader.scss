@@ -1,6 +1,7 @@
 .MobileHeader {
     position: fixed;
     width: 100%;
+    z-index: 10;
     height: auto;
     .bgColorHeader {
         background-color: $primary;
