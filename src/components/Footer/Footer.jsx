@@ -7,7 +7,7 @@ const Footer = () => {
       <section className='footer-mobile'>
 
         <div>
-          <input type="radio" id='homeradio' name='radio' />
+          <input type="radio" id='homeradio' name='radio'/>
           <label htmlFor="homeradio">
             <div>
               <HomeIcon />
