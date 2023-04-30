@@ -1,8 +1,7 @@
 import React from 'react';
 import { HomeIcon, PlusIcon, TravelIcon, UserIcon, TelegramIcon, YoutubeIcon, TwitterIcon, AparatIcon, InstagramIcon, LinkedinIcon, ToggleDownIcon } from '../icons/Icons';
+
 const Footer = () => {
-
-
   return (
     <footer>
       <section className='footer-mobile'>
