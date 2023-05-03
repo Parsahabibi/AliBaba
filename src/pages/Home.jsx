@@ -10,9 +10,9 @@ const Home = () => {
       <Header />
       <div style={{ paddingTop: "120px", width: "90%", margin: "0 auto" }}>
         <OtherService />
+        <HomePageContent />
+        <Footer />
       </div>
-      <HomePageContent />
-      <Footer />
     </div>
   )
 }
