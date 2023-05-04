@@ -1,0 +1,30 @@
+.HomePageContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2.5%;
+
+    a {
+        font-weight: 500;
+        color: $secondary-400;
+    }
+
+    h6 {
+        line-height: 23px;
+        color: $grays-500;
+        padding-bottom: 20px;
+    }
+    h3 {
+        padding-bottom: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+        font-weight: 700
+    }
+    .Alibaba{
+        padding-bottom: 50px;
+    }
+
+}
