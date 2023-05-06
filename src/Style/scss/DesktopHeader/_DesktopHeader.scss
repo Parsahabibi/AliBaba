@@ -1,0 +1,310 @@
+.DesktopHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 90px;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+
+    .right {
+        display: flex;
+        align-items: center;
+        padding-left: 90px;
+
+        .logo {
+            padding: 5px 0px 5px 80px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .AlibabaIr {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                // align-items: center;
+            }
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:last-child {
+                    .line {
+                        display: none;
+                    }
+                }
+
+                button {
+                    // padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: center;
+                    gap: 10px;
+                    background-color: transparent;
+                    padding: 0 10px;
+                    position: relative;
+
+                    .dropDowns {
+                        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .12);
+                        width: 130px;
+                        height: auto;
+                        background-color: $white;
+                        position: absolute;
+                        top: 50px;
+                        right: 0px;
+                        border-radius: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        // gap: 15px;
+                        margin: auto 0;
+                        // padding: 5px 10px 5px 20px;
+                        padding: 3px;
+
+                        .dropDown {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            // justify-content: center;
+                            // gap: 15px;
+                            // padding: 15px 0px;
+                            border-radius: 8px;
+
+                            .link {
+                                height: 90%;
+
+                                h6 {
+                                    padding: 8px 12px 8px 12px;
+                                    display: flex;
+                                    align-items: center;
+                                    align-self: center;
+                                    margin: 5px 0px;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: $grays-100;
+                            }
+
+                            .borderBottom {
+                                width: 85%;
+                                margin-right: 10px;
+                                background-color: $grays-150;
+                                height: 1px;
+                            }
+
+                            &:last-child {
+                                .borderBottom {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        color: $grays-500;
+                        padding: 8px 0px;
+                    }
+
+                    &:hover {
+                        background-color: #f8fafb;
+                        border-radius: 10px;
+                    }
+                }
+
+                .line {
+                    // border-radius: 15px;
+                    margin: 0 10px;
+                    background-color: $grays-150;
+                    width: 1px;
+                    height: 20px;
+
+
+                }
+
+            }
+
+        }
+    }
+
+    .left {
+        .items {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .item {
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    color: $grays-500;
+                    gap: 3px;
+                    padding: 10px 10px;
+
+                    &:hover {
+                        background-color: #f8fafb;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            .login {
+                button {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: transparent;
+                    padding: 10px 10px;
+
+                    &:hover {
+                        background-color: #f8fafb;
+                        border-radius: 10px;
+
+                    }
+
+                    .user {
+                        position: relative;
+
+                        .tick {
+                            position: absolute;
+                            width: 10px;
+                            height: 10px;
+                            color: $success-400;
+                            left: 18px;
+                        }
+                    }
+
+                    .subMenuLogin {
+                        position: relative;
+                        transition: 1s;
+
+                        .subMenu {
+                            display: flex;
+                            flex-direction: column;
+                            width: 15rem;
+                            position: absolute;
+                            top: 35px;
+                            left: -10px;
+                            height: auto;
+                            border-radius: 8px;
+                            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+
+                            .information {
+                                border-top-right-radius: 8px;
+                                border-top-left-radius: 8px;
+                                padding: 15px;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px;
+                                background-color: rgb(248, 250, 251);
+
+                                .number {
+                                    color: $grays-700;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                }
+
+                                .point {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    h5 {
+                                        font-weight: 900;
+                                    }
+
+                                    svg {
+                                        color: rgb(253, 183, 19);
+                                    }
+                                }
+
+                                .money {
+                                    display: flex;
+                                    align-items: center;
+                                    .rightMoney {
+                                        display: flex;
+                                        gap: 10px;
+                                        padding-left: 90px;
+
+                                        h5 {
+                                            font-weight: 900;
+                                        }
+                                    }
+
+                                    .buttonOfMoney {
+                                        display: flex;
+                                        button {
+                                            padding: 2px 5px;
+                                            color: $secondary-400;
+                                            font-size: 0.75rem;
+
+                                            &:hover {
+                                                background-color: $secondary-100;
+                                                border: 1px solid $secondary-200;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .others {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: center;
+                                // padding-top: 15px;
+                                // padding-right: 15px;
+                                // gap: 15px;
+
+                                .itemsOthers {
+                                    // padding-right: 15px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    .itemOthers {
+                                        padding-top: 15px;
+                                        padding-bottom: 15px;
+                                        padding-right: 15px;
+                                        width: 105%;
+                                        display: flex;
+                                        align-items: center;
+                                        // padding: 7.5px 40px;
+                                        &:hover{
+                                            background-color: $grays-100;
+                                            // border-radius: 8px;
+                                            // width: 107%;
+                                        }
+                                    }
+
+                                    .borderBottomItem {
+                                        width: 220px;
+                                        margin-right: 8px;
+                                        height: 1px;
+                                        background-color:rgba(0, 0, 0, 0.12);
+                                        // margin-top: 10px;
+
+                                    }
+
+                                    &:last-child {
+                                        .borderBottomItem {
+                                            background-color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

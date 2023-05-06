@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div style={{ paddingTop: "120px", width: "90%", margin: "0 auto" }}>
+      {/* <div style={{ paddingTop: "120px", width: "90%", margin: "0 auto" }}>
         <OtherService />
         <HomePageContent />
         <Footer />
-      </div>
+      </div> */}
     </div>
   )
 }
