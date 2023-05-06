@@ -41,22 +41,23 @@ footer {
     }
     .footer-desktop{
         @include flex(column,flex-start,center);
-        // display: none;
-        // width: 1200px;
         width: 100%;
         padding: 8px 16px 0 16px;
         margin-bottom: 52px;
         .top-footer-desktop{
+            @include flex(column,flex-start,center);
+            padding: 32px 0 0 0 ;
+            width: 100%;
+            margin: 0 auto;
+           div{
             @include flex(column,flex-start,flex-start);
-            padding: 32px 0 64px 0;
-            width: 336px;
             .d-top-footer-desktop{
                 @include flex();
-                margin: 0 4px;
+                margin: 0 4px 16px 4px;
                 img{
                     width: 64px;
                     height: 64px;
-                    margin-left: 8px;
+                    margin-left: 16px;
                 }
                 div{
                     text-align: start;
@@ -71,15 +72,15 @@ footer {
                     }
                 }
             }
+           }
         }
-        .middle-footer-desktop{
+        .middle-footer-mobile{
             @include flex(column,flex-start,center);
-
             padding: 32px 0 0 0 ;
             // border-top: 1px solid rgba(0, 0, 0, .12);
             // border-bottom: 1px solid rgba(0, 0, 0, .12);
             width: 100%;
-            .top-middle-footer-desktop{
+            .top-middle-footer-mobile{
                 @include flex(column,flex-start,center);
                 width: 100%;
                 padding: 0 8px 0 16px;
@@ -114,20 +115,20 @@ footer {
                 }
                 .copy{
                     p{
-                    font-size: 0.625rem;
+                        font-size: 0.625rem;
                         color: $grays-400;
+                        text-align: center;
                     }
                 }
-                .d-top-middle-footer-desktop{
+                .d-top-middle-footer-mobile{
                     @include flex(column,flex-start,flex-start);
                     width: 100%;
                     margin-bottom: 16px;
                     input{
                         display: none;
                         &:checked{
-                            ~.body-d-top-middle-footer-desktop{
-                                height: auto;
-                                margin: 14px 0;
+                            ~.body-d-top-middle-footer-mobile{
+                                max-height: 200px;
                             }
                             ~label div svg{
                                 transform: rotate(180deg);
@@ -137,18 +138,18 @@ footer {
                     label {
                         @include flex(row,space-between,center);
                         width: 100%;
-                        .head-d-top-middle-footer-desktop{
+                        .head-d-top-middle-footer-mobile{
                             @include flex(row,space-between,center);
                             width: 100%;
                         }
                     }
                     
-                    .body-d-top-middle-footer-desktop{
+                    .body-d-top-middle-footer-mobile{
                         @include flex(column,flex-start,flex-start);
-                        height: 0;
+                        max-height: 0;
                         overflow: hidden;
                         margin: 0;
-                        transition: all 0.5s;
+                        transition: all 0.6s;
                     }
                     h4{
                         margin: 8px 0 18.6px 0;
@@ -161,7 +162,7 @@ footer {
                     }
                   
                 }
-                .d4-top-middle-footer-desktop{
+                .d4-top-middle-footer-mobile{
                     @include flex(column,flex-start,center);
                     .namads-alibaba{
                         @include flex(row,flex-end,center);
@@ -210,8 +211,17 @@ footer {
                                 height: auto;
                             }
                             ~label div {
+                                border-radius: 10px;
+                                transform: all 0.4s;
+                                cursor: pointer;
+                                &:hover{
+                                    border: 1px solid $secondary-300;
+                                    background-color: $secondary-200;
+                                }
                                 span::after{
                                     content: 'کمتر';
+                                    top: -10px;
+                                    right: 5px;
                                 }
                                 svg{
                                     transform: rotate(180deg);
@@ -226,7 +236,7 @@ footer {
                        
                         span{
                             position: relative;
-                            font-size: 1rem;
+                            font-size: .9rem;
                             padding-left: 5px;
                             &::after{
                                 position: absolute;
@@ -239,6 +249,180 @@ footer {
                             margin-right: 40px;
                         }
                     }
+                }
+            }
+        }
+        .middle-footer-desktop{
+            @extend .middle-footer-mobile;
+            @include flex(column,flex-start,center);
+            display: none;
+            max-width: 948px;
+            border-top: 1px solid rgba(0, 0, 0, .12);
+            border-bottom: 1px solid rgba(0, 0, 0, .12);
+            .top-middle-footer-desktop{
+                @include flex(row,space-between,flex-start);
+                width: 100%;
+
+                .d-top-middle-footer-desktop{
+                    
+                    .head-d-top-middle-footer-desktop{
+                        margin: 8px 0 16px 0;
+                        h4{
+                            font-weight: 700;
+                            font-size: 0.875rem;
+                        }
+                    }
+                    .body-d-top-middle-footer-desktop{
+                        @include flex(column,flex-start,flex-start);
+                        a{
+                            margin-bottom: 10px;
+                            font-size: 0.875rem;
+
+                        }
+                    }
+                }
+                .d4-top-middle-footer-desktop{
+                    @include flex(column,flex-start,flex-end);
+                    width: 344px;
+                    max-width: 450px;
+                    .logofooter{
+                        width: 189px;
+                        height: 30px;
+                        margin-bottom: 24px;
+                    }
+                    .main-text-footer-dekstop{
+                        @include flex(column,flex-start,flex-end);
+                        margin-bottom: 48px;
+                        div{
+                            @include flex(row,flex-end,center);
+                            color: $grays-600;
+                            font-size: 0.875rem;
+                        }
+                        h6{
+                            margin-top:10px;
+                            text-align: end;
+                            
+                        }
+                    }
+                    .namads-alibaba{
+                        @include flex(row,flex-end,center);
+                        flex-wrap: wrap;
+                        a{
+                        @include flex();
+
+                            div{
+                                border:  1px solid rgba(0, 0, 0, .12);
+                                padding: 4px;
+                                margin-right: 8px;
+                                border-radius: 4px;
+                                width: 100%;
+                                img{
+                                    width: 69px;
+                                    height: 69px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .bottom-footer-desktop{
+            @include flex(row,space-between,center);
+            width: 100%;
+            display: none;
+            .locations{
+                @include flex(column,flex-start,flex-start);
+                width: 70%;
+                    margin-bottom: 25px;
+                    ul{
+                        @include flex(row,flex-start,center);
+                        flex-wrap: wrap;
+                        overflow: hidden;
+                        text-align: start;
+                        height: 35px;
+                        li{
+                            margin: 2px;
+                            padding-left: 20px;
+                            color: $grays-400;
+                            &::marker{
+                                color: $grays-200;
+                            }
+                            a{
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                    input{
+                        display: none;
+                        &:checked{
+                            ~ul{
+                                overflow: visible;
+                                height: auto;
+                            }
+                            ~label div {
+                                border-radius: 10px;
+                                transform: all 0.4s;
+                                cursor: pointer;
+                                &:hover{
+                                    border: 1px solid $secondary-300;
+                                    background-color: $secondary-200;
+                                }
+                                span::after{
+                                    content: 'کمتر';
+                                    top: -10px;
+                                    right: 5px;
+                                }
+                                svg{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+                    label div{
+                        @include flex();
+                        color: $secondary-400;
+                        padding: 4px;
+                        border-radius: 10px;
+                        transform: all 0.4s;
+                        cursor: pointer;
+                        border: 1px solid #fff;
+
+                        &:hover{
+                            border: 1px solid $secondary-300;
+                            background-color: $secondary-200;
+                        }
+                        span{
+                            position: relative;
+                            font-size: .9rem;
+                            padding-left: 5px;
+                            &::after{
+                                position: absolute;
+                                top: -15px;
+                                right: 0px;
+                                content: 'بیشتر';
+                                
+                            }
+                        }
+                        svg{
+                            margin-right: 40px;
+                        }
+                    }
+               }
+            .d1-bottom-footer-desktop{
+                width: 100%;
+                p,span{
+                    font-size: 0.625rem;
+                    color: $grays-400;
+                    display: inline;
+                }
+            }
+            .d2-bottom-footer-desktop{
+                @include flex(row,flex-end,center);
+                width: 100%;
+                a{
+                    margin: 0 12px;
+                    color: $grays-400;
                 }
             }
         }

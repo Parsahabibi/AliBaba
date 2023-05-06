@@ -41,9 +41,9 @@ const DesktopHeader = () => {
     ]
 
     const LoginItems = [
-        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری" },
-        { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی" },
-        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری" },
+        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری" , link:"" },
+        { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی" , link:"" },
+        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری" , link:"" },
     ]
 
 
@@ -307,11 +307,13 @@ const DesktopHeader = () => {
                                                         {
                                                             LoginItems.map(
                                                                 item =>
-                                                                    <div className='itemsOthers'  key={item.id}>
-                                                                        <div className='itemOthers'>
-                                                                            {item.image}
-                                                                            {item.title}
-                                                                        </div>
+                                                                    <div className='itemsOthers' key={item.id}>
+                                                                        <Link to={item.link}>
+                                                                            <div className='itemOthers'>
+                                                                                {item.image}
+                                                                                {item.title}
+                                                                            </div>
+                                                                        </Link>
                                                                         <div className='borderBottomItem'></div>
                                                                     </div>
                                                             )

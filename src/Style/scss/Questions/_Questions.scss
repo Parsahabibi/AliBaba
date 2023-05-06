@@ -1,0 +1,97 @@
+.your-question {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  margin: 32px auto 56px auto;
+  padding: 0 16px;
+  h2 {
+    font-size: 1.25rem;
+    color: $grays-600;
+    font-weight: bold;
+    margin-bottom: 4.6px;
+  }
+  .main-your-question {
+    .item-your-question {
+      box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      width: 100%;
+      line-height: 2.25;
+      margin-top: 12px;
+      input {
+        display: none;
+        &:checked {
+          ~ label .head-your-question svg:last-child {
+            transform: rotate(180deg);
+          }
+          ~ .body-your-question {
+            max-height: 1000px;
+            transition: max-height 0.4s ease-in;
+          }
+        }
+      }
+      .head-your-question{
+        @include flex(row, space-between, center);
+        width: 100%;
+        padding: 8px 12px;
+        cursor: pointer;
+        &:hover {
+          svg:last-child {
+            background-color: $secondary-100;
+            color: $secondary-400;
+          }
+        }
+        &.open {
+          max-height: 1000px;
+          transition: max-height 0.4s ease-in;
+        }
+        div {
+          @include flex(row, flex-start, center);
+          width: 100%;
+          h4 {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: $grays-500;
+          }
+        }
+        svg {
+          border-radius: 50%;
+          min-width: 2em;
+          min-height: 2em;
+        }
+        svg:first-child {
+          padding: 5px;
+          margin-left: 12px;
+          color: $info-400;
+          background-color: $info-100;
+        }
+        svg:last-child {
+          padding: 7px;
+          color: $grays-400;
+          background-color: $white;
+          transition: color, background-color 0.4s;
+        }
+        
+      }
+      .body-your-question {
+        max-height: 0;
+        transition: max-height 0.4s ease-out;
+        overflow: hidden;
+        &.open {
+          max-height: 1000px;
+          transition: max-height 0.4s ease-in;
+        }
+        p {
+          padding: 16px;
+          color: $grays-400;
+          font-size: 0.875rem;
+          a {
+            color: $secondary-400;
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

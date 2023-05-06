@@ -1,4 +1,5 @@
 .DesktopHeader {
+    // scroll-margin-top: fixed;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -156,6 +157,8 @@
             }
 
             .login {
+                position: relative;
+                z-index: 10;
                 button {
                     display: flex;
                     align-items: center;
@@ -184,7 +187,7 @@
                     .subMenuLogin {
                         position: relative;
                         transition: 1s;
-
+                        // background-color: $white;
                         .subMenu {
                             display: flex;
                             flex-direction: column;
@@ -277,6 +280,7 @@
                                         width: 105%;
                                         display: flex;
                                         align-items: center;
+                                        background-color:$white ;
                                         // padding: 7.5px 40px;
                                         &:hover{
                                             background-color: $grays-100;
