@@ -107,6 +107,18 @@
     .your-question{
         max-width: 992px;
     }
+    .services{
+        display: inline-block;
+    }
+    .bg-services{
+        display: flex;
+     
+    }
+     .main{
+        width: 1200px;
+        padding:0px 16px 0 16px;
+        margin-top: -86px;
+    }
 }
 
 @media (min-width:1200px) {
@@ -137,5 +149,15 @@
     .your-question{
         max-width: 1200px;
         padding: 0;
+    }
+    .main{
+        min-width: 1200px;
+        padding:  0;
+    }
+    .bg-services{
+            img{
+            width: auto;
+            height: 320px;
+        }
     }
 }

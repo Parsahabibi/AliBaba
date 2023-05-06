@@ -6,9 +6,9 @@ const OtherService = () => {
 
 
     const other = [
-        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/insurance-icon-bb51c425.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/insurance-icon-bb51c425.svg" class="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "بیمه مسافرتی" },
-        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/visa-icon-d8507c8e.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/visa-icon-d8507c8e.svg" class="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "ویزای سفر" },
-        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/gtour-icon-5e641f1b.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/gtour-icon-5e641f1b.svg" class="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "تور گروهی" }
+        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/insurance-icon-bb51c425.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/insurance-icon-bb51c425.svg" className="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "بیمه مسافرتی" },
+        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/visa-icon-d8507c8e.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/visa-icon-d8507c8e.svg" className="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "ویزای سفر" },
+        { id: 1, image: <img src="https://cdn.alibaba.ir/h2/mobile/assets/images/gtour-icon-5e641f1b.svg" alt="Alibaba https://cdn.alibaba.ir/h2/mobile/assets/images/gtour-icon-5e641f1b.svg" className="is-responsive is-animated" width="40" height="40" data-v-6fa1507f=""></img>, title: "تور گروهی" }
     ]
 
     const otherService = [

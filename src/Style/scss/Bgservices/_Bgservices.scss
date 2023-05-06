@@ -1,0 +1,7 @@
+.bg-services{
+    @include flex();
+    padding-top: 64px;
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+}

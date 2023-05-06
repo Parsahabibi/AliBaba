@@ -2,6 +2,7 @@
 @import "./color.scss";
 @import "./font.scss";
 @import "./mixins/flex.scss";
+@import "./Main/main";
 @import "./ButtonSearch/ButtonSearch";
 @import "./StyleHeader/StyleHeader";
 @import "./footer/Footer.scss";
@@ -9,4 +10,16 @@
 @import './OtherService/OtherService.scss';
 @import "./Questions/Questions";
 @import "./HomePageContent/HomePageContent.scss";
+@import "./SearchInput/Searchinput";
+@import "./Signup/signup";
+@import "./Bgservices/Bgservices";
+@import "./Services/services";
+
+
+
+
+
+
+
+
 @import "./media.scss";

@@ -1,0 +1,21 @@
+.signup{
+    width: 598px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    height: 100px;
+    background: #fff;
+    border-radius: 8px;
+    svg{
+        position: absolute;
+        left: 24px;
+        top: 24px;
+        content: '';
+        cursor: pointer;
+    }
+    .main-signup{
+        padding: 72px 128px;
+    }
+}
