@@ -16,9 +16,13 @@ const Home = () => {
         <OtherService />
         <Questions />
         <HomePageContent />
+        <Footer />
       </div>
+<<<<<<< HEAD
 
       <Footer />
+=======
+>>>>>>> e436d05190f764508b18d5603b513ccbaee1c6e2
     </div>
   );
 };
