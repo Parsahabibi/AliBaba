@@ -38,10 +38,10 @@
         content: "";
         transition: all 1s;
         height: 5px;
-        width: calc(100% - 22px);
+        width: calc(100% - 30px);
         border-radius: 10px 10px 0 0;
         background: $secondary-400;
-        margin: 0 11px;
+        margin: 0 15px;
         display: none;
       }
       
@@ -58,7 +58,54 @@
     padding: 0 36px;
     height: 106px;
     .top-bottom-services{
+      div{
+        @include flex(row,flex-start,center);
+      width: 100%;
+      }
       margin-bottom:24px;
+      .btn-services{
+        @include flex();
+        width: fit-content;
+        height: 34px;
+        padding: 4px 16px 4px 8px ;
+        white-space: nowrap;
+        border-radius: 9999px;
+        background-color: #fff;
+        font-size: .875rem;
+        font-weight: 500;
+        color: $grays-400;
+        margin-left: 8px;
+        line-height: 1rem;
+        border: 1px solid rgba(0, 0, 0, .12);
+        cursor: pointer;
+        p{
+          margin-left: 4px;
+          color: $grays-500;
+          font-size: .875rem;
+          font-weight: 500;
+          &.new{
+            position: relative;
+            &::after{
+              position: absolute;
+              left: -30px;
+              top:-24px;
+              content:'جدید';
+              background-color: $success-300;
+              font-size: .875rem;
+              color: #0a0b0c;
+              padding: 3.5px 10px;
+              border-radius: 10px;
+            }
+          }
+        }
+        
+        svg{
+          color: $grays-500;
+          font-size: .875rem;
+          font-weight: bold;
+          line-height: 1rem;
+        }
+      }
     }
     .bottom-bottom-services{
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import {
   AirplaneInsideServices,
   AirplaneOutsidServices,
@@ -9,6 +10,7 @@ import {
   TrainServices,
   VilaServices,
 } from "../icons/Icons";
+import BottomServices from "./BottomServices";
 import Itemservices from "./Itemservices";
 
 const Services = () => {
@@ -26,19 +28,12 @@ const Services = () => {
   ));
   return (
     <section className="services">
-  
       <section className="top-services">
         <ul>{SutputItemServices}</ul>
       </section>
+
       <section className="bottom-services">
-        <form action="">
-          <div className="top-bottom-services">
-
-          </div>
-          <div className="bottom-bottom-services">
-
-          </div>
-        </form>
+        <BottomServices/>
       </section>
     </section>
   );

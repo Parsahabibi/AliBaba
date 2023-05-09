@@ -1,15 +1,18 @@
 .Search{
     width: auto;
     height: 48px;
-    // background: red;
     position: relative;
     padding: 0 8px;
-    border: 1px solid #000;
+    border-radius: 8px 0 0 8px;
+    z-index: 10;
     input{
         width: 100%;
         height: 100%;
         background: transparent;
+        font-size:1rem;
+
         &:focus{
+
             ~label{
                 transform: translate(0px,-22px) scale(0.675);
                 padding: 9px 12px 9px 16px;
@@ -17,6 +20,11 @@
 
             }
         }
+    }
+    .labelfix{
+         transform: translate(0px,-22px) scale(0.675);
+                padding: 9px 12px 9px 16px;
+                z-index: 1;
     }
     label{
         position: absolute;
@@ -29,9 +37,6 @@
         transform: translate(-10px,10px) scale(1);
         background: #fff;
         z-index: -1;
-        // &:checked{
-        //     transform: translate(0px,-22px) scale(0.675);
-        //     padding: 9px 12px 9px 16px;
-        // }
+        white-space: nowrap;
     }
 }
