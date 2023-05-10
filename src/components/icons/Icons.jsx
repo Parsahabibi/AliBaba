@@ -316,7 +316,6 @@ const QuestionSign = () => {
 };
 
 const Poshtibani = () => {
-<<<<<<< HEAD
   return (
     <svg
       viewBox="0 0 24 24"
@@ -463,42 +462,11 @@ const VilaServices = () => {
   );
 };
 
-export {
-  HomeIcon,
-  ToggleDownIcon,
-  PlusIcon,
-  TravelIcon,
-  UserIcon,
-  TelegramIcon,
-  YoutubeIcon,
-  TwitterIcon,
-  AparatIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  Airplane,
-  Bus,
-  Train,
-  Camp,
-  Tour,
-  Hotel,
-  QuestionIcon,
-  DollerSign,
-  QuestionSign,
-  Poshtibani,
-  Close,
-  AirplaneInsideServices,
-  AirplaneOutsidServices,
-  TrainServices,
-  BusServices,
-  TourServices,
-  HotelServices,
-  VilaServices,
-};
-=======
-    return (
-        <svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor" className="text-info-400 bg-info-100 rounded-full p-2 ml-3 md:ml-0"><path d="M12 2.25c4.069 0 7.386 3.182 7.497 7.156l.003.206v1.58l1.029.193a1.49 1.49 0 0 1 1.216 1.34l.005.119v.883c0 .717-.515 1.328-1.221 1.46l-1.029.191v.847c0 2.39-1.927 4.333-4.332 4.42l-.168.003h-.158a1.853 1.853 0 0 1-1.694 1.102h-2.296a1.852 1.852 0 0 1 0-3.703h2.296c.756 0 1.406.452 1.694 1.1H15c1.609 0 2.916-1.23 2.996-2.772l.004-.15v-.515l-1.14.28c-.906.221-1.79-.42-1.856-1.33L15 14.549v-3.261c0-.97.919-1.672 1.86-1.441l1.14.278v-.513c0-3.234-2.683-5.862-6-5.862-3.255 0-5.899 2.53-5.997 5.68L6 9.612v.514l1.14-.279c.905-.222 1.79.419 1.856 1.33l.004.111v3.261c0 .97-.918 1.67-1.86 1.441l-2.049-.502-1.62-.301a1.49 1.49 0 0 1-1.216-1.341l-.005-.119v-.883c0-.716.516-1.327 1.222-1.46l1.027-.191v-.7H4.5v-.88c0-4.07 3.361-7.363 7.5-7.363Zm1.148 17.297h-2.296a.351.351 0 1 0 0 .703h2.296a.352.352 0 1 0 0-.703Zm-5.649-8.245L6 11.669v2.497l1.5.368v-3.232Zm9.001 0v3.232l1.5-.368V11.67l-1.5-.367Zm-12 1.416-.75.14v.854l.75.14v-1.134Zm15 0v1.134l.75-.14v-.854l-.75-.14Z" fillRule="evenodd"></path></svg>
-    )
-}
+
+//     return (
+//         <svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor" className="text-info-400 bg-info-100 rounded-full p-2 ml-3 md:ml-0"><path d="M12 2.25c4.069 0 7.386 3.182 7.497 7.156l.003.206v1.58l1.029.193a1.49 1.49 0 0 1 1.216 1.34l.005.119v.883c0 .717-.515 1.328-1.221 1.46l-1.029.191v.847c0 2.39-1.927 4.333-4.332 4.42l-.168.003h-.158a1.853 1.853 0 0 1-1.694 1.102h-2.296a1.852 1.852 0 0 1 0-3.703h2.296c.756 0 1.406.452 1.694 1.1H15c1.609 0 2.916-1.23 2.996-2.772l.004-.15v-.515l-1.14.28c-.906.221-1.79-.42-1.856-1.33L15 14.549v-3.261c0-.97.919-1.672 1.86-1.441l1.14.278v-.513c0-3.234-2.683-5.862-6-5.862-3.255 0-5.899 2.53-5.997 5.68L6 9.612v.514l1.14-.279c.905-.222 1.79.419 1.856 1.33l.004.111v3.261c0 .97-.918 1.67-1.86 1.441l-2.049-.502-1.62-.301a1.49 1.49 0 0 1-1.216-1.341l-.005-.119v-.883c0-.716.516-1.327 1.222-1.46l1.027-.191v-.7H4.5v-.88c0-4.07 3.361-7.363 7.5-7.363Zm1.148 17.297h-2.296a.351.351 0 1 0 0 .703h2.296a.352.352 0 1 0 0-.703Zm-5.649-8.245L6 11.669v2.497l1.5.368v-3.232Zm9.001 0v3.232l1.5-.368V11.67l-1.5-.367Zm-12 1.416-.75.14v.854l.75.14v-1.134Zm15 0v1.134l.75-.14v-.854l-.75-.14Z" fillRule="evenodd"></path></svg>
+//     )
+// }
 
 const LogoOfAlibaba = () => {
     return (
@@ -569,4 +537,13 @@ const LogOut = () =>{
 
 
 export {LogOut , RightArrow ,  Money, HomeIcon, ToggleDownIcon, PlusIcon, TravelIcon, UserIcon, TelegramIcon, YoutubeIcon, TwitterIcon, AparatIcon, InstagramIcon, LinkedinIcon, Airplane, Bus, Train, Camp, Tour, Hotel, DollerSign, QuestionSign, Poshtibani, LogoOfAlibaba, AlibabaIR, Arrow, BuyIcon, Enter, Tick, Point  , QuestionIcon}
->>>>>>> e436d05190f764508b18d5603b513ccbaee1c6e2
+export {
+  Close,
+  AirplaneInsideServices,
+  AirplaneOutsidServices,
+  TrainServices,
+  BusServices,
+  TourServices,
+  HotelServices,
+  VilaServices,
+};
