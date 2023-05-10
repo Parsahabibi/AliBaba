@@ -117,7 +117,7 @@
      .main{
         width: 1200px;
         padding:0px 16px 0 16px;
-        margin-top: -86px;
+        margin-top: -76px;
     }
 }
 
@@ -154,10 +154,37 @@
         min-width: 1200px;
         padding:  0;
     }
-    .bg-services{
-            img{
-            width: auto;
-            height: 320px;
-        }
+    .services{
+       .top-services {
+            ul{
+                padding: 0 85px;
+            }
+       }
+       .bottom-services{
+            form{
+                .bottom-bottom-services{
+                    .options-services{
+                        .d-options-services{
+                            &:nth-child(1){
+                                width: 457px;
+                            }
+                                &:nth-child(2){
+                                width: 274px;
+                        }
+                        &:nth-child(3){
+                            width: 182px;
+                        }
+                        &:nth-child(4){
+                            width: 187px;
+                            div,button{
+                             width: 100%;
+                            }
+                        } 
+                        }
+                    }
+                }
+            }
+       }
     }
+
 }
