@@ -6,6 +6,7 @@ import Questions from "../components/Yourquestion/YourQuestion";
 import HomePageContent from "../components/HomePageContent/HomePageContent";
 import Services from "../components/services/Services";
 import Bgservices from "../components/Bgservices/Bgservices.jsx";
+import OtherServiceDesktop from "../components/OtherService/OtherServiceDesktop/OtherServiceDesktop";
 const Home = () => {
   return (
     <div>
@@ -13,7 +14,7 @@ const Home = () => {
       <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
       <div className="main">
         <Services />
-        <OtherService />
+        <OtherServiceDesktop />
         <Questions />
         <HomePageContent />
       </div>

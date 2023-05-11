@@ -1,0 +1,67 @@
+.OtherServiceDesktop {
+    .titleDesktop {
+        padding-bottom: 15px;
+        // font-weight: 100;
+        p{
+            font-weight: 700;
+        }
+    }
+
+    .itemsDesktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .link{
+            &:not(:last-child){
+                .new{
+                    display: none;
+                }
+            }
+        }
+        .itemDesktop {
+            border: 1px solid rgba(0, 0, 0, .12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .description {
+                display: flex;
+                align-items: center;
+                // justify-content: center;
+                padding: 15px 15px 15px 200px;
+                gap: 10px;
+                .itemTitleDesktop{
+                    color:$grays-500;
+                }
+            }
+            .Arrow{
+                padding-left: 15px;
+                padding-top: 5px;
+                display: flex;
+                align-items: center;
+                svg{
+                    color:$grays-200;
+                }
+                .new{
+                    background-color:$success-300;
+                    border-radius: 9999px;
+                    // display: flex;
+                    // align-items: center;
+                    h5{
+                        padding: 0 0.5rem;
+                    }
+                }
+            }
+
+            .bgColorDesktop {
+                .itemImageDesktop {
+                    width: 46px;
+                    height: 46px;
+                }
+            }
+
+            .itemTitleDesktop {}
+        }
+    }
+}

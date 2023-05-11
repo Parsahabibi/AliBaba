@@ -661,7 +661,15 @@ const PlusServices = () => {
     </svg>
   );
 };
+
+const LeftArrow = () =>{
+  return(
+    <svg viewBox="0 0 24 24" width="16px" height="16px" fill="currentColor" class="text-grays-200 mr-1" data-v-bcfff104=""><path d="M16.698 21.266a.75.75 0 0 1-1.08 1.037l-.066-.069-8.25-9.75a.75.75 0 0 1-.058-.89l.058-.078 8.25-9.75a.75.75 0 0 1 1.202.893l-.056.075L8.858 12l7.84 9.266Z"></path></svg>
+  )
+}
+
 export {
+  LeftArrow,
   HomeIcon,
   ToggleDownIcon,
   PlusIcon,
