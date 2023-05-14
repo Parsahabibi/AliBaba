@@ -13,12 +13,10 @@ const ServicesAirplaneOutside=()=>{
           </div>
           <SearchInput label="مقصد (شهر، فرودگاه)" />
         </div>
-        
-        <div className="d-options-services">
+
+        <div className="border-width100">
           <SearchInput
-            label="مسافران"
-            valueInput="1 مسافر"
-            classlabel="labelfix"
+            label="تاریخ حرکت"
           />
         </div>
         <div className="d-options-services">

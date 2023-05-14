@@ -661,6 +661,36 @@ const PlusServices = () => {
     </svg>
   );
 };
+const Add = () => {
+  return (
+    <svg viewBox="0 0 24 24" width="16px" height="16px" fill="currentColor">
+      <path d="M12 3c.585 0 1.065.446 1.12 1.017l.005.108v6.75h6.75a1.125 1.125 0 0 1 .108 2.245l-.108.005h-6.75v6.75a1.125 1.125 0 0 1-2.245.108l-.005-.108v-6.75h-6.75a1.125 1.125 0 0 1-.108-2.245l.108-.005h6.75v-6.75C10.875 3.504 11.379 3 12 3Z"></path>
+    </svg>
+  );
+};
+const Remove = () => {
+  return (
+    <svg viewBox="0 0 24 24" width="16px" height="16px" fill="currentColor">
+      <path d="M19.875 10.875a1.125 1.125 0 0 1 .108 2.245l-.108.005H4.125a1.125 1.125 0 0 1-.108-2.245l.108-.005h15.75Z"></path>
+    </svg>
+  );
+};
+const Location = () => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="24px"
+      height="24px"
+      fill="currentColor"
+      className="ml-2 shrink-0"
+    >
+      <path
+        d="M11.28 1.534c4.437-.419 8.22 3.11 8.22 7.59 0 4.053-1.89 7.941-6.398 12.888-.593.65-1.62.651-2.212 0-4.219-4.628-6.14-8.33-6.374-12.09-.263-4.237 2.701-8.005 6.765-8.388ZM18 9.124c0-3.604-3.031-6.432-6.579-6.097C8.192 3.332 5.8 6.374 6.013 9.83c.21 3.37 1.977 6.775 5.982 11.17l.531-.59c3.803-4.306 5.402-7.66 5.471-11.054L18 9.124ZM12 5.25a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5Zm0 1.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
+        filRule="evenodd"
+      ></path>
+    </svg>
+  );
+};
 export {
   HomeIcon,
   ToggleDownIcon,
@@ -704,4 +734,7 @@ export {
   Switch,
   CloseServices,
   PlusServices,
+  Add,
+  Remove,
+  Location,
 };
