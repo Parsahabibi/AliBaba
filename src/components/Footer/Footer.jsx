@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HomeIcon, PlusIcon, TravelIcon, UserIcon, TelegramIcon, YoutubeIcon, TwitterIcon, AparatIcon, InstagramIcon, LinkedinIcon, ToggleDownIcon } from '../icons/Icons';
+import TopFooter from '../TopFooter/TopFooter';
+import MobileFooter from '../MobileFooter/MobileFooter';
 
-const Footer = () => {
+const Footer = ({conditional , open}) => {
   return (
     <footer>
-      <section className='footer-mobile'>
+      {/* <section className='footer-mobile'>
 
         <div>
           <input type="radio" id='homeradio' name='radio' />
@@ -46,10 +48,11 @@ const Footer = () => {
           </label>
         </div>
 
-      </section>
+      </section> */}
+      {open === true ? <MobileFooter /> : <></>}
 
       <section className='footer-desktop'>
-        <section className='top-footer-desktop'>
+        {/* <section className='top-footer-desktop'>
           <div className='main-d-top-footer-desktop'>
             <div className='d-top-footer-desktop'>
               <img src="assets/image/Footer/footer1.png" alt="" />
@@ -73,7 +76,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+        {conditional === true ? <TopFooter /> : <></>}
         <section className='middle-footer-mobile'>
           <section className='top-middle-footer-mobile'>
             <section className='d-top-middle-footer-mobile d1-top-middle-footer-mobile'>
