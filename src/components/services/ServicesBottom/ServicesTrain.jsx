@@ -19,7 +19,7 @@ const ServicesTrain = () => {
         <PlusServices />
         {/* <CloseServices /> */}
       </div>
-      <div className="d-options-services">
+      <div className="d-options-services"> 
         <SearchInput label="مسافران" valueInput="1 مسافر" classlabel="labelfix"/>
       </div>
       <div className="d-options-services">

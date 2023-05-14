@@ -23,9 +23,9 @@ const DesktopHeader = () => {
 
     const Ticket = [
         { id: 1, title: 'پرواز داخلی', link: "" },
-        { id: 1, title: 'پرواز خارجی', link: "" },
-        { id: 1, title: 'قطار', link: "" },
-        { id: 1, title: 'اتوبوس', link: "" },
+        { id: 2, title: 'پرواز خارجی', link: "" },
+        { id: 3, title: 'قطار', link: "" },
+        { id: 4, title: 'اتوبوس', link: "" },
     ]
 
     const rest = [
@@ -36,8 +36,8 @@ const DesktopHeader = () => {
 
     const More = [
         { id: 1, title: "علی بابا پلاس", link: "" },
-        { id: 1, title: "مجله علی بابا", link: "" },
-        { id: 1, title: "بیمه مسافرتی", link: "" }
+        { id: 2, title: "مجله علی بابا", link: "" },
+        { id: 3, title: "بیمه مسافرتی", link: "" }
     ]
 
     const LoginItems = [
