@@ -6,6 +6,8 @@
     .footer-desktop {
       margin-bottom: 0;
       .top-footer-desktop {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
         .main-d-top-footer-desktop {
           @include flex();
           max-width: 948px;
@@ -20,6 +22,9 @@
       .bottom-footer-desktop {
         display: flex;
         max-width: 948px;
+        .locations {
+          margin-top: -110px;
+        }
       }
     }
   }
@@ -66,6 +71,7 @@
       }
     }
   }
+ 
 }
 
 @media (min-width: 992px) {
@@ -101,6 +107,11 @@
           }
         }
       }
+      .bottom-footer-desktop {
+        .locations {
+          margin-top: -90px;
+        }
+      }
     }
   }
   .your-question {
@@ -114,8 +125,18 @@
   }
   .main {
     width: 1200px;
-    padding: 0px 16px 0 16px;
+    padding: 0 16px;
     margin-top: -76px;
+  }
+  .center {
+    width: 1200px;
+    padding: 0 16px;
+  }
+   .bashgah-moshtarian-mobile {
+    display: none;
+  }
+  .bashgah-moshtarian-desktop {
+    display: inline;
   }
 }
 
@@ -141,6 +162,15 @@
       }
       .bottom-footer-desktop {
         max-width: 1168px;
+        .locations {
+          margin-top: -30px;
+        }
+        .d1-bottom-footer-desktop {
+          p,
+          span {
+            white-space: nowrap;
+          }
+        }
       }
     }
   }
@@ -150,7 +180,11 @@
   }
   .main {
     min-width: 1200px;
-    padding: 0;
+    padding: 0 16px;
+  }
+  .center {
+    min-width: 1200px;
+    padding: 0 16px;
   }
   .services {
     .top-services {
@@ -185,7 +219,7 @@
       }
     }
   }
-  .ButtonSearch{
-    width:187px;
+  .ButtonSearch {
+    width: 187px;
   }
 }

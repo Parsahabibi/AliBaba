@@ -58,13 +58,20 @@ const ServicesAirplaneInside = () => {
       dropstart2.current.style.display = "none";
     }
 
-    if (e.target !== inputnumber.current ) {
-      document.querySelector(".dropdown-number").style.display = "none";
-    }
+    // if (e.target !== inputnumber.current ) {
+    //   document.querySelector(".dropdown-number").style.display = "none";
+    // }
 
     if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
       document.querySelector(".switch-options-services").style.cursor =
         "pointer";
+    }
+    if (
+      e.target !== document.querySelector(".btn-services") &&
+      e.target !== document.querySelector(".btn-services>p") &&
+      e.target !== document.querySelector(".btn-services>svg")
+    ) {
+      document.querySelector(".items-btns-services").style.display = "none";
     }
   };
 
@@ -159,7 +166,12 @@ const ServicesAirplaneInside = () => {
   }
 
   function showDropdownNumber() {
-    document.querySelector(".dropdown-number").style.display = "inline";
+    let DropdownNumber = document.querySelector(".dropdown-number");
+    if (DropdownNumber.style.display === "inline") {
+      DropdownNumber.style.display = "none";
+    } else {
+      DropdownNumber.style.display = "inline";
+    }
   }
 
   return (
