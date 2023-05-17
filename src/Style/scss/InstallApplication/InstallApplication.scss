@@ -6,6 +6,24 @@
 
         .logo {
             padding-right: 15px;
+            display: flex;
+            align-items: center;
+
+            @media screen and (min-width:930px) {
+                gap: 5px;
+            }
+
+            .alibabaIr {
+                display: none;
+
+                @media screen and (min-width:930px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
         }
 
         display: flex;
@@ -16,6 +34,10 @@
             display: flex;
             align-items: center;
             gap: 20px;
+
+            @media screen and (min-width:930px) {
+                padding-left: 25px;
+            }
 
             .item {
                 button {
@@ -40,6 +62,14 @@
                 // }
                 position: relative;
                 z-index: 10;
+
+                .number {
+                    display: none;
+
+                    @media screen and (min-width:930px) {
+                        display: inline;
+                    }
+                }
 
                 button {
                     display: flex;
@@ -82,6 +112,11 @@
                             height: auto;
                             border-radius: 8px;
                             box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+
+                            @media screen and (min-width:930px) {
+                                // justify-content: space-around;
+                                left: -10px;
+                            }
 
                             .information {
                                 border-top-right-radius: 8px;
@@ -199,6 +234,12 @@
                 }
             }
         }
+
+        @media screen and (min-width:930px) {
+            // justify-content: space-around;
+            gap: 65%;
+            padding: 10px 0px;
+        }
     }
 
     .body {
@@ -215,20 +256,119 @@
 
                     h1 {
                         padding-bottom: 10px;
+
+                        @media screen and (min-width : 930px) {
+                            padding-bottom: 20px;
+
+                        }
                     }
 
                     h6 {
                         padding-bottom: 10px;
+
+                        @media screen and (min-width:930px) {
+                            font-size: 1rem;
+                        }
                     }
                 }
 
                 .image {
                     width: 228px;
                     height: 295px;
-                    // display: flex;
-                    // align-items: center;
-                    // justify-content: center;
                     margin: 0 auto;
+
+                    @media screen and (min-width:930px) {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row-reverse;
+                        justify-content: center;
+                        width: 100%;
+                        height: auto;
+                        margin: 0 auto;
+                        gap: 8rem;
+                    }
+
+                    .imageMobile {
+                        img {
+                            @media screen and (min-width:930px) {
+                                width: 526px;
+                                height: 679px;
+                            }
+                        }
+
+                    }
+
+                    .imageDesktop {
+                        display: none;
+
+                        .rightDesktopImage {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $primary;
+                            padding: 12px;
+                            border-radius: 1rem;
+
+                            img {
+                                background-color: #f8fafb;
+                                padding: 12px;
+                                border-radius: 0.25rem;
+                            }
+
+                            p {
+                                padding-top: 12px;
+                            }
+                        }
+
+                        .or {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            width: 100%;
+
+                            .rightBorder {
+                                min-width: 42%;
+                                height: 1px;
+                                background-color: rgba(0, 0, 0, .12);
+                            }
+
+                            .leftBorder {
+                                min-width: 42%;
+                                height: 1px;
+                                background-color: rgba(0, 0, 0, .12);
+                            }
+                        }
+
+                        .HintInstall {
+                            .button {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0 auto;
+
+                                button {
+                                    background-color: $secondary-400;
+                                    color: $white;
+                                    font-size: 1rem;
+                                    border-radius: 8px;
+                                    padding: 12px 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                        }
+
+                        @media screen and (min-width:930px) {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;
+                        }
+                    }
                 }
 
                 .itemsDownload {
@@ -237,6 +377,10 @@
                     align-items: center;
                     justify-content: center;
                     gap: 10px;
+
+                    @media screen and (min-width:930px) {
+                        display: none
+                    }
 
                     .itemDownload {
                         display: flex;
@@ -316,18 +460,21 @@
                     flex-direction: column;
                     gap: 32px;
                     padding-right: 35px;
-                    // padding-bottom: 32px;
+
 
                     .itemSuccess {
                         display: flex;
                         align-items: center;
                         gap: 20px;
 
-                        // gap: 125px;
-                        // justify-content: center;
                         .image {
                             width: 70px;
                             height: 52px;
+
+                            @media screen and (min-width:900px) {
+                                width: 116px;
+                                height: 100px;
+                            }
                         }
 
                         .des {
@@ -342,7 +489,34 @@
                                 font-size: 24px;
                                 font-weight: 700;
                             }
+
+                            @media screen and (min-width:930px) {
+                                align-items: center;
+                                width: 100%;
+
+                                h5 {
+                                    font-size: 1rem;
+                                }
+
+                                h2 {
+                                    font-size: 32px;
+                                }
+                            }
                         }
+
+                        @media screen and (min-width:930px) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    @media screen and (min-width:930px) {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        // gap: 15px;
+                        // padding-right: 20px;
+                        // padding-left: 25px;
+                        // padding-top: 20px;
                     }
                 }
             }
@@ -352,8 +526,8 @@
             margin-top: 64px;
 
             .informations {
-                // padding: 32px 0px;
 
+                // padding: 32px 0px;
                 .information {
                     display: flex;
                     flex-direction: column;
@@ -378,7 +552,10 @@
                         // margin-top: 32px;
                     }
 
-                    .imageInstall {}
+                    .imageInstall {
+                        width: 304px;
+                        height: 302px;
+                    }
 
                     .sub {
                         display: flex;
@@ -390,6 +567,57 @@
                         padding-bottom: 32px;
 
                     }
+
+                    @media screen and (min-width:930px) {
+                        display: none;
+                    }
+                }
+            }
+
+            .informationsDesktop {
+                display: none;
+
+                .informationDesktop {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+                    &:nth-child(even) {
+                        flex-direction: row-reverse;
+                    }
+
+                    &:nth-child(odd) {
+                        background-color: rgb(248, 250, 251);
+                    }
+
+                    .titleDesktop {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 25px;
+                        // &:nth-child(odd){
+                        //     padding-left: 50px;
+                        // }
+                        // &:nth-child(even){
+                        //     padding-right: 50px;
+                        // }
+                    }
+
+                    .imageInstallDesktop {
+                        width: 470px;
+                        height: 570px;
+                        padding: 50px 0px 50px 0px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                }
+
+                @media screen and (min-width:930px) {
+                    display: block;
                 }
             }
 
@@ -399,7 +627,7 @@
                 justify-content: center;
                 align-items: flex-start;
                 gap: 32px;
-                padding: 50px 8px 55px 8px;
+                padding: 50px 8px 150px 8px;
 
                 .serviceInstall {
                     display: flex;
@@ -410,6 +638,11 @@
                     img {
                         width: 70px;
                         height: 60px;
+
+                        @media screen and (min-width:930px) {
+                            width: 118px;
+                            height: 100px;
+                        }
                     }
 
                     .desInstall {
@@ -419,12 +652,34 @@
                         justify-content: center;
                         width: 67%;
                         gap: 5px;
+
+                        @media screen and (min-width:930px) {
+                            width: 100%;
+                            text-align: center;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
                     }
+
+                    @media screen and (min-width:930px) {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                    }
+                }
+
+                @media screen and (min-width:930px) {
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
                 }
             }
 
             .app {
-                background-color: rgb(248, 250, 251);;
+                background-color: rgb(248, 250, 251);
+
                 .ApplicationAliBaba {
                     .title {
                         display: flex;
@@ -450,14 +705,16 @@
                         margin: 0 auto;
                     }
                 }
-                .button{
+
+                .button {
                     // width: 90%;
                     padding: 32px 0px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     margin: 0 auto;
-                    button{
+
+                    button {
                         width: 96%;
                         background-color: $secondary-400;
                         color: $white;
@@ -468,6 +725,128 @@
                         align-items: center;
                         justify-content: center;
                     }
+                }
+
+                @media screen and (min-width:930px) {
+                    display: none;
+                }
+            }
+
+            .AppDesktop {
+                display: flex;
+                // align-items: center;
+                // justify-content: center;
+                gap: 32px;
+                margin: 0 auto;
+                padding-right: 10%;
+                padding-bottom: 75px;
+                .AnroidDesktop {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    width: 30%;
+
+                    h3 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .ItemAnroidDesktop {
+                        display: flex;
+                        align-items: center;
+                        background-color: $grays-600;
+                        border-radius: 8px;
+                        gap: 10px;
+                        padding: 12px 24px;
+                        color: #f8fafb;
+
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+
+                .IosDesktop {
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: center;
+                    text-align: center;
+
+                    h3 {
+                        padding-bottom: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        // margin-right: 195px;
+                        padding-right: 197px;
+                    }
+
+                    .ItemsIosDesktop {
+                        width: 350%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .ItemIosDesktop {
+                            display: grid;
+                            grid-template-columns: repeat(2, 20%);
+                            grid-template-rows: repeat(3, 30%);
+                            gap: 10px;
+
+                            .content {
+                                display: flex;
+                                align-items: center;
+                                background-color: $grays-600;
+                                color: #f8fafb;
+                                padding: 12px 24px;
+                                gap: 10px;
+                                border-radius: 8px;
+
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+
+                                &:last-child {
+                                    display: none;
+                                }
+                            }
+
+                            @media screen and (min-width:1000px) {
+                                grid-template-columns: repeat(2, 22.5%);
+                                grid-template-rows: repeat(3, 30%);
+                            }
+
+                            // @media screen and (min-width:1150px) {
+                            //     grid-template-columns: repeat(2, 24%);
+                            //     grid-template-rows: repeat(3, 30%);
+                            // }
+
+                            @media screen and (min-width:1260px) {
+                                grid-template-columns: repeat(2, 25%);
+                                grid-template-rows: repeat(3, 30%);
+                            }
+
+                            @media screen and (min-width:1350px) {
+                                grid-template-columns: repeat(2, 32.5%);
+                                grid-template-rows: repeat(3, 30%);
+                            }
+                        }
+                    }
+                }
+
+                display: none;
+
+                @media screen and (min-width:930px) {
+                    display: flex;
+                    align-items: center;
                 }
             }
         }

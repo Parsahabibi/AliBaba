@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Enter, LogoOfAlibaba, Tick, Arrow, Point, Money, RightArrow, Poshtibani, LogOut, Bazar, Maykat, Download, Internet } from '../icons/Icons'
+import { Enter, LogoOfAlibaba, Tick, Arrow, Point, Money, RightArrow, Poshtibani, LogOut, Bazar, Maykat, Download, Internet, AlibabaIR } from '../icons/Icons'
 import { Link } from 'react-router-dom'
 import alibabaInstall from '../../assets/image/HomeImage/alibabaInstall.jpg'
 import alibabaInstall1 from "../../assets/image/HomeImage/alibabaInstall2.jpg"
@@ -10,6 +10,8 @@ import Footer from '../Footer/Footer'
 import TopFooter from '../TopFooter/TopFooter'
 const InstallApplication = () => {
 
+
+    // const [desktop , setDesktop] = useState(false)
 
     const LoginItems = [
         { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "" },
@@ -42,6 +44,7 @@ const InstallApplication = () => {
         { id: 5, title: "آی اپس", image: <img src="https://www.alibaba.ir/assets/images/app-markets/logo-store-iapps-bf2f1022.svg" /> },
         { id: 6, title: "وب اپلیکیشن", image: <Internet /> },
     ]
+
 
 
     const bodyInformation = [
@@ -93,6 +96,10 @@ const InstallApplication = () => {
             <div className='header'>
                 <div className='logo'>
                     <LogoOfAlibaba />
+                    <div className='alibabaIr'>
+                        <AlibabaIR />
+                        <span> خرید بلیط، هتل، تور </span>
+                    </div>
                 </div>
                 <div className='items'>
                     <div className='login' ref={dropdownRefLogin}>
@@ -101,7 +108,7 @@ const InstallApplication = () => {
                                 <Tick className='tick' />
                                 <Enter />
                             </div>
-                            {/* <p>09197401839</p> */}
+                            <p className='number'>09197401839</p>
                             <Arrow />
                             <div className='subMenuLogin'>
                                 {
@@ -163,7 +170,27 @@ const InstallApplication = () => {
                             <h6> کاربردی‌ترین اپلیکیشن سفر </h6>
                         </div>
                         <div className='image'>
-                            <img src={require('../../assets/image/HomeImage/alibaba.jpg')} />
+                            <div className='imageMobile'>
+                                <img src={require('../../assets/image/HomeImage/alibaba.jpg')} />
+                            </div>
+                            <div className='imageDesktop'>
+                                <div className='rightDesktopImage'>
+                                    <img src='https://www.alibaba.ir/assets/images/app/qr-e9f64f34.svg' />
+                                    <p>برای دانلود اسکن کنید</p>
+                                </div>
+                                <div className='or'>
+                                    <div className='rightBorder'></div>
+                                    <p>یا</p>
+                                    <div className='leftBorder'></div>
+                                </div>
+                                <div className='HintInstall'>
+                                    <Link to={'/Install'}>
+                                        <div className='button'>
+                                            <button> مشاهده لینک‌های دانلود </button>
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                         <div className='itemsDownload'>
                             {
@@ -214,7 +241,7 @@ const InstallApplication = () => {
                                                         item.title
                                                     }
                                                 </h2>
-                                                <h5>
+                                                <h5 className='h5'>
                                                     {item.sub}
                                                 </h5>
                                             </div>
@@ -238,6 +265,22 @@ const InstallApplication = () => {
                                         </div>
                                         <div className='sub'>
                                             <h6>{item.sub}</h6>
+                                        </div>
+                                    </div>
+                            )
+                        }
+                    </div>
+                    <div className='informationsDesktop'>
+                        {
+                            bodyInformation.map(
+                                item =>
+                                    <div className='informationDesktop' key={item.id}>
+                                        <div className='titleDesktop'>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.sub}</p>
+                                        </div>
+                                        <div className='imageInstallDesktop'>
+                                            <img src={item.image} alt='pic' />
                                         </div>
                                     </div>
                             )
@@ -272,6 +315,36 @@ const InstallApplication = () => {
                                 <button> مشاهده لینک‌های دانلود </button>
                             </div>
                         </Link>
+                    </div>
+                    <div className='AppDesktop'>
+                        <div className='AnroidDesktop'>
+                            <h3>دانلود نسخه اندروید</h3>
+                            {
+                                itemsDownload.map(
+                                    item =>
+                                        <Link className='ItemAnroidDesktop' to={""}>
+                                            {item.image}
+                                            <h4>{item.title}</h4>
+                                        </Link>
+                                )
+                            }
+                        </div>
+                        <div className='IosDesktop' >
+                            <h3>دانلود نسخه iOS</h3>
+                            <div className='ItemsIosDesktop'>
+                                <div className='ItemIosDesktop'>
+                                    {
+                                        downloadIos.map(
+                                            item =>
+                                                <Link className='content' to={''}>
+                                                    {item.image}
+                                                    <h4>{item.title}</h4>
+                                                </Link>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
