@@ -148,7 +148,7 @@ const DesktopHeader = () => {
 
                     </div>
                 </Link>
-                <div className='items '>
+                <div className='items'>
                     <div className='item' ref={dropdownRef}>
                         <button onClick={handleToggle} >
                             <p>بلیط</p>

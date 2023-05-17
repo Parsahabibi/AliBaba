@@ -11,20 +11,20 @@ import InstallApplication from "../components/InstallApplication/InstallApplicat
 import BashgahMoshtarian from "./BashgahMoshtarian";
 const Home = () => {
   return (
-    // <div>
-    //   <Header />
-    //   <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
-    //   <div className="main">
-    //     <Services />
-    //     <OtherServiceDesktop />
-    //     <Questions />
-    //     <HomePageContent />
-    //   </div>
+    <div>
+      <Header />
+      {/* <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
+      <div className="main">
+        <Services />
+        <OtherServiceDesktop />
+        <Questions />
+        <HomePageContent />
+      </div>
 
-    //   <Footer conditional={true} IdMore="more4"/>
-    // </div>
+      <Footer conditional={true} IdMore="more4"/> */}
+    </div>
     // <InstallApplication />
-    <BashgahMoshtarian />
+    // <BashgahMoshtarian />
   );
 };
 

@@ -28,7 +28,6 @@
         .items {
             display: flex;
             align-items: center;
-
             .item {
                 display: flex;
                 align-items: center;
@@ -128,6 +127,13 @@
 
                 }
 
+            }
+            @media screen and (min-width: 930px) {
+                display: none;
+            }
+            @media screen and (min-width: 1275px) {
+                display: flex;
+                align-items: center;
             }
 
         }
