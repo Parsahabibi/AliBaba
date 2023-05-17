@@ -1,0 +1,33 @@
+
+.top-bottom-services{
+    >div{
+        .btn-services{
+            position: relative;
+        }
+    }
+}
+.items-btns-services{
+    position: absolute;
+    top:100%;
+    right:0;
+    content:'';
+    min-width: max-content;
+    background: $white;
+    z-index: 10000;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .08);
+    border: 1px solid rgba(37, 36, 36, 0.12);
+    margin-top: 2px;
+    display: none;
+    ul{
+        list-style: none;
+        li{
+            padding: 10px 24px;
+            color: $grays-700;
+        }
+    }
+    .bg-select{
+        background: $secondary-100;
+        color: $secondary-400;
+    }
+}

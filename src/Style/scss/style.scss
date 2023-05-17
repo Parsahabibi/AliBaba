@@ -9,7 +9,6 @@
 @import "./MobileHeader/StyleMobileHeader";
 @import './OtherService/OtherService.scss';
 @import "./HomePageContent/HomePageContent.scss";
-
 @import "./SearchInput/Searchinput";
 @import "./Signup/signup";
 @import "./Bgservices/Bgservices";
@@ -18,14 +17,19 @@
 @import "./DropDown/DropDown";
 @import "./Questions/Questions";
 @import "./OptionsServices/optionsServices";
+@import "./Services/dropdown-services";
 @import "./OtherService/OtherServiceDesktop";
 @import './ApplictionAlibaba/ApplicationAlibaba.scss';
 @import './Banner/Banner.scss';
 @import "./InstallApplication/InstallApplication.scss";
+@import "./DesktopHeader/DesktopHeader";
+@import "./DropDown/DropDown";
+@import "./Questions/Questions";
+@import "./Services/Items-btns-services";
+@import "./bashgahMoshtarian/BashgahMostarianMobile";
+@import "./bashgahMoshtarian/BashgahMoshtarianDesktop";
+
+
 
 
 @import "./media.scss";
-@import "./DesktopHeader/DesktopHeader";
-@import "./DropDown/DropDown";
-@import "./Questions/Questions"
-

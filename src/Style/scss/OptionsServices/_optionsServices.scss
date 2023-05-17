@@ -60,6 +60,9 @@
                 font-size: .625rem;
             }
         }
+        .hidden{
+            display: none;
+        }
         }
         .CloseServices{
             cursor: pointer;
@@ -77,6 +80,27 @@
         }
         .Searcg{
         width: 100%;
+        }
+        .chose-number{
+            @include flex();
+            button{
+                @include flex();
+                background-color: $secondary-400;
+                margin: 0 4px;
+                padding: 1px;
+                border-radius: 4px;
+                svg{
+                width: 16px;
+                height: 16px;
+                color: $white;
+                border-radius: 4px;
+
+                }
+                
+            }
+            span{
+                font-size: 16px;
+            }
         }
     }
 }

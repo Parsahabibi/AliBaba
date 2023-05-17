@@ -8,6 +8,7 @@ import Services from "../components/services/Services";
 import Bgservices from "../components/Bgservices/Bgservices.jsx";
 import OtherServiceDesktop from "../components/OtherService/OtherServiceDesktop/OtherServiceDesktop";
 import InstallApplication from "../components/InstallApplication/InstallApplication";
+import BashgahMoshtarian from "./BashgahMoshtarian";
 const Home = () => {
   return (
     // <div>
@@ -20,9 +21,10 @@ const Home = () => {
     //     <HomePageContent />
     //   </div>
 
-    //   <Footer />
+    //   <Footer conditional={true} IdMore="more4"/>
     // </div>
-    <InstallApplication />
+    // <InstallApplication />
+    <BashgahMoshtarian />
   );
 };
 

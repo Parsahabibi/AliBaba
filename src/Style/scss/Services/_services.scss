@@ -58,9 +58,10 @@
     padding: 0 36px;
     height: 106px;
     .top-bottom-services{
+      height:34px;
       div{
-        @include flex(row,flex-start,center);
-      width: 100%;
+        // @include flex(row,flex-start,center);
+        width: 100%;
       }
       margin-bottom:24px;
       .btn-services{

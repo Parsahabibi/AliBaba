@@ -1,0 +1,174 @@
+.bashgah-moshtarian-desktop {
+  display: none;
+  p {
+    color: $grays-500;
+    line-height: 32px;
+    text-align: justify;
+  }
+  .content1-bashgah-moshtarian-desktop {
+    @include flex();
+    margin-bottom: 120px;
+    h1 {
+      font-size: 2em;
+      font-weight: 900;
+      margin: 0.67em 0;
+    }
+    span {
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    div:nth-child(1) {
+      margin-left: 3rem;
+    }
+    img {
+      width: 755px;
+    }
+  }
+  .content2-bashgah-moshtarian-desktop {
+    @include flex(column, flex-start, center);
+    margin-bottom: 120px;
+    h2 {
+      font-style: 1.5rem;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+    > span {
+      margin-bottom: 12px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $grays-500;
+    }
+    > P {
+      text-align: center;
+      line-height: 32px;
+      margin-bottom: 3rem;
+      font-size: 0.875rem;
+      width: 980px;
+    }
+    .emkanat-desktop {
+      .header-emkanat-desktop {
+        @include flex();
+        margin-bottom: 4rem;
+        div {
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+          display: inline-block;
+          cursor: pointer;
+          border-radius: 0.75rem;
+          padding: 0.75rem 1.5rem;
+          background: $grays-100;
+          span {
+            font-size: 0.975rem;
+            color: $grays-400;
+          }
+        }
+        .active-btn {
+          background: $secondary-100;
+          span {
+            color: $secondary-400;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .body-emkanat-desktop {
+        .child-body-emkanat {
+          @include flex();
+          width: 992px;
+          display: none;
+
+          .item-emkanat-desktop {
+            @include flex(column, flex-start, center);
+            text-align: center;
+            width: 248px;
+            height: 234px;
+            padding: 12px;
+            border-radius: 1rem;
+            &:hover {
+              background: $grays-100;
+            }
+            img {
+              width: 88px;
+              height: 88px;
+            }
+            h3,
+            p {
+              text-align: center;
+            }
+            h3 {
+              font-size: 0.875rem;
+              margin-bottom: 0.5rem;
+              span {
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
+                font-weight: 700;
+              }
+            }
+            P {
+              color: $grays-400;
+              line-height: 2;
+              font-size: 0.75rem;
+            }
+          }
+          .child-body-emkanat {
+          }
+        }
+        .active-item {
+          display: flex;
+        }
+      }
+    }
+  }
+  .content3-bashgah-moshtarian-desktop {
+    @include flex();
+    margin-bottom: 120px;
+    img {
+      width: 430px;
+    }
+
+    div:nth-child(2) {
+      margin-right: 48px;
+      h2 {
+        margin-bottom: 12px;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      p {
+        line-height: 32px;
+        color: $grays-400;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .ul-bashgah-moshtarian {
+        margin: 16px 0;
+        ul {
+          @include flex(row, flex-start, flex-start);
+          flex-wrap: wrap;
+          li {
+            @include flex(row, flex-start, center);
+            font-size: 0.875rem;
+            color: $grays-500;
+            line-height: 28px;
+            margin-bottom: 16px;
+            width: 50%;
+            span {
+              @include flex();
+              background: $secondary-100;
+              width: 48px;
+              height: 48px;
+              margin-left: 24px;
+              border-radius: 0.75rem;
+            }
+            svg {
+              width: 20px;
+              height: 20px;
+              color: $secondary-400;
+              background: $secondary-100;
+            }
+          }
+        }
+      }
+    }
+  }
+}
