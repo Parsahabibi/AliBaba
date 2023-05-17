@@ -411,13 +411,19 @@
 
             .download {
                 .ios {
+
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     padding-bottom: 32px;
 
                     p {
+                        cursor: pointer;
                         color: $secondary-400 ;
+                    }
+
+                    @media screen and (min-width:930px) {
+                        display: none;
                     }
                 }
 
@@ -582,6 +588,7 @@
                     align-items: center;
                     justify-content: center;
                     gap: 50px;
+
                     &:nth-child(even) {
                         flex-direction: row-reverse;
                     }
@@ -740,6 +747,7 @@
                 margin: 0 auto;
                 padding-right: 10%;
                 padding-bottom: 75px;
+
                 .AnroidDesktop {
                     display: flex;
                     flex-direction: column;
