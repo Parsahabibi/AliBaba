@@ -24,15 +24,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
+            // width: 32%;
             .description {
                 display: flex;
                 align-items: center;
                 // justify-content: center;
-                padding: 15px 15px 15px 200px;
+                padding: 15px 15px 15px 0px;
                 gap: 10px;
                 .itemTitleDesktop{
                     color:$grays-500;
+                }
+                @media screen and (min-width: 900px) {
+                    padding-left: 95px;
+                }
+                @media screen and (min-width: 950px) {
+                    padding-left: 105px;
+                }
+                @media screen and (min-width: 975px) {
+                    padding-left: 115px;
+                }
+                @media screen and (min-width: 1024px) {
+                    padding-left: 120px;
+                }
+                @media screen and (min-width: 1200px) {
+                    padding-left: 195px;
                 }
             }
             .Arrow{

@@ -13,9 +13,8 @@ import Account from "../components/Dashboard/Account/Account";
 const Home = () => {
   return (
     <div>
-      <Account />
-      {/* <Header /> */}
-      {/* <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
+      <Header />
+      <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
       <div className="main">
         <Services />
         <OtherServiceDesktop />
@@ -23,7 +22,7 @@ const Home = () => {
         <HomePageContent />
       </div>
 
-      <Footer conditional={true} IdMore="more4"/> */}
+      <Footer conditional={true} IdMore="more4"/>
     </div>
     // <InstallApplication />
     // <BashgahMoshtarian />

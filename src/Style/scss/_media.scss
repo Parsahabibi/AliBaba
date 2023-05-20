@@ -117,12 +117,7 @@
   .your-question {
     max-width: 992px;
   }
-  .services {
-    display: inline-block;
-  }
-  .bg-services {
-    display: flex;
-  }
+ 
   .main {
     width: 1200px;
     padding: 0 16px;
@@ -139,7 +134,18 @@
     display: inline;
   }
 }
-
+@media (min-width:900px) {
+  .main {
+    padding: 0 16px;
+    margin-top: -76px;
+  }
+  .bg-services {
+    display: flex;
+  }
+   .services {
+      display: inline-block;
+    }
+}
 @media (min-width: 1200px) {
   footer {
     .footer-desktop {
