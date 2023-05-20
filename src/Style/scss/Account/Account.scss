@@ -1,0 +1,143 @@
+.Account {
+    background-color: $grays-100;
+    height: 100vh;
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            gap: 15px;
+            padding: 10px;
+            padding-left: 18%;
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+
+            h5 {
+                font-weight: 700;
+            }
+        }
+
+        .edit {
+            display: flex;
+            align-items: center;
+            color: $secondary-400;
+
+            button {
+                background-color: rgb(255, 255, 255);
+                color: $secondary-400;
+                display: flex;
+                align-items: center;
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .bodyAccount {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        // position: relative;
+        margin: 0 auto;
+        border-radius: 8px;
+        padding-top: 88px;
+        // top: 88px;
+
+        .Count {
+            border: 1px solid rgba(0, 0, 0, .12);
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+
+            .itemsCount {
+                width: 95%;
+                margin: 0 auto;
+                .itemCount {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 13px 5px;
+                    .RightItemCount {
+                        display: flex;
+                        align-items: center;
+                        width: 85%;
+                        gap: 5px;
+                        // border-bottom: 1px solid black;
+                        h6{
+                            line-height:17px;
+                        }
+
+                    }                        
+                    .LeftItemCount {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px; 
+                        h3{
+                            color: $success-400;
+                        }  
+                        span{
+                            color: $grays-400;
+                        }             
+                    }
+                }
+                &:not(:first-child) {
+                    .LeftItemCount {
+                        display: none;
+                    }
+                }
+
+                .border{
+                    width: 98%;
+                    height: 1px;
+                    background-color: rgba(0, 0, 0, .12);
+                }
+                &:last-child{
+                    .border{
+                        display: none;
+                    }
+                }
+                &:nth-child(2){
+                    .RightItemCount{
+                        color:$secondary-400;
+                    }
+                }
+                &:nth-child(3){
+                    .RightItemCount{
+                        color:$secondary-400;
+                        opacity: 0.5 ;
+                    }
+                }
+            }
+            
+        }
+        .AlibabaPlus{
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgba(0, 0, 0, .12);
+            border-radius: 8px;
+            .plus{
+                display: flex;
+                align-items: center;
+                // justify-content: flex-start;
+                padding: 13px 12px;
+            }
+        }
+    }
+}

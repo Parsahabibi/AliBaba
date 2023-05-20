@@ -9,10 +9,12 @@ import Bgservices from "../components/Bgservices/Bgservices.jsx";
 import OtherServiceDesktop from "../components/OtherService/OtherServiceDesktop/OtherServiceDesktop";
 import InstallApplication from "../components/InstallApplication/InstallApplication";
 import BashgahMoshtarian from "./BashgahMoshtarian";
+import Account from "../components/Dashboard/Account/Account";
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Account />
+      {/* <Header /> */}
       {/* <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
       <div className="main">
         <Services />
