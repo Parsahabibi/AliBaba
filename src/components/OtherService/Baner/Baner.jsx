@@ -5,8 +5,6 @@ const Baner = () => {
         <div className='Banner'>
             <Link to={""}><img src={require('../../../assets/image/HomeImage/game.jpg')} /></Link>
             <Link to={""}><img src={require('../../../assets/image/HomeImage/amirali.jpg')} /></Link>
-            
-            
         </div>
     )
 }
