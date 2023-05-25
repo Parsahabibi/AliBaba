@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
+import Dropdown from "../../DropDown/DropDown";
 import {
   CloseServices,
   PlusServices,
@@ -9,6 +10,7 @@ import {
   Remove,
 } from "../../icons/Icons";
 import SearchInput from "../../SearchInput/SearchInput";
+import DropStartLocation from "../Dropdownservices/DropStartLocation";
 const NumberHorofi = [
   "یک",
   "دو",
@@ -133,18 +135,63 @@ const ServicesVila = () => {
       setpeople((people) => people - 1);
     }
   };
+  const dropstart = useRef(0);
+  const inputstart = useRef(0);
+  const Labelstart = useRef(0);
+  const items_dropdown = [
+    "اقامتگاه های شهر تهران",
+    "اقامتگاه های شهر کردان",
+    "اقامتگاه های شهر رامسر",
+    "اقامتگاه های شهر چالوس",
+    "اقامتگاه های شهر متل قو (سلمانشهر)",
+    "اقامتگاه های شهر رشت",
+    "اقامتگاه های شهر بندر انزلی",
+    "اقامتگاه های شهر مشهد",
+    "اقامتگاه های شهر نوشهر"
+  ];
+   function putitem(e) {
+     inputstart.current.value = e.target.innerText;
+     Labelstart.current.classList.add("labelfix");
+
+     let spandropdown = document.querySelectorAll(".color-black");
+     for (let i = 0; i < spandropdown.length; i++) {
+       spandropdown[i].style.color = "#000";
+       spandropdown[i].style.backgroundColor = "transparent";
+     }
+     e.target.style.color = "#0077DB";
+     e.target.style.backgroundColor = "#F2F9FF";
+   }
+   function opendropdown() {
+     dropstart.current.style.display = "flex";
+   }
+    window.onclick = function (e) {
+      if (e.target !== inputstart.current) {
+        dropstart.current.style.display = "none";
+      }
+    };
   return (
     <div className="options-services">
-      <div className="border-width100">
-        <SearchInput label="مقصد یا نوع اقامتگاه" />
+      <div className="d-options-services border-width100 flex-3-10 no-before">
+        <SearchInput
+          label="مقصد یا نوع اقامتگاه"
+          handleclick={opendropdown}
+          refinput={inputstart}
+          refLabel={Labelstart}
+        />
+        <DropStartLocation
+          classdropdown="dropdown-services w-100"
+          id={dropstart}
+          handleclick={putitem}
+          itemsDropdown={items_dropdown}
+        />
       </div>
-      <div className="d-options-services">
+      <div className="d-options-services flex-3-10">
         <SearchInput label="تاریخ ورود" />
         <SearchInput label="تاریخ خروج" />
         <PlusServices />
         {/* <CloseServices /> */}
       </div>
-      <div className="d-options-services">
+      <div className="d-options-services flex-3-10">
         <SearchInput
           label="تعداد مسافران"
           valueInput={NumberHorofi[people - 1] + " نفر "}
