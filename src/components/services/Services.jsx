@@ -31,11 +31,15 @@ const Services = (props) => {
   return (
     <section className="services">
       <section className="top-services">
-        <ul>{
-        props.ItemServices.map((item) => (
-    <Itemservices icon={item.icon} text={item.text} check={item.check} />
-  ))
-        }</ul>
+        <ul>
+          {props.ItemServices.map((item) => (
+            <Itemservices
+              icon={item.icon}
+              text={item.text}
+              check={item.check}
+            />
+          ))}
+        </ul>
       </section>
 
       <section className="bottom-services">

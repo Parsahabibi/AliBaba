@@ -14,7 +14,7 @@ const ApplicationAlibaba = () => {
                         <h4> سریع‌تر و مطمئن‌تر به سفر بروید </h4>
                     </div>
                     <div className='link'>
-                        <Link className='link' to={''}>
+                        <Link className='link' to={'/Install'}>
                             <p> مشاهده لینک های دانلود </p>
                             <LeftArrow />
                         </Link>

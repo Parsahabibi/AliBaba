@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Enter, LogoOfAlibaba, Tick, Arrow, Point, Money, RightArrow, Poshtibani, LogOut, Bazar, Maykat, Download, Internet } from '../icons/Icons'
+import { Enter, LogoOfAlibaba, Tick, Arrow, Point, Money, RightArrow, Poshtibani, LogOut, Bazar, Maykat, Download, Internet, AlibabaIR } from '../icons/Icons'
 import { Link } from 'react-router-dom'
 import alibabaInstall from '../../assets/image/HomeImage/alibabaInstall.jpg'
 import alibabaInstall1 from "../../assets/image/HomeImage/alibabaInstall2.jpg"
@@ -10,6 +10,8 @@ import Footer from '../Footer/Footer'
 import TopFooter from '../TopFooter/TopFooter'
 const InstallApplication = () => {
 
+
+    // const [desktop , setDesktop] = useState(false)
 
     const LoginItems = [
         { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "" },
@@ -42,6 +44,7 @@ const InstallApplication = () => {
         { id: 5, title: "آی اپس", image: <img src="https://www.alibaba.ir/assets/images/app-markets/logo-store-iapps-bf2f1022.svg" /> },
         { id: 6, title: "وب اپلیکیشن", image: <Internet /> },
     ]
+
 
 
     const bodyInformation = [
@@ -89,177 +92,265 @@ const InstallApplication = () => {
 
 
     return (
-      <div className="InstallApplication">
-        <div className="header">
-          <div className="logo">
-            <LogoOfAlibaba />
-          </div>
-          <div className="items">
-            <div className="login" ref={dropdownRefLogin}>
-              <button
-                onClick={() => {
-                  setOpenLogin(!openLogin);
-                }}
-              >
-                <div className="user">
-                  <Tick className="tick" />
-                  <Enter />
-                </div>
-                {/* <p>09197401839</p> */}
-                <Arrow />
-                <div className="subMenuLogin">
-                  {openLogin === true ? (
-                    <div className="subMenu">
-                      <div className="information">
-                        <div className="number">
-                          <p>09197401839</p>
-                        </div>
-                        <div className="point">
-                          <Point />
-                          <h5>0 امتیاز</h5>
-                        </div>
-                        <div className="money">
-                          <div className="rightMoney">
-                            <Money />
-                            <h5>0 ریال</h5>
-                          </div>
-                          <div className="buttonOfMoney">
-                            <Link to={""}>
-                              <button>
-                                افزایش
-                                <RightArrow />
-                              </button>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="others">
-                        {LoginItems.map((item) => (
-                          <div className="itemsOthers" key={item.id}>
-                            <Link to={item.link}>
-                              <div className="itemOthers">
-                                {item.image}
-                                {item.title}
-                              </div>
-                            </Link>
-                            <div className="borderBottomItem"></div>
-                          </div>
-                        ))}
-                      </div>
+        <div className='InstallApplication'>
+            <div className='header'>
+                <div className='logo'>
+                    <LogoOfAlibaba />
+                    <div className='alibabaIr'>
+                        <AlibabaIR />
+                        <span> خرید بلیط، هتل، تور </span>
                     </div>
-                  ) : (
-                    <></>
-                  )}
                 </div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="body">
-          <div className=" Top">
-            <div className="ApplicationAliBaba">
-              <div className="title">
-                <h1> اپلیکیشن علی‌بابا </h1>
-                <h6> کاربردی‌ترین اپلیکیشن سفر </h6>
-              </div>
-              <div className="image">
-                <img
-                  src={require("../../assets/image/HomeImage/alibaba.jpg")}
-                />
-              </div>
-              <div className="itemsDownload">
-                {itemsDownload.map((item) => (
-                  <a className="itemDownload" href={item.link} target="_blank">
-                    {item.image}
-                    <p>{item.title}</p>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="download">
-              {openIos === false ? (
-                <div
-                  onClick={() => {
-                    setOpenIos(!openIos);
-                  }}
-                  className="ios"
-                >
-                  <p>دانلود نسخه iOS</p>
-                </div>
-              ) : (
-                <div className="ItemsDownloadIos">
-                  {downloadIos.map((item) => (
-                    <a className="ItemDownloadIos" href="" target="_blank">
-                      {item.image}
-                      <p>{item.title}</p>
-                    </a>
-                  ))}
-                </div>
-              )}
-              <div className="success">
-                {Success.map((item) => (
-                  <div className="itemSuccess">
-                    <div className="image">{item.image}</div>
-                    <div className="des">
-                      <h5>{item.head}</h5>
-                      <h2>{item.title}</h2>
-                      <h5>{item.sub}</h5>
+                <div className='items'>
+                    <div className='login' ref={dropdownRefLogin}>
+                        <button onClick={() => { setOpenLogin(!openLogin) }}>
+                            <div className='user'>
+                                <Tick className='tick' />
+                                <Enter />
+                            </div>
+                            <p className='number'>09197401839</p>
+                            <Arrow />
+                            <div className='subMenuLogin'>
+                                {
+                                    openLogin === true ?
+                                        <div className='subMenu'>
+                                            <div className='information'>
+                                                <div className='number'>
+                                                    <p>09197401839</p>
+                                                </div>
+                                                <div className='point'>
+                                                    <Point />
+                                                    <h5>0 امتیاز</h5>
+                                                </div>
+                                                <div className='money'>
+                                                    <div className='rightMoney'>
+                                                        <Money />
+                                                        <h5>0 ریال</h5>
+                                                    </div>
+                                                    <div className='buttonOfMoney'>
+                                                        <Link to={''}>
+                                                            <button>
+                                                                افزایش
+                                                                <RightArrow />
+                                                            </button>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='others'>
+                                                {
+                                                    LoginItems.map(
+                                                        item =>
+                                                            <div className='itemsOthers' key={item.id}>
+                                                                <Link to={item.link}>
+                                                                    <div className='itemOthers'>
+                                                                        {item.image}
+                                                                        {item.title}
+                                                                    </div>
+                                                                </Link>
+                                                                <div className='borderBottomItem'></div>
+                                                            </div>
+                                                    )
+                                                }
+                                            </div>
+                                        </div>
+                                        :
+                                        <></>
+                                }
+                            </div>
+                        </button>
                     </div>
-                  </div>
-                ))}
-              </div>
+                </div>
             </div>
-          </div>
-          <div className="Bottom">
-            <div className="informations">
-              {bodyInformation.map((item) => (
-                <div className="information" key={item.id}>
-                  <div className="title">
-                    <h3>{item.title}</h3>
-                  </div>
-                  <div className="imageInstall">
-                    <img src={item.image} alt="pic" />
-                  </div>
-                  <div className="sub">
-                    <h6>{item.sub}</h6>
-                  </div>
+            <div className='body'>
+                <div className=' Top'>
+                    <div className='ApplicationAliBaba'>
+                        <div className='title'>
+                            <h1> اپلیکیشن علی‌بابا </h1>
+                            <h6> کاربردی‌ترین اپلیکیشن سفر </h6>
+                        </div>
+                        <div className='image'>
+                            <div className='imageMobile'>
+                                <img src={require('../../assets/image/HomeImage/alibaba.jpg')} />
+                            </div>
+                            <div className='imageDesktop'>
+                                <div className='rightDesktopImage'>
+                                    <img src='https://www.alibaba.ir/assets/images/app/qr-e9f64f34.svg' />
+                                    <p>برای دانلود اسکن کنید</p>
+                                </div>
+                                <div className='or'>
+                                    <div className='rightBorder'></div>
+                                    <p>یا</p>
+                                    <div className='leftBorder'></div>
+                                </div>
+                                <div className='HintInstall'>
+                                    <Link to={'/Install'}>
+                                        <div className='button'>
+                                            <button> مشاهده لینک‌های دانلود </button>
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='itemsDownload'>
+                            {
+                                itemsDownload.map(
+                                    item =>
+                                        <a className='itemDownload' href={item.link} target='_blank'>
+                                            {item.image}
+                                            <p>{item.title}</p>
+                                        </a>
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div className='download'>
+
+                        {
+                            openIos === false ?
+                                <div onClick={() => { setOpenIos(!openIos) }} className='ios'>
+                                    <p>دانلود نسخه iOS</p>
+                                </div>
+                                :
+                                <div className='ItemsDownloadIos'>
+                                    {
+                                        downloadIos.map(
+                                            item =>
+                                                <a className='ItemDownloadIos' href='' target='_blank'>
+                                                    {item.image}
+                                                    <p>{item.title}</p>
+                                                </a>
+                                        )
+                                    }
+                                </div>
+                        }
+                        <div className='success'>
+                            {
+                                Success.map(
+                                    item =>
+                                        <div className='itemSuccess'>
+                                            <div className='image'>
+                                                {item.image}
+                                            </div>
+                                            <div className='des'>
+                                                <h5>
+                                                    {item.head}
+                                                </h5>
+                                                <h2>
+                                                    {
+                                                        item.title
+                                                    }
+                                                </h2>
+                                                <h5 className='h5'>
+                                                    {item.sub}
+                                                </h5>
+                                            </div>
+                                        </div>
+                                )
+                            }
+                        </div>
+                    </div>
                 </div>
-              ))}
+                <div className='Bottom'>
+                    <div className='informations'>
+                        {
+                            bodyInformation.map(
+                                item =>
+                                    <div className='information' key={item.id}>
+                                        <div className='title'>
+                                            <h3>{item.title}</h3>
+                                        </div>
+                                        <div className='imageInstall'>
+                                            <img src={item.image} alt='pic' />
+                                        </div>
+                                        <div className='sub'>
+                                            <h6>{item.sub}</h6>
+                                        </div>
+                                    </div>
+                            )
+                        }
+                    </div>
+                    <div className='informationsDesktop'>
+                        {
+                            bodyInformation.map(
+                                item =>
+                                    <div className='informationDesktop' key={item.id}>
+                                        <div className='titleDesktop'>
+                                            <h3>{item.title}</h3>
+                                            <p>{item.sub}</p>
+                                        </div>
+                                        <div className='imageInstallDesktop'>
+                                            <img src={item.image} alt='pic' />
+                                        </div>
+                                    </div>
+                            )
+                        }
+                    </div>
+                    <div className='servicesInstall'>
+                        {
+                            services.map(
+                                item =>
+                                    <div className='serviceInstall'>
+                                        {item.image}
+                                        <div className='desInstall'>
+                                            <h3>{item.title}</h3>
+                                            <h6>{item.sub}</h6>
+                                        </div>
+                                    </div>
+                            )
+                        }
+                    </div>
+                    <div className='app'>
+                        <div className='ApplicationAliBaba'>
+                            <div className='title'>
+                                <h1> اپلیکیشن علی‌بابا </h1>
+                                <h6> کاربردی‌ترین اپلیکیشن سفر را به‌رایگان دانلود کنید </h6>
+                            </div>
+                            <div className='image'>
+                                <img src={require('../../assets/image/HomeImage/alibaba.jpg')} />
+                            </div>
+                        </div>
+                        <Link to={'/Install'}>
+                            <div className='button'>
+                                <button> مشاهده لینک‌های دانلود </button>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='AppDesktop'>
+                        <div className='AnroidDesktop'>
+                            <h3>دانلود نسخه اندروید</h3>
+                            {
+                                itemsDownload.map(
+                                    item =>
+                                        <Link className='ItemAnroidDesktop' to={""}>
+                                            {item.image}
+                                            <h4>{item.title}</h4>
+                                        </Link>
+                                )
+                            }
+                        </div>
+                        <div className='IosDesktop' >
+                            <h3>دانلود نسخه iOS</h3>
+                            <div className='ItemsIosDesktop'>
+                                <div className='ItemIosDesktop'>
+                                    {
+                                        downloadIos.map(
+                                            item =>
+                                                <Link className='content' to={''}>
+                                                    {item.image}
+                                                    <h4>{item.title}</h4>
+                                                </Link>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="servicesInstall">
-              {services.map((item) => (
-                <div className="serviceInstall">
-                  {item.image}
-                  <div className="desInstall">
-                    <h3>{item.title}</h3>
-                    <h6>{item.sub}</h6>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="app">
-              <div className="ApplicationAliBaba">
-                <div className="title">
-                  <h1> اپلیکیشن علی‌بابا </h1>
-                  <h6> کاربردی‌ترین اپلیکیشن سفر را به‌رایگان دانلود کنید </h6>
-                </div>
-                <div className="image">
-                  <img
-                    src={require("../../assets/image/HomeImage/alibaba.jpg")}
-                  />
-                </div>
-              </div>
-              <Link to={"/Install"}>
-                <div className="button">
-                  <button> مشاهده لینک‌های دانلود </button>
-                </div>
-              </Link>
-            </div>
-          </div>
+            <Footer conditional={false} open={false} />
         </div>
-        <Footer conditional={false} open={false} IdMore="more3"/>
-      </div>
-    );
+    )
 }
 
 export default InstallApplication

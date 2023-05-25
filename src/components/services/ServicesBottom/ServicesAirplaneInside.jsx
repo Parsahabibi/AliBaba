@@ -12,8 +12,6 @@ const ServicesAirplaneInside = () => {
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
 
-
-
   function opendropdown() {
     dropstart.current.style.display = "inline";
   }
@@ -61,6 +59,13 @@ const ServicesAirplaneInside = () => {
       dropstart2.current.style.display = "none";
     }
 
+    if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
+      document.querySelector(".switch-options-services").style.cursor =
+        "pointer";
+    }
+    if (e.target !== document.querySelector(".btn-services>p")) {
+      document.querySelector(".items-btns-services").style.display = "none";
+    }
   };
 
   function switchvalue() {
@@ -161,7 +166,7 @@ const ServicesAirplaneInside = () => {
       DropdownNumber.style.display = "inline";
     }
   }
-const items_dropdown = [
+  const items_dropdown = [
     "تهران",
     "اهواز",
     "شیراز",

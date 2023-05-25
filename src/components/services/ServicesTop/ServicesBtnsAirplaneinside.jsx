@@ -12,7 +12,7 @@ const ServicesbtnsAirplaneInside = () => {
     }
     e.target.classList.add("bg-select");
   }
-  
+
   const itembtns =["یک طرفه","رفت و برگشت"];
   return (
     <div>

@@ -2,6 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // import { dollerSign, questionSign, poshtibani } from '../icons/Icons'
 import { DollerSign, QuestionSign, Poshtibani } from '../icons/Icons'
+import Slider from '../Slider/Slider'
+
+
+
+
 const OtherService = () => {
 
 
@@ -76,7 +81,8 @@ const OtherService = () => {
                     )
                 }
             </div>
-            <div className='ApplicationAlibaba'>
+            <Slider />
+            <div className='ApplicationAlibabaa'>
                 <div className='textOfApplicationAlibaba'>
                     <h4> اپلیکیشن علی‌بابا </h4>
                     <h5> همه سفرها در جیب شماست </h5>

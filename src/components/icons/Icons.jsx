@@ -820,7 +820,29 @@ const Icon6Bashgah = () => {
   );
 };
 
+const Count = () => {
+  return (
+    <svg viewBox="0 0 24 24" width="1.4rem" height="1.4rem" fill="currentColor" class="align-middle ml-2 shrink-0"><path d="M20.25 4.5c1.24 0 2.25 1.01 2.25 2.25v10.5c0 1.24-1.01 2.25-2.25 2.25H3.75c-1.24 0-2.25-1.01-2.25-2.25V6.75c0-1.24 1.01-2.25 2.25-2.25h16.5ZM21 9.75H3v7.5c0 .414.336.75.75.75h16.5a.75.75 0 0 0 .75-.75v-7.5ZM9 13.5A.75.75 0 1 1 9 15H5.25a.75.75 0 1 1 0-1.5H9Zm3 0a.75.75 0 1 1 0 1.5h-.75a.75.75 0 1 1 0-1.5H12Z"></path></svg>
+  );
+};
+
+
+const Plus = () => {
+  return (
+<svg viewBox="0 0 24 24" width="1rem" height="1rem" fill="currentColor" class="ml-1"><path d="M12 3c.585 0 1.065.446 1.12 1.017l.005.108v6.75h6.75a1.125 1.125 0 0 1 .108 2.245l-.108.005h-6.75v6.75a1.125 1.125 0 0 1-2.245.108l-.005-.108v-6.75h-6.75a1.125 1.125 0 0 1-.108-2.245l.108-.005h6.75v-6.75C10.875 3.504 11.379 3 12 3Z"></path></svg>
+  );
+};
+
+const Mines = () => {
+  return (
+<svg viewBox="0 0 24 24" width="1rem" height="1rem" fill="currentColor" class="ml-1"><path d="M19.875 10.875a1.125 1.125 0 0 1 .108 2.245l-.108.005H4.125a1.125 1.125 0 0 1-.108-2.245l.108-.005h15.75Z"></path></svg>
+  );
+};
+
 export {
+  Plus,
+  Count,
+  Mines,
   Internet,
   Download,
   Maykat,

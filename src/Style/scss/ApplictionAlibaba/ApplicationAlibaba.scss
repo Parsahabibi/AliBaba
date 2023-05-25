@@ -1,4 +1,4 @@
-.ApplicationAlibaba{
+.ApplicationAlibaba {
     border: 1px solid rgba(0, 0, 0, .12);
     border-radius: 8px;
     // padding-top: 30px;
@@ -7,53 +7,74 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    .right{
+
+    .right {
         display: flex;
         align-items: center;
-        .QrCode{
+
+        .QrCode {
             width: 148px;
             height: 187px;
-            
+
         }
-        .description{
+
+        .description {
             padding-right: 64px;
-            .title{
+
+            .title {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 padding-bottom: 35px;
             }
-            .link{
+
+            .link {
                 display: flex;
                 align-items: center;
                 gap: 5px;
                 color: $secondary-400;
                 padding-bottom: 20px;
             }
-            .icon{
+
+            .icon {
                 display: flex;
                 align-items: center;
                 gap: 15px;
-                img{
+
+                img {
                     width: 20px;
                     height: 20px;
                 }
-                .text{
-                    h5{
+
+                .text {
+                    h5 {
                         color: $grays-300;
                     }
                 }
             }
         }
     }
-    .left{
+
+    .left {
         position: absolute;
-        left: 80px;
+        left: 0px;
         bottom: 0;
+
         // padding-top: 20px;
-        img{
+        img {
             width: 369px;
             height: 294px;
         }
+
+        @media screen and (min-width: 1200px) {
+            left: 80px;
+        }
+    }
+
+    @media screen and (min-width:900px) {
+        padding-right: 40px;
+    }
+    @media screen and (min-width:1200px) {
+        padding-right: 85px;
     }
 }
