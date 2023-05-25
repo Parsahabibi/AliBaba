@@ -1,0 +1,38 @@
+.boxs-vila {
+  width: 100%;
+  margin-bottom: 68px;
+  h2 {
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .body-boxs-vila {
+    @include flex(row,center,flex-start);
+
+    .box-vila {
+      @include flex(column,flex-start,flex-start);
+      margin-left: 20px;
+      width: calc(33.33333% - 20px);
+      &:last-child {
+        width: 33.333333%;
+        margin-left: 0;
+      }
+      h4{
+        font-size: .875rem;
+        margin-bottom: .25rem;
+        font-weight: 700;
+        color: #000;
+      }
+      p{
+        font-size: .75rem;
+        color: $grays-300;
+        margin-bottom: 12px;
+      }
+      img {
+        width: 100%;
+        height: 195px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

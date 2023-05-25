@@ -83,23 +83,31 @@
         }
         .chose-number{
             @include flex();
-            button{
+            div{
                 @include flex();
                 background-color: $secondary-400;
-                margin: 0 4px;
-                padding: 1px;
-                border-radius: 4px;
+                margin: 0 8px;
+                padding: 3px;
+                border-radius: 8px;
+                cursor: pointer;
                 svg{
                 width: 16px;
                 height: 16px;
                 color: $white;
                 border-radius: 4px;
-
                 }
-                
+                // &:last-child{
+                //     cursor: no-drop;
+                //     opacity: 0.5;
+                // }
             }
             span{
                 font-size: 16px;
+                margin: 0 4px;
+            }
+            .disabled{
+                cursor: no-drop;
+                opacity: 0.5;
             }
         }
     }

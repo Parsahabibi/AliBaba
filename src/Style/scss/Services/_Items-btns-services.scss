@@ -31,3 +31,9 @@
         color: $secondary-400;
     }
 }
+
+.flex-start{
+    @include flex(row,flex-start,center);
+}
+
+

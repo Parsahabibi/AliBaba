@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useRef } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
 import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
@@ -10,6 +11,8 @@ const ServicesAirplaneInside = () => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
+
+
 
   function opendropdown() {
     dropstart.current.style.display = "inline";
@@ -58,21 +61,6 @@ const ServicesAirplaneInside = () => {
       dropstart2.current.style.display = "none";
     }
 
-    // if (e.target !== inputnumber.current ) {
-    //   document.querySelector(".dropdown-number").style.display = "none";
-    // }
-
-    if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
-      document.querySelector(".switch-options-services").style.cursor =
-        "pointer";
-    }
-    if (
-      e.target !== document.querySelector(".btn-services") &&
-      e.target !== document.querySelector(".btn-services>p") &&
-      e.target !== document.querySelector(".btn-services>svg")
-    ) {
-      document.querySelector(".items-btns-services").style.display = "none";
-    }
   };
 
   function switchvalue() {
@@ -173,6 +161,16 @@ const ServicesAirplaneInside = () => {
       DropdownNumber.style.display = "inline";
     }
   }
+const items_dropdown = [
+    "تهران",
+    "اهواز",
+    "شیراز",
+    "مشهد",
+    "بندر عباس",
+    "اصفهان",
+    "تبریز",
+    "کیش",
+  ];
 
   return (
     <div className="options-services">
@@ -187,6 +185,7 @@ const ServicesAirplaneInside = () => {
           classdropdown="dropdown-services"
           id={dropstart}
           handleclick={putitem}
+          itemsDropdown={items_dropdown}
         />
         <div className="switch-options-services" onClick={switchvalue}>
           <Switch />
@@ -202,6 +201,7 @@ const ServicesAirplaneInside = () => {
           classdropdown="dropdown-services dropdownend"
           id={dropstart2}
           handleclick={putitem2}
+          itemsDropdown={items_dropdown}
         />
       </div>
       <div className="d-options-services">

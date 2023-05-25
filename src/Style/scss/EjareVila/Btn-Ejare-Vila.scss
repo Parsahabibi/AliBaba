@@ -1,0 +1,25 @@
+.btns-ejare-vila {
+  width: 100%;
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  margin: 48px 0 64px 0;
+  .btn-ejare-vila {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    width: 146px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin-bottom: 8px;
+    border-radius: 9999px;
+    background-color: #fff;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $grays-500;
+    line-height: 1rem;
+
+    cursor: pointer;
+  }
+}
