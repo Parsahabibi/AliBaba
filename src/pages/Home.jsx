@@ -3,7 +3,6 @@ import DesktopHomePage from "../components/DesktopHomePage/DesktopHomePage";
 import MobileHomePage from "../components/MobileHomePage/MobileHomePage";
 
 
-
 const Home = () => {
 
   return (
