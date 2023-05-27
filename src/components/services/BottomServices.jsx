@@ -13,11 +13,12 @@ import ServicesbtnsHotel from "./ServicesTop/ServicesBtnsHotel";
 import ServicesHotel from "./ServicesBottom/ServicesHotel";
 import ServicesbtnsVila from "./ServicesTop/ServicesBtnsVila";
 import ServicesVila from "./ServicesBottom/ServicesVila";
-const BottomServices = () => {
+const BottomServices = (props) => {
   return (
     <form action="">
       <div className="top-bottom-services">
-        <ServicesbtnsAirplaneInside />
+        {props.TopBottomServices}
+        {/* <ServicesbtnsAirplaneInside /> */}
         {/* <ServicesBtnsAirplaneoutside /> */}
         {/* <ServicesBtnsTrain/> */}
         {/* <ServicesBtnBus /> */}
@@ -26,7 +27,8 @@ const BottomServices = () => {
         {/* <ServicesbtnsVila /> */}
       </div>
       <div className="bottom-bottom-services">
-        <ServicesAirplaneInside />
+        {props.BottomBottomServices}
+        {/* <ServicesAirplaneInside /> */}
         {/* <ServicesAirplaneOutside /> */}
         {/* <ServicesTrain/> */}
         {/* <ServicesBus /> */}

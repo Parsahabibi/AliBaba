@@ -12,19 +12,14 @@ const ServicesbtnsAirplaneInside = () => {
     }
     e.target.classList.add("bg-select");
   }
-  //  window.onclick = function (e) {
-  //   debugger;
-  //    if (e.target !== document.querySelector(".btn-services")) {
-  //      document.querySelector(".items-btns-services").style.display = "none";
-  //    }
 
-  //  };
+  const itembtns =["یک طرفه","رفت و برگشت"];
   return (
     <div>
       <BtnsServices
         handleclick={ShowBtemsBtn}
         matn="یک طرفه"
-        ItemsBtns={["یک طرفه", "رفت و برگشت"]}
+        ItemsBtns={itembtns}
         PutItemInBtn={changevaluebtn}
       />
     </div>

@@ -71,7 +71,12 @@
       }
     }
   }
- 
+ .vila-desktop{
+  display: inline;
+ }
+ .vila-mobile{
+  display: none;
+ }
 }
 
 @media (min-width: 992px) {
@@ -227,5 +232,30 @@
   }
   .ButtonSearch {
     width: 187px;
+  }
+  .btns-ejare-vila{
+    .btn-ejare-vila{
+      width: 186px;
+    }
+  }
+  .boxs-vila {
+     .body-boxs-vila{
+      .box-vila{
+        img{
+          height: 240px;
+        }
+      }
+     }
+  }
+  .slider-reserve-vila{
+    .col-slider-reserve-vila{
+      min-width: 292px;
+      .item-slider-reserve-vila{
+        img{
+          max-width: 96px;
+
+        }
+      }
+    }
   }
 }

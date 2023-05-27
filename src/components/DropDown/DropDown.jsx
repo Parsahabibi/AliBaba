@@ -5,14 +5,9 @@ import { useEffect, useRef } from "react";
 
 const Dropdown = ({ options, onSelect, label }) => {
 
-
-
     const [isOpen, setIsOpen] = useState(false);
 
-
     const dropdownRef = useRef(null);
-
-
 
     const handleSelect = (option) => {
         onSelect(option);

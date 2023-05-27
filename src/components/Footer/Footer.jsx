@@ -4,7 +4,7 @@ import { HomeIcon, PlusIcon, TravelIcon, UserIcon, TelegramIcon, YoutubeIcon, Tw
 import TopFooter from '../TopFooter/TopFooter';
 import MobileFooter from '../MobileFooter/MobileFooter';
 
-const Footer = ({ conditional, open, IdMore }) => {
+const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
   return (
     <footer>
       {open === true ? <MobileFooter /> : <></>}
@@ -39,8 +39,8 @@ const Footer = ({ conditional, open, IdMore }) => {
         <section className="middle-footer-mobile">
           <section className="top-middle-footer-mobile">
             <section className="d-top-middle-footer-mobile d1-top-middle-footer-mobile">
-              <input type="checkbox" id="check-alibaba" />
-              <label htmlFor="check-alibaba">
+              <input type="checkbox" id={"check-alibaba" + num} />
+              <label htmlFor={"check-alibaba" + num}>
                 <div className="head-d-top-middle-footer-mobile">
                   <h4>علی‌بابا</h4>
                   <ToggleDownIcon />
@@ -66,9 +66,9 @@ const Footer = ({ conditional, open, IdMore }) => {
               </div>
             </section>
             <section className="d-top-middle-footer-mobile d2-top-middle-footer-mobile">
-              <input type="checkbox" id="check-khadamat" />
+              <input type="checkbox" id={"check-khadamat" + num} />
 
-              <label htmlFor="check-khadamat">
+              <label htmlFor={"check-khadamat" + num}>
                 <div className="head-d-top-middle-footer-mobile">
                   <h4>خدمات مشتریان</h4>
                   <ToggleDownIcon />
@@ -93,8 +93,8 @@ const Footer = ({ conditional, open, IdMore }) => {
               </div>
             </section>
             <section className="d-top-middle-footer-mobile d3-top-middle-footer-mobile">
-              <input type="checkbox" id="check-etelaat" />
-              <label htmlFor="check-etelaat">
+              <input type="checkbox" id={"check-etelaat2" + num} />
+              <label htmlFor={"check-etelaat2" + num}>
                 <div className="head-d-top-middle-footer-mobile">
                   <h4>اطلاعات تکمیلی</h4>
                   <ToggleDownIcon />
@@ -112,7 +112,7 @@ const Footer = ({ conditional, open, IdMore }) => {
               </div>
             </section>
             <section className="locations">
-              <input type="checkbox" id="checkmore" />
+              <input type="checkbox" id={IdMore} />
               <ul>
                 <li>
                   <Link to="">بلیط چارتر</Link>
@@ -154,7 +154,7 @@ const Footer = ({ conditional, open, IdMore }) => {
                   <Link to="">هتل شایگان کیش</Link>
                 </li>
               </ul>
-              <label htmlFor="checkmore">
+              <label htmlFor={IdMore}>
                 <div>
                   <span></span>
                   <ToggleDownIcon />
@@ -336,7 +336,7 @@ const Footer = ({ conditional, open, IdMore }) => {
           </section>
           <section className="bottom-footer-desktop">
             <section className="locations">
-              <input type="checkbox" id={IdMore} />
+              <input type="checkbox" id={IdMoreDesktop} />
               <ul>
                 <li>
                   <Link to="">بلیط چارتر</Link>
@@ -378,7 +378,7 @@ const Footer = ({ conditional, open, IdMore }) => {
                   <Link to="">هتل شایگان کیش</Link>
                 </li>
               </ul>
-              <label htmlFor={IdMore}>
+              <label htmlFor={IdMoreDesktop}>
                 <div>
                   <span></span>
                   <ToggleDownIcon />

@@ -22,10 +22,14 @@
     h3 {
         padding-bottom: 30px;
     }
-
+    h2{
+        padding-bottom: 30px;
+        font-weight: 700;
+    }
     p {
         padding-bottom: 20px;
-        font-weight: 700
+        font-weight: 700;
+        color: #000;
     }
 
     .Alibaba {
@@ -65,8 +69,10 @@
         // line-height: 250px;
         img {
             display: block;
-            width: 392px;
-            height: 283px;
+            // width: 392px;
+            // height: 283px;
+            width: 480px;
+            height: auto;
         }
 
         h6 {
@@ -77,10 +83,18 @@
             display: flex;
 
             .index{            
-                width: 149%;
+                // width: 149%;
                 font-size: 0.875rem;
                 font-weight: 400;
             }
         }
     }
+}
+.flex-center{
+    @include flex();
+   .top{
+     .index{
+        width: 100%;
+    }
+   }
 }

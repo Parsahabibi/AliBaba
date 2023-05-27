@@ -1,0 +1,25 @@
+.reserve-vila{
+    @include flex();
+    width: 100%;
+    margin: 48px 0;
+    .content-reserve-vila{
+        // min-width: 100%;
+        h2{
+            margin: 20px 0 32px 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            // color: #0a0b0c;
+        }
+        p{
+            line-height: 2.3;
+            color: $grays-500;
+            text-align: justify;
+            font-size: .875rem;
+            margin: 32px 0 32px 32px;
+        }
+    }
+    .slider-reserve-vila{
+        // width: 50%;
+
+    }
+}
