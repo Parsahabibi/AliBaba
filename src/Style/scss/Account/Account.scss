@@ -1,6 +1,6 @@
 .Account {
     background-color: $grays-100;
-    height: 100vh;
+    height: auto;
 
     .header {
         position: fixed;
@@ -49,7 +49,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
         // position: relative;
         margin: 0 auto;
         border-radius: 8px;
@@ -69,74 +69,214 @@
             .itemsCount {
                 width: 95%;
                 margin: 0 auto;
+
                 .itemCount {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     padding: 13px 5px;
+
                     .RightItemCount {
                         display: flex;
                         align-items: center;
                         width: 85%;
                         gap: 5px;
+
                         // border-bottom: 1px solid black;
-                        h6{
-                            line-height:17px;
+                        h6 {
+                            line-height: 17px;
                         }
 
-                    }                        
+                    }
+
                     .LeftItemCount {
                         display: flex;
                         align-items: center;
-                        gap: 5px; 
-                        h3{
+                        gap: 5px;
+
+                        h3 {
                             color: $success-400;
-                        }  
-                        span{
+                        }
+
+                        span {
                             color: $grays-400;
-                        }             
+                        }
                     }
                 }
+
                 &:not(:first-child) {
                     .LeftItemCount {
                         display: none;
                     }
                 }
 
-                .border{
+                .border {
                     width: 98%;
                     height: 1px;
                     background-color: rgba(0, 0, 0, .12);
                 }
-                &:last-child{
-                    .border{
+
+                &:last-child {
+                    .border {
                         display: none;
                     }
                 }
-                &:nth-child(2){
-                    .RightItemCount{
-                        color:$secondary-400;
+
+                &:nth-child(2) {
+                    .RightItemCount {
+                        color: $secondary-400;
                     }
                 }
-                &:nth-child(3){
-                    .RightItemCount{
-                        color:$secondary-400;
-                        opacity: 0.5 ;
+
+                &:nth-child(3) {
+                    .RightItemCount {
+                        color: $secondary-400;
+                        opacity: 0.5;
                     }
                 }
             }
-            
+
         }
-        .AlibabaPlus{
+
+        .Point {
+            width: 100%;
+            background-color: $white;
+            border: 1px solid rgba(0, 0, 0, .12);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: center;
+
+            .TopPoint {
+                width: 92%;
+                display: flex;
+                flex-direction: column;
+                // align-items: ;
+                margin: 0 auto;
+                padding: 15px 0px;
+                gap: 15px;
+
+                .room {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // padding-bottom: 20px;
+
+                    .zero {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 8px;
+                    }
+
+                    .BlueRoom {
+                        background-color: $info-100;
+                        color: $info-500;
+                        border-radius: 0.75rem;
+
+                        h5 {
+                            padding: 2px 12px;
+                        }
+                    }
+                }
+
+                .progress {
+                    height: 4px;
+                    border-radius: 8px;
+                    background-color: $grays-150;
+                }
+
+                .only {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h5 {
+                        color: $grays-400;
+                    }
+
+                    .details {
+                        h6 {
+                            color: $secondary-400;
+                        }
+                    }
+
+                }
+            }
+
+            .divider {
+                width: 92%;
+                height: 1px;
+                margin: 0 auto;
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+
+            .BottomPoint {
+                width: 92%;
+                margin: 0 auto;
+                padding-top: 15px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding-bottom: 15px;
+            }
+        }
+
+        .AlibabaPlus {
             width: 100%;
             background-color: rgb(255, 255, 255);
             border: 1px solid rgba(0, 0, 0, .12);
             border-radius: 8px;
-            .plus{
+
+            .plus {
                 display: flex;
                 align-items: center;
                 // justify-content: flex-start;
                 padding: 13px 12px;
+                gap: 8px;
+            }
+        }
+
+        .ItemsAccount {
+            width: 100%;
+            background-color: $white;
+            border: 1px solid rgba(0, 0, 0, .12);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
+            .ItemAccount {
+                width: 92%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+
+                &:first-child {
+                    padding-top: 15px;
+                }
+
+                &:last-child{
+                    color: $danger-400;
+                    .divider{
+                        display: none;
+                    }
+                }
+
+                .textAccount {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding-bottom: 15px;
+                }
+
+                .divider {
+                    width: 100%;
+                    height: 1px;
+                    margin: 0 auto;
+                    background-color: rgba(0, 0, 0, 0.12);
+                }
             }
         }
     }

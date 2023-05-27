@@ -10,18 +10,24 @@ import React from "react";
 // import InstallApplication from "../components/InstallApplication/InstallApplication";
 // import BashgahMoshtarian from "./BashgahMoshtarian";
 // import Account from "../components/Dashboard/Account/Account";
-import DesktopHomePage from "../components/DesktopHomePage/DesktopHomePage";
-import MobileHomePage from "../components/MobileHomePage/MobileHomePage";
-import Slider from "../components/Slider/Slider";
+// import DesktopHomePage from "../components/DesktopHomePage/DesktopHomePage";
+// import MobileHomePage from "../components/MobileHomePage/MobileHomePage";
+// import Slider from "../components/Slider/Slider";
+import Account from '../components/Dashboard/Account/Account'
+import MobileAccount from "./MobileAccount";
 const Home = () => {
   return (
-    <div className="HomePage">
-      <div className="DesktopHomePage">
-        <DesktopHomePage />
-      </div>
-      <div className="MobileHomePage">
-        <MobileHomePage />
-      </div>
+    // <div className="HomePage">
+    //   <div className="DesktopHomePage">
+    //     <DesktopHomePage />
+    //   </div>
+    //   <div className="MobileHomePage">
+    //     <MobileHomePage />
+    //   </div>
+    // </div>
+    <div>
+      <MobileAccount />
+      {/* <Account /> */}
     </div>
   );
 };
