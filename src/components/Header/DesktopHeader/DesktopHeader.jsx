@@ -41,7 +41,7 @@ const DesktopHeader = () => {
     ]
 
     const LoginItems = [
-        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری" , link:"" },
+        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری" , link:"/Account/Profile" },
         { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی" , link:"" },
         { id: 3, image: <LogOut />, title: " خروج از حساب کاربری" , link:"" },
     ]

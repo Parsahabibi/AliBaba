@@ -1,0 +1,19 @@
+.HoverButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary-400;
+    border: 1px solid transparent;
+    padding:2px 5px ;
+    gap: 5px;
+    h6{
+        color: $secondary-400;
+        // color: red;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: $secondary-100;
+        border-radius: 8px;
+        border: 1px solid $secondary-200
+    }
+}

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Count, LeftArrow, List, Logo, Logout, Mines, Plus, PlusIcon, Poshtibani1, Quiz } from '../../icons/Icons'
 import { Link } from "react-router-dom"
+import IncreamentMoney from '../../IncreamentMoney/IncreamentMoney'
 const Account = () => {
 
 
@@ -18,6 +19,9 @@ const Account = () => {
         { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی' },
         { id: 1, image: <Logout />, title: 'خروج از حساب کاربری' }
     ]
+
+
+    const [open, setOpen] = useState(false)
 
 
     return (
@@ -38,6 +42,19 @@ const Account = () => {
                             item =>
                                 <div className='itemsCount' key={item.id}>
                                     <div className='itemCount'>
+                                        {/* {
+                                            item.id === 2 ?
+                                                <div onClick={() => { setOpen(!open) }} className='RightItemCount'>
+                                                    {item.image}
+                                                    <h6>{item.title}</h6>
+                                                    <IncreamentMoney classes={open === true ? 'show' : 'none'}/>
+                                                </div>
+                                                :
+                                                <div className='RightItemCount'>
+                                                    {item.image}
+                                                    <h6>{item.title}</h6>
+                                                </div>
+                                        } */}
                                         <div className='RightItemCount'>
                                             {item.image}
                                             <h6>{item.title}</h6>
@@ -67,7 +84,7 @@ const Account = () => {
                         <div className='progress'></div>
                         <div className='only'>
                             <h5>تنها 65000 امتیاز تا اتاق بعدی</h5>
-                            <Link className='details'>
+                            <Link to={'/Account/CustomerClub'} className='details'>
                                 <h6> جزئیات امتیاز‌ها </h6>
                             </Link>
                         </div>
@@ -75,7 +92,7 @@ const Account = () => {
                     <div className='divider'></div>
                     <div className='BottomPoint'>
                         <Logo />
-                        <Link to={''}>
+                        <Link to={'/Account/CustomerClub'}>
                             <h6>باشگاه همسفران</h6>
                         </Link>
                     </div>

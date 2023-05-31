@@ -10,6 +10,8 @@ import EmailsAccount from "../pages/EmailsAccount";
 import EditUsersName from "../pages/EditUsersName";
 import BankInformation from "../pages/BankInformation";
 import AirplanOutSide from "../pages/AirplanOutSide";
+import DesktopAccounts from "../pages/DesktopAccounts";
+import CustomerClub from "../components/CustomerClub/CustomerClub";
 
 const router = createBrowserRouter([
     {
@@ -51,5 +53,14 @@ const router = createBrowserRouter([
     {
         path: "/EditAccount/BankInformation",
         element: <BankInformation />,
-    },])
+    },
+    {
+        path: "/Account/Profile",
+        element: <DesktopAccounts />,
+    },
+    {
+        path: "/Account/CustomerClub",
+        element: <CustomerClub />,
+    },
+])
 export default router
