@@ -1,11 +1,6 @@
 import React from "react";
-import BtnsServices from "../../BtnsServices/BtnsServices";
-const ServicesbtnsAirplaneInside = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+const ServicesbtnsBus = () => {
+  return <div className="body-btns-services"></div>;
 };
 
-export default ServicesbtnsAirplaneInside;
+export default ServicesbtnsBus;

@@ -15,67 +15,68 @@
     max-height: 310px;
     overflow-y: scroll;
     display: none;
-      &::-webkit-scrollbar {
-        width: 5px;
+    &::-webkit-scrollbar {
+      width: 5px;
     }
     &::-webkit-scrollbar-track {
-        background: transparent;
+      background: transparent;
     }
     &::-webkit-scrollbar-thumb {
-        background: rgb(196, 196, 196,);
-        border-radius: 10px;
+      background: rgb(196, 196, 196);
+      border-radius: 10px;
     }
     ul {
       list-style: none;
-      li{
-        @include flex(row,flex-start,center);
+      width: 100%;
+      li {
+        @include flex(row, flex-start, center);
         height: 56px;
         font-size: 0.875rem;
         width: 100%;
         cursor: pointer;
-        &:hover{
-            background: $secondary-100;
+        &:hover {
+          background: $secondary-100;
         }
-        span{
-            @include flex(row,flex-start,center);
-            height: 56px;
-            font-size: 0.875rem;
-            width: 100%;
-        margin: 0 14px;
+        span {
+          @include flex(row, flex-start, center);
+          height: 56px;
+          font-size: 0.875rem;
+          width: 100%;
+          margin: 0 14px;
 
-            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
         }
-        svg{
-            margin-left: 8px;
-            color: $grays-300;
+        svg {
+          margin-left: 8px;
+          color: $grays-300;
         }
-        &:first-child{
-            background: $grays-100;
-            height: 31px;
-            color: rgb(108, 118, 128);
-            font-size: 0.75rem ;
-            cursor: auto;
+        &:first-child {
+          background: $grays-100;
+          height: 31px;
+          color: rgb(108, 118, 128);
+          font-size: 0.75rem;
+          cursor: auto;
 
-            span{
-                height: 100%;
-                padding: 6px 0;
-                border-bottom: none;
-            }
-        }
-        &:last-child span{
+          span {
+            height: 100%;
+            padding: 6px 0;
             border-bottom: none;
+          }
+        }
+        &:last-child span {
+          border-bottom: none;
         }
       }
     }
   }
-  .dropdownend{
+  .dropdownend {
     right: 50%;
   }
-  .dropdown-number{
+  .dropdown-number {
     position: absolute;
     right: 0;
-    top:100%;
-    content: '';
+    top: 100%;
+    content: "";
     width: 300px;
     border-radius: 8px;
     background: $white;
@@ -83,29 +84,28 @@
     padding: 16px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     display: none;
-    .item-dropdown-number{
-      @include flex(row,space-between,center);
+    .item-dropdown-number {
+      @include flex(row, space-between, center);
       margin: 8px 0 24px 0;
       width: 100%;
-      &:last-child{
+      &:last-child {
         margin: 8px 0;
       }
-      .matn-item-dropdown-number{
-        p{
+      .matn-item-dropdown-number {
+        p {
           margin-left: 8px;
           font-size: 0.95rem;
-
         }
-        span{
+        span {
           color: rgb(108, 118, 128);
           font-size: 0.825rem;
         }
       }
-      .chose-number{
-        @include flex(row,space-between,center);
+      .chose-number {
+        @include flex(row, space-between, center);
 
         width: 100px;
-        .btn{
+        .btn {
           @include flex();
           width: 24px;
           height: 24px;
@@ -114,14 +114,13 @@
           color: $white;
           cursor: pointer;
         }
-        .disabled{
+        .disabled {
           opacity: 0.4;
           cursor: no-drop;
         }
       }
-      div{
-        @include flex(row,flex-start,center);
-
+      div {
+        @include flex(row, flex-start, center);
       }
     }
   }

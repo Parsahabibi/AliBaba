@@ -30,6 +30,11 @@ const ServicesAirplaneOutside = () => {
   const dropstart2 = useRef(0);
   const inputstart2 = useRef(0);
   const Labelstart2 = useRef(0);
+  const inputstart3 = useRef(0);
+  const Labelstart3 = useRef(0);
+  const inputstart4 = useRef(0);
+  const Labelstart4 = useRef(0);
+  const Labelstart5 = useRef(0);
 
   function opendropdown2() {
     dropstart2.current.style.display = "inline";
@@ -49,34 +54,48 @@ const ServicesAirplaneOutside = () => {
   }
 
   window.onclick = function (e) {
-    if (e.target !== inputstart.current) {
-      dropstart.current.style.display = "none";
+    if (inputstart.current) {
+      if (e.target !== inputstart.current) {
+        dropstart.current.style.display = "none";
+      }
     }
 
-    if (e.target !== inputstart2.current) {
-      dropstart2.current.style.display = "none";
+    if (inputstart2.current) {
+      if (e.target !== inputstart2.current) {
+        dropstart2.current.style.display = "none";
+      }
     }
 
-    if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
-      document.querySelector(".switch-options-services").style.cursor =
-        "pointer";
+    if (inputstart2.current && inputstart.current) {
+      if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
+        document.querySelector(".switch-options-services").style.cursor =
+          "pointer";
+      }
     }
-     if (e.target !== document.querySelectorAll(".btn-services>p")[0]) {
-       document.querySelectorAll(".items-btns-services")[0].style.display =
-         "none";
-     }
-     if (e.target !== document.querySelectorAll(".btn-services>p")[1]) {
-       document.querySelectorAll(".items-btns-services")[1].style.display =
-         "none";
-     }
-    
+    if (document.querySelectorAll(".btn-services>p")[0]) {
+      if (e.target !== document.querySelectorAll(".btn-services>p")[0]) {
+        document.querySelectorAll(".items-btns-services")[0].style.display =
+          "none";
+      }
+    }
+    if (document.querySelectorAll(".btn-services>p")[1]) {
+      if (e.target !== document.querySelectorAll(".btn-services>p")[1]) {
+        document.querySelectorAll(".items-btns-services")[1].style.display =
+          "none";
+      }
+    }
   };
 
   function switchvalue() {
-    let x = inputstart.current.value;
-    let y = inputstart2.current.value;
-    inputstart.current.value = y;
-    inputstart2.current.value = x;
+    if (
+      inputstart.current.value.length >= 1 &&
+      inputstart2.current.value.length >= 1
+    ) {
+      let x = inputstart.current.value;
+      let y = inputstart2.current.value;
+      inputstart.current.value = y;
+      inputstart2.current.value = x;
+    }
   }
 
   const inputnumber = useRef(0);
@@ -188,7 +207,6 @@ const ServicesAirplaneOutside = () => {
     <div className="options-services">
       <div className="d-options-services">
         <SearchInput
-      
           label="مبدا (شهر، فرودگاه)"
           handleclick={opendropdown}
           refinput={inputstart}
@@ -217,8 +235,16 @@ const ServicesAirplaneOutside = () => {
         />
       </div>
       <div className="d-options-services">
-        <SearchInput label="تاریخ رفت" />
-        <SearchInput label="تاریخ برگشت" />
+        <SearchInput
+          label="تاریخ رفت"
+          refinput={inputstart3}
+          refLabel={Labelstart3}
+        />
+        <SearchInput
+          label="تاریخ برگشت"
+          refinput={inputstart4}
+          refLabel={Labelstart4}
+        />
         <PlusServices />
         {/* <CloseServices /> */}
       </div>
@@ -228,6 +254,7 @@ const ServicesAirplaneOutside = () => {
           valueInput="1 مسافر"
           classlabel="labelfix"
           refinput={inputnumber}
+          refLabel={Labelstart5}
           handleclick={showDropdownNumber}
         />
         <DropdownNumber

@@ -5,7 +5,7 @@ const Itemservices = (props) => {
   return (
     <li className={props.check}>
       <div className="border-bottom"></div>
-      <Link to="./">
+      <Link to={props.Link}>
         {props.icon}
         <p>{props.text}</p>
       </Link>

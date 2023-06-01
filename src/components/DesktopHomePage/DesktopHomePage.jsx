@@ -6,8 +6,7 @@ import Questions from '../Yourquestion/YourQuestion'
 import HomePageContent from '../HomePageContent/HomePageContent'
 import Footer from '../Footer/Footer'
 import OtherServiceDesktop from '../OtherService/OtherServiceDesktop/OtherServiceDesktop'
-import { AirplaneInsideServices, BusServices, HotelServices, TourServices, TrainServices, VilaServices } from '../icons/Icons'
-import ServicesVila from '../services/ServicesBottom/ServicesVila'
+import { AirplaneInsideServices, AirplaneOutsidServices, BusServices, HotelServices, TourServices, TrainServices, VilaServices } from '../icons/Icons'
 import ServicesAirplaneInside from '../services/ServicesBottom/ServicesAirplaneInside'
 import ServicesbtnsAirplaneInside from '../services/ServicesTop/ServicesBtnsAirplaneinside'
 
@@ -15,25 +14,38 @@ const DesktopHomePage = () => {
     const item_services = [
       {
         check: "active",
+        Link: "/",
         icon: <AirplaneInsideServices />,
         text: "پرواز داخلی",
       },
       {
         check: "deactive",
-        icon: <AirplaneInsideServices />,
+        Link: "/AirplanOutSide",
+        icon: <AirplaneOutsidServices />,
         text: "پرواز خارجی",
       },
-      { check: "deactive", icon: <TrainServices />, text: "قطار" },
-      { check: "deactive", icon: <BusServices />, text: "اتوبوس" },
-      { check: "deactive", icon: <TourServices />, text: "تور" },
-      { check: "deactive", icon: <HotelServices />, text: "هتل" },
-      { check: "deactive", icon: <VilaServices />, text: "ویلا و اقامتگاه" },
+      { check: "deactive", Link: "/Train", icon: <TrainServices />, text: "قطار" },
+      { check: "deactive", Link: "/bus", icon: <BusServices />, text: "اتوبوس" },
+      { check: "deactive", Link: "/Thour", icon: <TourServices />, text: "تور" },
+      {
+        check: "deactive",
+        Link: "/Hotel",
+        icon: <HotelServices />,
+        text: "هتل",
+      },
+      {
+        check: "deactive",
+        Link: "/Vila",
+        icon: <VilaServices />,
+        text: "ویلا و اقامتگاه",
+      },
     ];
     const content_item_your_question_AirlanInside = [
       {
         id: "item1-questions",
         title: `چند روز قبل از پرواز، بلیط هواپیما را بخریم؟`,
-        description: `امکان رزرو بلیط هواپیما از ماه‌ها قبل وجود دارد. اما گاهی اوقات قیمت بلیط هواپیما در روزهای نزدیک به پرواز ارزان‌تر می‌شود. بنابراین در صورتی که شرایطتان اجازه می‌دهد، رزرو آنلاین بلیط هواپیما را به روزهای نزدیک پرواز موکول کنید. البته اگر قصد سفر در ایام پرسفر نظیر تعطیلات را دارید، باید هر چه زودتر رزرو بلیط هواپیما را انجام دهید`,
+        description: `امکان رزرو بلیط هواپیما از ماه‌ها قبل وجود دارد. اما گاهی اوقات قیمت بلیط هواپیما در روزهای نزدیک به پرواز ارزان‌تر می‌شود. بنابراین در صورتی که شرایطتان اجازه می‌دهد، رزرو آنلاین بلیط هواپیما را به روزهای نزدیک پرواز موکول کنید. البته اگر قصد سفر در ایام پرسفر نظیر تعطیلات را دارید،
+    باید هر چه زودتر رزرو بلیط هواپیما را انجام دهید`,
       },
       {
         id: "item2-questions",

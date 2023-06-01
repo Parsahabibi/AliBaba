@@ -32,6 +32,11 @@ const ServicesAirplaneInside = () => {
   const dropstart2 = useRef(0);
   const inputstart2 = useRef(0);
   const Labelstart2 = useRef(0);
+  const inputstart3 = useRef(0);
+  const Labelstart3 = useRef(0);  
+  const inputstart4 = useRef(0);
+  const Labelstart4 = useRef(0);
+  const Labelstart5 = useRef(0);
 
   function opendropdown2() {
     dropstart2.current.style.display = "inline";
@@ -51,28 +56,42 @@ const ServicesAirplaneInside = () => {
   }
 
   window.onclick = function (e) {
-    if (e.target !== inputstart.current) {
-      dropstart.current.style.display = "none";
+    if (inputstart.current) {
+      if (e.target !== inputstart.current) {
+        dropstart.current.style.display = "none";
+      }
     }
 
-    if (e.target !== inputstart2.current) {
-      dropstart2.current.style.display = "none";
+    if (inputstart2.current) {
+      if (e.target !== inputstart2.current) {
+        dropstart2.current.style.display = "none";
+      }
     }
 
-    if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
-      document.querySelector(".switch-options-services").style.cursor =
-        "pointer";
+    if (inputstart2.current && inputstart.current) {
+      if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
+        document.querySelector(".switch-options-services").style.cursor =
+          "pointer";
+      }
     }
-    if (e.target !== document.querySelector(".btn-services>p")) {
-      document.querySelector(".items-btns-services").style.display = "none";
+
+    if (document.querySelector(".btn-services>p")) {
+      if (e.target !== document.querySelector(".btn-services>p")) {
+        document.querySelector(".items-btns-services").style.display = "none";
+      }
     }
   };
 
   function switchvalue() {
-    let x = inputstart.current.value;
-    let y = inputstart2.current.value;
-    inputstart.current.value = y;
-    inputstart2.current.value = x;
+    if (
+      inputstart.current.value.length >= 1 &&
+      inputstart2.current.value.length >= 1
+    ) {
+      let x = inputstart.current.value;
+      let y = inputstart2.current.value;
+      inputstart.current.value = y;
+      inputstart2.current.value = x;
+    }
   }
 
   const inputnumber = useRef(0);
@@ -210,8 +229,16 @@ const ServicesAirplaneInside = () => {
         />
       </div>
       <div className="d-options-services">
-        <SearchInput label="تاریخ رفت" />
-        <SearchInput label="تاریخ برگشت" />
+        <SearchInput
+          label="تاریخ رفت"
+          refLabel={Labelstart3}
+          refinput={inputstart3}
+        />
+        <SearchInput
+          label="تاریخ برگشت"
+          refLabel={Labelstart4}
+          refinput={inputstart4}
+        />
         <PlusServices />
         {/* <CloseServices /> */}
       </div>
@@ -221,6 +248,7 @@ const ServicesAirplaneInside = () => {
           valueInput="1 مسافر"
           classlabel="labelfix"
           refinput={inputnumber}
+          refLabel={Labelstart5}
           handleclick={showDropdownNumber}
         />
         <DropdownNumber

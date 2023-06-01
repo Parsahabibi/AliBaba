@@ -6,7 +6,7 @@ const BtnsServices = (props) => {
 
   const ItemBtns = props.ItemsBtns;
   return (
-    <div className="btn-services" onClick={props.handleclick}>
+    <div className="btn-services" onClick={props.handleclick} ref={props.ref}>
       <p className={props.classP}>{props.matn}</p>
       <ToggleDownIcon />
       <div className="items-btns-services">

@@ -39,7 +39,7 @@ const ServicesBtnsAirplaneoutside = () => {
   }
  
   return (
-    <div className="flex-start">
+    <div className="body-btns-services flex-start">
       <BtnsServices
         ItemsBtns={itembtns}
         matn="یک طرفه"

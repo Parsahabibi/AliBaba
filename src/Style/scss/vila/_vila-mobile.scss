@@ -1,0 +1,247 @@
+.vila-mobile {
+  // display: inline;
+  // position: relative;
+  color: $grays-600;
+  .bg-vila-mobile {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50000;
+    background: #4b4b4b99;
+  }
+  .dropdown-services-mobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    max-width: 448px;
+    z-index: 1000000;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow-y: scroll;
+    .head-dropdown-services-mobile {
+      @include flex(row, flex-start, center);
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      p {
+        margin-right: 8px;
+      }
+    }
+    .item-services-mobile {
+      margin: 12px;
+    }
+    .body-dropdown-services-mobile {
+      width: 100%;
+      ul {
+        list-style: none;
+        width: 100%;
+        li {
+          @include flex(row, flex-start, center);
+          height: 56px;
+          font-size: 0.875rem;
+          width: 100%;
+          cursor: pointer;
+          &:hover {
+            background: $secondary-100;
+          }
+          span {
+            @include flex(row, flex-start, center);
+            height: 56px;
+            font-size: 0.875rem;
+            width: 100%;
+            margin: 0 14px;
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+          }
+          svg {
+            margin-left: 8px;
+            color: $grays-300;
+          }
+          &:first-child {
+            background: $grays-100;
+            height: 31px;
+            color: rgb(108, 118, 128);
+            font-size: 0.75rem;
+            cursor: auto;
+
+            span {
+              height: 100%;
+              padding: 6px 0;
+              border-bottom: none;
+            }
+          }
+          &:last-child span {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  .header-vila-mobile {
+    @include flex(row-reverse, flex-end, center);
+    height: 56px;
+    width: 100%;
+    padding: 4px 4px 4px 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: $white;
+    z-index: 10000;
+
+    svg {
+      margin: 0 12px 0 20px;
+    }
+  }
+  .main {
+    padding-top: 0;
+  }
+  .item-services-mobile {
+    @include flex(row, space-between, center);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background: $grays-100;
+    position: relative;
+    margin-bottom: 24px;
+
+    .Search {
+      width: 100%;
+    }
+    .chose-number {
+      @include flex();
+      position: relative;
+      div {
+        @include flex();
+        background-color: $secondary-400;
+        margin: 0 8px;
+        padding: 3px;
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        position: relative;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          color: $white;
+          border-radius: 4px;
+          margin: -3px -1px 0 0;
+        }
+      }
+      span {
+        font-size: 16px;
+        margin: 0 4px;
+      }
+      .disabled {
+        cursor: no-drop;
+        opacity: 0.5;
+      }
+    }
+    &.border-between {
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: 1px;
+        height: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.12);
+      }
+    }
+    svg {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+      color: $grays-300;
+      z-index: 1000;
+    }
+    input {
+      font-size: 1rem;
+      padding-right: 28px;
+      &:focus {
+        ~ label {
+          background: $white;
+          top: 1px;
+          padding: 9px 12px 9px 16px !important;
+        }
+      }
+    }
+    label {
+      background: $grays-100;
+      height: 25px;
+      padding: 0px 28px 0px 16px;
+    }
+  }
+  .services-mobile {
+    margin-top: 55px;
+    padding: 16px;
+
+    .btn-services-mobile {
+      .ButtonSearch {
+        width: 100%;
+      }
+    }
+  }
+  .reserve-vila {
+    @include flex(column, flex-start, center);
+    text-align: center;
+    margin-top: 0;
+    .content-reserve-vila {
+      p {
+        margin: 0;
+      }
+    }
+    .container-slider {
+      width: 100%;
+      .slider-reserve-vila {
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          width: 0px;
+        }
+      }
+    }
+  }
+  .boxs-vila {
+    @include flex(column, flex-start, center);
+
+    .body-boxs-vila {
+      @include flex(column, flex-start, center);
+      width: 100%;
+      .box-vila {
+        @include flex(column, flex-start, center);
+        text-align: center;
+        width: 100%;
+        margin: 0;
+
+        img {
+          width: 100%;
+          max-width: 385px;
+          height: auto;
+        }
+        p {
+          font-size: 0.625rem;
+        }
+      }
+    }
+  }
+  .vila-content-mobile {
+    text-align: center;
+  }
+  .btns-ejare-vila {
+    .btn-ejare-vila {
+      width: 50%;
+      &:nth-child(odd) {
+        width: calc(50% - 8px);
+
+        margin-left: 8px;
+      }
+    }
+  }
+}

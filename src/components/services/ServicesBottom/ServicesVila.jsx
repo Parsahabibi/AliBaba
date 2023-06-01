@@ -116,20 +116,20 @@ const NumberHorofi = [
 const ServicesVila = () => {
   const [people, setpeople] = useState(1);
   const Increment = () => {
-    document.querySelector(".BtnDecrement").classList.remove("disabled");
+    document.querySelector(".BtnDecrementDesktop").classList.remove("disabled");
 
     if (people >= 99) {
-      document.querySelector(".BtnIncrement").classList.add("disabled");
+      document.querySelector(".BtnIncrementDesktop").classList.add("disabled");
     }
     if (people < 100) {
       setpeople((people) => people + 1);
     }
   };
   const Decrement = () => {
-    document.querySelector(".BtnIncrement").classList.remove("disabled");
+    document.querySelector(".BtnIncrementDesktop").classList.remove("disabled");
 
     if (people <= 2) {
-      document.querySelector(".BtnDecrement").classList.add("disabled");
+      document.querySelector(".BtnDecrementDesktop").classList.add("disabled");
     }
     if (people > 1) {
       setpeople((people) => people - 1);
@@ -138,6 +138,12 @@ const ServicesVila = () => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
+  const inputstart2 = useRef(0);
+  const Labelstart2 = useRef(0);
+  const inputstart3 = useRef(0);
+  const Labelstart3 = useRef(0);
+  const inputstart4 = useRef(0);
+  const Labelstart4 = useRef(0);
   const items_dropdown = [
     "اقامتگاه های شهر تهران",
     "اقامتگاه های شهر کردان",
@@ -147,28 +153,30 @@ const ServicesVila = () => {
     "اقامتگاه های شهر رشت",
     "اقامتگاه های شهر بندر انزلی",
     "اقامتگاه های شهر مشهد",
-    "اقامتگاه های شهر نوشهر"
+    "اقامتگاه های شهر نوشهر",
   ];
-   function putitem(e) {
-     inputstart.current.value = e.target.innerText;
-     Labelstart.current.classList.add("labelfix");
+  function putitem(e) {
+    inputstart.current.value = e.target.innerText;
+    Labelstart.current.classList.add("labelfix");
 
-     let spandropdown = document.querySelectorAll(".color-black");
-     for (let i = 0; i < spandropdown.length; i++) {
-       spandropdown[i].style.color = "#000";
-       spandropdown[i].style.backgroundColor = "transparent";
-     }
-     e.target.style.color = "#0077DB";
-     e.target.style.backgroundColor = "#F2F9FF";
-   }
-   function opendropdown() {
-     dropstart.current.style.display = "flex";
-   }
-    window.onclick = function (e) {
+    let spandropdown = document.querySelectorAll(".color-black");
+    for (let i = 0; i < spandropdown.length; i++) {
+      spandropdown[i].style.color = "#000";
+      spandropdown[i].style.backgroundColor = "transparent";
+    }
+    e.target.style.color = "#0077DB";
+    e.target.style.backgroundColor = "#F2F9FF";
+  }
+  function opendropdown() {
+    dropstart.current.style.display = "flex";
+  }
+  window.onclick = function (e) {
+    if (inputstart.current) {
       if (e.target !== inputstart.current) {
         dropstart.current.style.display = "none";
       }
-    };
+    }
+  };
   return (
     <div className="options-services">
       <div className="d-options-services border-width100 flex-3-10 no-before">
@@ -186,8 +194,16 @@ const ServicesVila = () => {
         />
       </div>
       <div className="d-options-services flex-3-10">
-        <SearchInput label="تاریخ ورود" />
-        <SearchInput label="تاریخ خروج" />
+        <SearchInput
+          label="تاریخ ورود"
+          refinput={inputstart2}
+          refLabel={Labelstart2}
+        />
+        <SearchInput
+          label="تاریخ خروج"
+          refinput={inputstart3}
+          refLabel={Labelstart3}
+        />
         <PlusServices />
         {/* <CloseServices /> */}
       </div>
@@ -196,13 +212,15 @@ const ServicesVila = () => {
           label="تعداد مسافران"
           valueInput={NumberHorofi[people - 1] + " نفر "}
           classlabel="labelfix"
+          refinput={inputstart4}
+          refLabel={Labelstart4}
         />
         <div className="chose-number">
-          <div onClick={Increment} className="BtnIncrement">
+          <div onClick={Increment} className="BtnIncrementDesktop">
             <Add />
           </div>
           <span>{people}</span>
-          <div onClick={Decrement} className="BtnDecrement disabled">
+          <div onClick={Decrement} className="BtnDecrementDesktop disabled">
             <Remove />
           </div>
         </div>

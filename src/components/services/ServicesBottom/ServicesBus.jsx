@@ -3,7 +3,7 @@ import ButtonSearch from "../../ButtonSearch/ButtonSearch";
 import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
 import SearchInput from "../../SearchInput/SearchInput";
 
-const ServicesAirplaneOutside=()=>{
+const ServicesBus=()=>{
     return (
       <div className="options-services">
         <div className="d-options-services">
@@ -26,4 +26,4 @@ const ServicesAirplaneOutside=()=>{
     );
 }
 
-export default ServicesAirplaneOutside;
+export default ServicesBus;

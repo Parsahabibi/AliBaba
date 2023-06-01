@@ -77,20 +77,35 @@ const AirplanOutSide = () => {
       description: `برای اینکه بدون دغدغه سفر خود را آغاز کنید باید حداقل دو ساعت قبل از پرواز در فرودگاه حضور داشته باشید. برای پرواز نیازی به داشتن پرینت بلیط ندارید و تصویر و شماره بلیط به همراه مدارک شناسایی کفایت می کند.`,
     },
   ];
+const item_services = [
+  {
+    check: "deactive",
+    Link: "/",
+    icon: <AirplaneInsideServices />,
+    text: "پرواز داخلی",
+  },
+  {
+    check: "active",
+    Link: "/AirplanOutSide",
+    icon: <AirplaneOutsidServices />,
+    text: "پرواز خارجی",
+  },
+  { check: "deactive", Link: "/Train", icon: <TrainServices />, text: "قطار" },
+  { check: "deactive", Link: "/Bus", icon: <BusServices />, text: "اتوبوس" },
+  { check: "deactive", Link: "/Thour", icon: <TourServices />, text: "تور" },
+  { check: "deactive", Link: "/Hotel", icon: <HotelServices />, text: "هتل" },
+  {
+    check: "deactive",
+    Link: "/Vila",
+    icon: <VilaServices />,
+    text: "ویلا و اقامتگاه",
+  },
+];
 
-  const item_services = [
-    { check: "deactive", icon: <AirplaneInsideServices />, text: "پرواز داخلی" },
-    { check: "active", icon: <AirplaneOutsidServices />, text: "پرواز خارجی" },
-    { check: "deactive", icon: <TrainServices />, text: "قطار" },
-    { check: "deactive", icon: <BusServices />, text: "اتوبوس" },
-    { check: "deactive", icon: <TourServices />, text: "تور" },
-    { check: "deactive", icon: <HotelServices />, text: "هتل" },
-    { check: "deactive", icon: <VilaServices />, text: "ویلا و اقامتگاه" },
-  ];
   return (
-    <div>
+    <div> 
       <Header />
-      <Bgservices img="./assets/image/HomeImage/Domesticflight.jpg" />
+      <Bgservices img="./assets/image/HomeImage/Internationalflights.jpg" />
       <div className="main">
         <Services
           ItemServices={item_services}
@@ -102,7 +117,7 @@ const AirplanOutSide = () => {
         <AirplanOutSideContent />
       </div>
 
-      <Footer conditional={true} IdMore="more7" />
+      <Footer conditional={true} IdMore="more7" IdMoreDesktop="moreairplalinsidedesktop"/>
     </div>
   );
 };

@@ -27,20 +27,28 @@ const VilaDesktop = () => {
   const item_services = [
     {
       check: "deactive",
+      Link: "/",
       icon: <AirplaneInsideServices />,
       text: "پرواز داخلی",
     },
     {
       check: "deactive",
+      Link: "/AirplanOutSide",
       icon: <AirplaneOutsidServices />,
       text: "پرواز خارجی",
     },
-    { check: "deactive", icon: <TrainServices />, text: "قطار" },
-    { check: "deactive", icon: <BusServices />, text: "اتوبوس" },
-    { check: "deactive", icon: <TourServices />, text: "تور" },
-    { check: "deactive", icon: <HotelServices />, text: "هتل" },
-    { check: "active", icon: <VilaServices />, text: "ویلا و اقامتگاه" },
+    { check: "deactive", Link: "/Train", icon: <TrainServices />, text: "قطار" },
+    { check: "deactive", Link: "/Bus", icon: <BusServices />, text: "اتوبوس" },
+    { check: "deactive", Link: "/Thour", icon: <TourServices />, text: "تور" },
+    { check: "deactive", Link: "/Hotel", icon: <HotelServices />, text: "هتل" },
+    {
+      check: "active",
+      Link: "/Vila",
+      icon: <VilaServices />,
+      text: "ویلا و اقامتگاه",
+    },
   ];
+ 
   const ContentEjareVila = [
     " اجاره ویلا در کردان",
     "اجاره ویلا شمال",
@@ -81,18 +89,19 @@ const VilaDesktop = () => {
     }
     if (count > 0) {
       document.querySelector(
-        ".row-slider-reserve-vila"
+        ".row-slider-reserve-vila-desktop"
       ).style.transform = `translateX(${(count -= 25)}%)`;
     }
   };
   const ScrollLeft = () => {
+
     document.querySelector(".btn-right-slider").style.display = "flex";
     if (count >= 25) {
       document.querySelector(".btn-left-slider").style.display = "none";
     }
     if (count < 50) {
       document.querySelector(
-        ".row-slider-reserve-vila"
+        ".row-slider-reserve-vila-desktop"
       ).style.transform = `translateX(${(count += 25)}%)`;
     }
   };
@@ -100,7 +109,7 @@ const VilaDesktop = () => {
   let oldx = 0;
   const Swiper = (e) => {
     document
-      .querySelector(".slider-reserve-vila")
+      .querySelector(".row-slider-reserve-vila-desktop")
       .addEventListener("mousemove", function () {
         if (e.pageX < oldx) {
           console.log("left");
@@ -110,7 +119,7 @@ const VilaDesktop = () => {
           }
           if (count < 50) {
             document.querySelector(
-              ".row-slider-reserve-vila"
+              ".row-slider-reserve-vila-desktop"
             ).style.transform = `translateX(${(count += 25)}%)`;
           }
         } else if (e.pageX > oldx) {
@@ -121,17 +130,12 @@ const VilaDesktop = () => {
           }
           if (count > 0) {
             document.querySelector(
-              ".row-slider-reserve-vila"
+              ".row-slider-reserve-vila-desktop"
             ).style.transform = `translateX(${(count -= 25)}%)`;
           }
         }
         oldx = e.pageX;
-        // let ContainerSlider = document.querySelector(
-        //   ".row-slider-reserve-vila"
-        // );
-        // console.log(position + "-------" + e.pageX);
-        // console.log(position - e.pageX);
-        // ContainerSlider.style.transform = `translateX(${start - e.pageX}px)`;
+      
       });
   };
 
@@ -170,7 +174,7 @@ const VilaDesktop = () => {
               <Arrow />
             </div>
             <div className="slider-reserve-vila" onMouseDown={Swiper}>
-              <div className="row-slider-reserve-vila">
+              <div className="row-slider-reserve-vila row-slider-reserve-vila-desktop">
                 <div className="col-slider-reserve-vila">
                   <ItemSliderReserveVila
                     src={
