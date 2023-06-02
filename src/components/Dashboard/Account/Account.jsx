@@ -14,9 +14,9 @@ const Account = () => {
 
 
     const ItemsAccount = [
-        { id: 1, image: <List />, title: 'لیست مسافران' },
-        { id: 1, image: <Quiz />, title: 'مرکز پشتیبانی' },
-        { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی' },
+        { id: 1, image: <List />, title: 'لیست مسافران' , link:'/Account/ListOfPassengers' },
+        { id: 1, image: <Quiz />, title: 'مرکز پشتیبانی' , link:'/Account/HelpCenter' },
+        { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی' , link:'/Account/Ticketing' },
         { id: 1, image: <Logout />, title: 'خروج از حساب کاربری' }
     ]
 
@@ -107,7 +107,7 @@ const Account = () => {
                     {
                         ItemsAccount.map(
                             item =>
-                                <Link className='ItemAccount' to={''}>
+                                <Link className='ItemAccount' to={item.link}>
                                     <div className='textAccount'>
                                         {item.image}
                                         <h6>{item.title}</h6>

@@ -12,6 +12,9 @@ import BankInformation from "../pages/BankInformation";
 import AirplanOutSide from "../pages/AirplanOutSide";
 import DesktopAccounts from "../pages/DesktopAccounts";
 import CustomerClub from "../components/CustomerClub/CustomerClub";
+import ListOfPassengers from "../components/ListOfPassengers/ListOfPassengers";
+import Ticketing from "../components/Ticketing/Ticketing";
+import HelpCenter from "../components/HelpCenter/HelpCenter";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +64,18 @@ const router = createBrowserRouter([
     {
         path: "/Account/CustomerClub",
         element: <CustomerClub />,
+    },
+    {
+        path: "/Account/ListOfPassengers",
+        element: <ListOfPassengers />,
+    },
+    {
+        path: "/Account/Ticketing",
+        element: <Ticketing/>,
+    },
+    {
+        path: "/Account/HelpCenter",
+        element: <HelpCenter/>,
     },
 ])
 export default router
