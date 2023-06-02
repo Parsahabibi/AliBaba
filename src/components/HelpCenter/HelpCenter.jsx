@@ -111,7 +111,7 @@ const HelpCenter = () => {
 
     return (
         <div className='HelpCenter'>
-            <div onClick={() => { setNavbarOpen(false) }} className='baler' style={navbarOpen === true ? { display: 'inline' } : { display: 'none' }}></div>
+            <div className='baler' onClick={() => { setNavbarOpen(false) }}  style={navbarOpen === true ? { display: 'inline' } : { display: 'none' }}></div>
             <div className='header'>
                 <div className='menu'>
                     <div className='hamburger' onClick={() => setNavbarOpen(true)}>
