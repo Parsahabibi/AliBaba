@@ -7,10 +7,10 @@ const Account = () => {
 
 
     const CountData = [
-        { id: 1, image: <Count />, title: "موجودی حساب " },
-        { id: 2, image: <Plus />, title: " افزایش موجودی " },
-        { id: 3, image: <Mines />, title: " درخواست انتقال موجودی به حساب بانکی " },
-        { id: 4, image: <Count />, title: "موجودی و تراکنش‌ها" }
+        { id: 1, image: <Count />, title: "موجودی حساب " , link:'' },
+        { id: 2, image: <Plus />, title: " افزایش موجودی "  , link:''},
+        { id: 3, image: <Mines />, title: " درخواست انتقال موجودی به حساب بانکی " , link:'' },
+        { id: 4, image: <Count />, title: "موجودی و تراکنش‌ها" , link:'/Account/Transactions' }
     ]
 
 
@@ -61,15 +61,15 @@ const Account = () => {
                                     <div className='itemCount'>
                                         {
                                             item.id === 2 ?
-                                                <div onClick={() => { setOpen(!open) }} className='RightItemCount'>
+                                                <Link onClick={() => { setOpen(!open) }} className='RightItemCount'>
                                                     {item.image}
                                                     <h6>{item.title}</h6>
-                                                </div>
+                                                </Link>
                                                 :
-                                                <div className='RightItemCount'>
+                                                <Link to={item.link} className='RightItemCount'>
                                                     {item.image}
                                                     <h6>{item.title}</h6>
-                                                </div>
+                                                </Link>
                                         }
                                         <div className='LeftItemCount'>
                                             <h3>0</h3>

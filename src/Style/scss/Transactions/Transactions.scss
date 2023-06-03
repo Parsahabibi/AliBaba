@@ -1,0 +1,128 @@
+.Transactions {
+
+    // display: flex;
+    // align-items: center;
+
+    .headerTransactions {
+        padding: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // gap: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+        .Title {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding-bottom: 12px;
+            .arrow{
+                display: flex;
+                align-items: center;
+            }
+
+            .download {
+                display: flex;
+                align-items: center;
+                color: $secondary-400;
+
+                h5 {
+                    font-weight: 600;
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+
+        .items {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 16px;
+
+            .right,
+            .left {
+                padding: 4px;
+
+                // width: 100%;
+                h6 {
+                    padding: 4px 12px;
+                }
+            }
+
+            .right , .left {
+                h6 {
+                    border-radius: 8px;
+                }
+
+            }
+        }
+
+
+        .filter {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .filters,
+            .sort {
+                border: 1px solid rgba(0, 0, 0, 0.12);
+                border-radius: 1rem;
+                padding: 4px 12px;
+                color: #000000a6;
+                display: flex;
+                align-items: center;
+
+                // width: 90%;
+                // justify-content: space-between;
+            }
+
+            .filters {
+                svg {
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+
+            .sort {
+                gap: 8px;
+                position: relative;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+
+    }
+
+    .bodyTransactions {
+        width: 100%;
+        height: 76vh;
+        background-color: $grays-100;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding-top: 48px;
+        gap: 16px;
+        img {
+
+            width: 164px;
+            height: 164px;
+        }
+
+        h6 {
+            font-weight: 700;
+        }
+    }
+}

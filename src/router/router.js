@@ -15,6 +15,8 @@ import CustomerClub from "../components/CustomerClub/CustomerClub";
 import ListOfPassengers from "../components/ListOfPassengers/ListOfPassengers";
 import Ticketing from "../components/Ticketing/Ticketing";
 import HelpCenter from "../components/HelpCenter/HelpCenter";
+import DesktopTicketingPage from "../pages/DesktopTicketingPage";
+import Transactions from "../components/Transactions/Transactions";
 
 const router = createBrowserRouter([
     {
@@ -72,6 +74,14 @@ const router = createBrowserRouter([
     {
         path: "/Account/Ticketing",
         element: <Ticketing/>,
+    },
+    {
+        path: "/Account/DesktopTicketing",
+        element: <DesktopTicketingPage/>,
+    },
+    {
+        path: "/Account/Transactions",
+        element: <Transactions/>,
     },
     {
         path: "/Account/HelpCenter",
