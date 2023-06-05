@@ -71,9 +71,15 @@
 
                         input {
                             border: 1px solid rgba(0, 0, 0, 0.12);
-                            padding: 7px 100px;
+                            padding: 7px 30px;
                             border-radius: 4px;
                             // width: 200%;
+                            @media screen and (min-width: 1000px) {
+                                padding: 7px 60px;
+                            }
+                            @media screen and (min-width: 1100px) {
+                                padding: 7px 100px;
+                            }
                         }
                     }
 

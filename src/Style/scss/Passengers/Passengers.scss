@@ -1,0 +1,129 @@
+.PassengersDesktop {
+    .headerPassengersDesktop {}
+
+    .mainPassengersDesktop {
+        background-color: $grays-100;
+        height: 90vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 120px;
+        padding-bottom: 0px;
+        gap: 16px;
+
+        .mainContentPassengersDesktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            .searchMainPassengersDesktop {
+                padding: 16px 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+
+                .header {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding-bottom: 32px;
+
+                    h4 {
+                        font-weight: 700;
+                    }
+                }
+
+                .input {}
+            }
+
+            .ListMainPassengersDesktop {
+                width: 100%;
+                padding: 16px 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+
+                .top {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 57px;
+                    padding-bottom: 40px;
+
+                    .right {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        h4 {
+                            font-weight: 700;
+                        }
+                    }
+
+                    @media screen and (min-width: 1000px) {
+                        gap: 145px;
+                    }
+
+                    @media screen and (min-width: 1100px) {
+                        gap: 241px;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        gap: 359px;
+                    }
+
+                    @media screen and (min-width: 1300px) {
+                        gap: 450px;
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 300px;
+                        height: 169px;
+                    }
+
+                    h6 {
+                        font-weight: 700;
+                        padding-bottom: 16px;
+                        text-align: center;
+                    }
+
+                    h5 {
+                        padding-bottom: 16px;
+                        width: 45%;
+                        text-align: center;
+                        font-weight: 500;
+                        color: $grays-400;
+                    }
+
+                    button {
+                        background-color: $secondary-400;
+                        color: white;
+                        border-radius: 8px;
+                        width: 51%;
+                        padding: 10px 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 4px;
+                        &:hover{
+                            background-color: $secondary-500;
+                        }
+                        @media screen and (min-width:1100px) {
+                            width: 29%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

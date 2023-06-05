@@ -18,6 +18,7 @@ import HelpCenter from "../components/HelpCenter/HelpCenter";
 import DesktopTicketingPage from "../pages/DesktopTicketingPage";
 import Transactions from "../components/Transactions/Transactions";
 import MyTrip from "../components/MyTrip/MyTrip";
+import Passengers from "../components/Passengers/Passengers";
 
 const router = createBrowserRouter([
     {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
     {
         path: "/Account/MyTrip",
         element: <MyTrip />,
+    },
+    {
+        path: "/Account/Passengers",
+        element: <Passengers />,
     },
     {
         path: "/Account/HelpCenter",

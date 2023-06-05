@@ -6,12 +6,15 @@
         border: 1px solid rgba(0, 0, 0, .12);
         border-radius: 0.5rem;
         // width: 27.5%;
+        width: 100%;
 
         .itemAccountComponent {
             .contentItemsAccountComponent {
+                width: 150%;
                 display: flex;
                 align-items: center;
                 padding: 16px 16px 16px 100px;
+                
             }
 
             .borderAccountComponent {
