@@ -17,6 +17,7 @@ import Ticketing from "../components/Ticketing/Ticketing";
 import HelpCenter from "../components/HelpCenter/HelpCenter";
 import DesktopTicketingPage from "../pages/DesktopTicketingPage";
 import Transactions from "../components/Transactions/Transactions";
+import MyTrip from "../components/MyTrip/MyTrip";
 
 const router = createBrowserRouter([
     {
@@ -26,15 +27,15 @@ const router = createBrowserRouter([
     {
         path: "/AirplanOutSide",
         element: <AirplanOutSide />,
-      },
+    },
     {
         path: "/Install",
         element: <HintInstall />,
-    }, 
+    },
     {
         path: "/Account",
         element: <Accounts />,
-    },      
+    },
     {
         path: "/EditAccount",
         element: <EditAccount />,
@@ -73,19 +74,23 @@ const router = createBrowserRouter([
     },
     {
         path: "/Account/Ticketing",
-        element: <Ticketing/>,
+        element: <Ticketing />,
     },
     {
         path: "/Account/DesktopTicketing",
-        element: <DesktopTicketingPage/>,
+        element: <DesktopTicketingPage />,
     },
     {
         path: "/Account/Transactions",
-        element: <Transactions/>,
+        element: <Transactions />,
+    },
+    {
+        path: "/Account/MyTrip",
+        element: <MyTrip />,
     },
     {
         path: "/Account/HelpCenter",
-        element: <HelpCenter/>,
+        element: <HelpCenter />,
     },
 ])
 export default router
