@@ -19,6 +19,7 @@ import DesktopTicketingPage from "../pages/DesktopTicketingPage";
 import Transactions from "../components/Transactions/Transactions";
 import MyTrip from "../components/MyTrip/MyTrip";
 import Passengers from "../components/Passengers/Passengers";
+import DesktopTicketing from "../components/DesktopTicketing/DesktopTicketing";
 
 const router = createBrowserRouter([
     {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
     {
         path: "/Account/Passengers",
         element: <Passengers />,
+    },
+    {
+        path: "/Account/DesktopTicketing",
+        element: <DesktopTicketing />,
     },
     {
         path: "/Account/HelpCenter",
