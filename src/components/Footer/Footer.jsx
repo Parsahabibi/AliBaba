@@ -51,9 +51,7 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
                 <a href="https://www.alibabatravels.co/help-center/contact-us">
                   تماس با ما
                 </a>
-                <a href="https://www.alibabatravels.co/why-alibaba">
-                  چرا علی‌بابا
-                </a>
+                <Link to="/WhyAlibaba">چرا علی‌بابا</Link>
                 <a href="https://www.alibabatravels.co/insurance">
                   علی بابا پلاس
                 </a>
@@ -225,9 +223,7 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
                 <a href="https://www.alibabatravels.co/help-center/contact-us">
                   تماس با ما
                 </a>
-                <a href="https://www.alibabatravels.co/why-alibaba">
-                  چرا علی‌بابا
-                </a>
+                <Link to="/WhyAlibaba">چرا علی‌بابا</Link>
                 <a href="https://www.alibabatravels.co/insurance">
                   علی بابا پلاس
                 </a>

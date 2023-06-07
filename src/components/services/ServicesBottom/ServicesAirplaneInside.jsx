@@ -6,8 +6,8 @@ import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
 import SearchInput from "../../SearchInput/SearchInput";
 import DropdownNumber from "../Dropdownservices/DropdownNumber";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
-
-const ServicesAirplaneInside = () => {
+import { Link } from "react-router-dom";
+const ServicesAirplaneInside = (props) => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
@@ -33,7 +33,7 @@ const ServicesAirplaneInside = () => {
   const inputstart2 = useRef(0);
   const Labelstart2 = useRef(0);
   const inputstart3 = useRef(0);
-  const Labelstart3 = useRef(0);  
+  const Labelstart3 = useRef(0);
   const inputstart4 = useRef(0);
   const Labelstart4 = useRef(0);
   const Labelstart5 = useRef(0);
@@ -195,6 +195,13 @@ const ServicesAirplaneInside = () => {
     "تبریز",
     "کیش",
   ];
+  
+  // const data=(x)=> {
+  //   console.log(x);
+  // }
+  // props.data(
+  //   inputnumber.current.value
+  // )
 
   return (
     <div className="options-services">
@@ -233,11 +240,13 @@ const ServicesAirplaneInside = () => {
           label="تاریخ رفت"
           refLabel={Labelstart3}
           refinput={inputstart3}
+          type="date"
         />
         <SearchInput
           label="تاریخ برگشت"
           refLabel={Labelstart4}
           refinput={inputstart4}
+          type="date"
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -246,7 +255,7 @@ const ServicesAirplaneInside = () => {
         <SearchInput
           label="مسافران"
           valueInput="1 مسافر"
-          classlabel="labelfix"
+          classlabel=" labelfix "
           refinput={inputnumber}
           refLabel={Labelstart5}
           handleclick={showDropdownNumber}
@@ -260,9 +269,12 @@ const ServicesAirplaneInside = () => {
           clickbtndecrement3={decrementNumber3}
         />
       </div>
+      {/* <Link to="/Search"> */}
+
       <div className="d-options-services">
         <ButtonSearch />
       </div>
+      {/* </Link> */}
     </div>
   );
 };

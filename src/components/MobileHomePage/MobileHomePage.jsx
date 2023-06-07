@@ -43,6 +43,7 @@ const MobileHomePage = () => {
       description: ` خیر؛ هنگام رزرو بلیط هواپیما داخلی یا خارجی امکان انتخاب صندلی وجود ندارد. البته در زمان چک‌این انتخاب محدوده صندلی امکان‌پذیر است.`,
     },
   ];
+  
   return (
     <div className="MobileHomePage">
       <MobileHeader />

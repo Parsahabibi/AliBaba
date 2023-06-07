@@ -1,0 +1,17 @@
+@import "./airlaneoutsideDesktop.scss";
+@import "./airlaneoutsideMobile.scss";
+
+
+.btn-dropdown-services-mobile{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 99999px;
+    padding: 5px 10px;
+    p{
+        font-size: 0.825rem;
+        color: $grays-400;
+        margin-left: 5px;
+    }
+    svg{
+        transform: rotate(180deg);
+    }
+}

@@ -71,26 +71,11 @@
       }
     }
   }
-  .vila-desktop {
-    display: inline;
-  }
-  .vila-mobile {
-    display: none;
-  }
-  .hotel-desktop {
-    display: inline;
-  }
-  .hotel-mobile {
-    display: none;
-  }
-  .train-desktop{
-    display: inline;
-  }
-  .train-mobile{
-    display: none;
+
+   .content-bus .list-blit-bus{
+    @include flex(row,space-between,center);
   }
 }
-
 @media (min-width: 992px) {
   footer {
     .footer-desktop {
@@ -144,12 +129,7 @@
     width: 1200px;
     padding: 0 16px;
   }
-  .bashgah-moshtarian-mobile {
-    display: none;
-  }
-  .bashgah-moshtarian-desktop {
-    display: inline;
-  }
+
 }
 @media (min-width: 900px) {
   .main {
@@ -197,13 +177,17 @@
       }
     }
   }
+  .content-bus .companys{
+    overflow: hidden;
+
+  }
   .your-question {
     max-width: 1200px;
     padding: 0;
-    .main-your-question{
-      .item-your-question{
-        .body-your-question{
-          p{
+    .main-your-question {
+      .item-your-question {
+        .body-your-question {
+          p {
             padding: 16px 60px;
           }
         }

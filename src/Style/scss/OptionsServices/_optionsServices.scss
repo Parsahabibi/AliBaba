@@ -1,5 +1,6 @@
 .options-services {
-  @include flex();
+    @include flex(row, flex-start, center);
+ 
   width: 100%;
 
   .d-options-services {

@@ -10,7 +10,7 @@ import { AirplaneInsideServices, AirplaneOutsidServices, BusServices, HotelServi
 import ServicesAirplaneInside from '../services/ServicesBottom/ServicesAirplaneInside'
 import ServicesbtnsAirplaneInside from '../services/ServicesTop/ServicesBtnsAirplaneinside'
 
-const DesktopHomePage = () => {
+const DesktopHomePage = (props) => {
     const item_services = [
       {
         check: "active",
@@ -95,7 +95,10 @@ const DesktopHomePage = () => {
             />
             <HomePageContent />
           </div>
-          <Footer conditional={true} IdMoreDesktop="moredesktophomepage"/>
+          <Footer
+            conditional={true}
+            IdMoreDesktop="moredesktophomepage"
+          />
         </div>
       </div>
     );

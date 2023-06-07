@@ -14,6 +14,7 @@
     width: 50%;
     max-height: 310px;
     overflow-y: scroll;
+    z-index: 10;
     display: none;
     &::-webkit-scrollbar {
       width: 5px;

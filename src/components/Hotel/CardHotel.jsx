@@ -6,9 +6,15 @@ const CardHotel = (props) => {
     <div className="card-hotel">
       <Link to={props.link}>
         <div>
-          <img src={props.src} alt="" />
-          <span>هتل های</span>
-          <p>{props.text}</p>
+          {props.on === true ? (
+            <p style={{fontWeight:400}}>{props.text}</p>
+          ) : (
+            <>
+              <img src={props.src} alt="" />
+              <span>هتل های</span>
+              <p>{props.text}</p>
+            </>
+          )}
         </div>
         <LeftArrow />
       </Link>

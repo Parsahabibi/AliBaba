@@ -1,0 +1,40 @@
+.w100{
+    width:calc(50% - 100px) !important;
+}
+.content-bus {
+  h4 {
+    margin: 32px 0 8px 0;
+  }
+  a {
+    color: $secondary-400;
+  }
+  .companys {
+    @include flex(row,flex-start,center);
+    margin-top: 24px;
+    overflow: scroll;
+    .item-company {
+      @include flex(column, flex-start, center);
+      img {
+        width: 60px;
+        margin: 0 45px 8px 45px;
+        height: 45px;
+      }
+    }
+  }
+  .list-blit-bus{
+    @include flex(column,space-between,flex-start);
+    ul{
+        margin: 14px 0;
+        padding: 0 12px;
+        li{
+            margin-bottom: 8px;
+            a{
+                color: $grays-500;
+            }
+            &::marker{
+                color: $primary;
+            }
+        }
+    }
+  }
+}

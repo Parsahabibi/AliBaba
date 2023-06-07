@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import ButtonSearch from "../ButtonSearch/ButtonSearch";
 import Footer from "../Footer/Footer";
 import { Add, ArrowRight, Date, Location, Remove } from "../icons/Icons";
@@ -169,7 +170,10 @@ const HotelMobile = () => {
       </div>
       <div className="header-vila-mobile">
         <p>هتل</p>
+        <Link to='/'>
+
         <ArrowRight />
+        </Link>
       </div>
       <div className="services-mobile">
         <div className="item-services-mobile" onClick={OpenMenu}>
@@ -236,6 +240,7 @@ const HotelMobile = () => {
         conditional={true}
         IdMore="morehotelMobile"
         IdMoreDesktop="morehotelMobile"
+        num="191981"
       />
     </div>
   );

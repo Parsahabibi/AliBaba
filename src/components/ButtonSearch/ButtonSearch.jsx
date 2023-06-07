@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ButtonSearch = (props) => {
   return (
     <div>
-      <button className="ButtonSearch">
-        <p>{props.text ? props.text : "جستجو"}</p>
-      </button>
+      <Link to='/Search'>
+        <button className="ButtonSearch">
+          <p>{props.text ? props.text : "جستجو"}</p>
+        </button>
+      </Link>
     </div>
   );
 };

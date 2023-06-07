@@ -238,11 +238,13 @@ const ServicesTrain = () => {
           label="تاریخ رفت"
           refLabel={Labelstart3}
           refinput={inputstart3}
+          type="date"
         />
         <SearchInput
           label="تاریخ برگشت"
           refLabel={Labelstart4}
           refinput={inputstart4}
+          type="date"
         />
         <PlusServices />
         {/* <CloseServices /> */}

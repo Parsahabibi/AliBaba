@@ -2,9 +2,7 @@ import React from "react";
 import DesktopHomePage from "../components/DesktopHomePage/DesktopHomePage";
 import MobileHomePage from "../components/MobileHomePage/MobileHomePage";
 
-
 const Home = () => {
- 
   return (
     <div className="HomePage">
       <div className="DesktopHomePage">
@@ -14,7 +12,6 @@ const Home = () => {
         <MobileHomePage />
       </div>
     </div>
-
   );
 };
 

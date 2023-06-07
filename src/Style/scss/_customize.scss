@@ -18,7 +18,7 @@ body,html{
 }
 body{
     &::-webkit-scrollbar {
-        width: 4px;
+        width: 5px;
     }
     &::-webkit-scrollbar-track {
         background: transparent;
@@ -48,4 +48,11 @@ input{
     &::placeholder{
         font-family: Alibaba;
     }
+}
+
+.mt-10{
+    margin-top:10px !important ;
+}
+.mb-64{
+    margin-bottom: 64px;
 }

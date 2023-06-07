@@ -8,6 +8,7 @@ import { Add, ArrowRight, Location, Remove, Date } from "../icons/Icons";
 import SearchInput from "../SearchInput/SearchInput";
 import ButtonSearch from "../ButtonSearch/ButtonSearch";
 import DropStartLocation from "../services/Dropdownservices/DropStartLocation";
+import { Link } from "react-router-dom";
 
 const VilaMobile = () => {
   const NumberHorofi = [
@@ -236,7 +237,9 @@ const VilaMobile = () => {
       </div>
       <div className="header-vila-mobile">
         <p>اقامتگاه</p>
-        <ArrowRight />
+        <Link to='/'>
+          <ArrowRight />
+        </Link>
       </div>
       <div className="services-mobile">
         <div className="item-services-mobile">

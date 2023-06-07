@@ -239,11 +239,13 @@ const ServicesAirplaneOutside = () => {
           label="تاریخ رفت"
           refinput={inputstart3}
           refLabel={Labelstart3}
+          type="date"
         />
         <SearchInput
           label="تاریخ برگشت"
           refinput={inputstart4}
           refLabel={Labelstart4}
+          type="date"
         />
         <PlusServices />
         {/* <CloseServices /> */}

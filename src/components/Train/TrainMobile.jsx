@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import ButtonSearch from "../ButtonSearch/ButtonSearch";
 import Footer from "../Footer/Footer";
 import {
@@ -429,7 +430,10 @@ const TrainMobile = () => {
       </div>
       <div className="header-vila-mobile">
         <p>قطار</p>
+        <Link to='/'>
+
         <ArrowRight />
+        </Link>
       </div>
       <div className="header-services-mobile">
         <div
@@ -450,7 +454,7 @@ const TrainMobile = () => {
         </div>
       </div>
 
-      <div className="services-mobile ">
+      <div className="services-mobile  mt-10">
         <div className="containder-item-services-mobile">
           <div className="item-services-mobile-train">
             <Location />

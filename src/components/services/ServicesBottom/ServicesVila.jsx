@@ -198,10 +198,12 @@ const ServicesVila = () => {
           label="تاریخ ورود"
           refinput={inputstart2}
           refLabel={Labelstart2}
+          type="date"
         />
         <SearchInput
           label="تاریخ خروج"
           refinput={inputstart3}
+          type="date"
           refLabel={Labelstart3}
         />
         <PlusServices />

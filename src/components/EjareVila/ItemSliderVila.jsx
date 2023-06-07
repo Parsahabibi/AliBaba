@@ -7,7 +7,9 @@ const ItemSliderReserveVila = (props) => {
         <img src={props.src} alt="" />
         <div>
           <span>{props.title}</span>
-          <p>برای ۱ شب <span>{props.price}</span>ریال</p>
+          <p>
+            برای ۱ {props.ForWhat || "شب"} <span>{props.price}</span>ریال
+          </p>
         </div>
       </div>
     </Link>

@@ -26,7 +26,7 @@
   }
 }
 .services-mobile {
-  margin-top: 10px !important;
+  // margin-top: 10px !important;
   .containder-item-services-mobile {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -97,6 +97,7 @@
     font-weight: 500;
     color: $grays-400;
     border-bottom: 5px solid transparent;
+    white-space: nowrap;
   }
   .active-nav {
     border-color: $secondary-400;
@@ -133,7 +134,7 @@
   border-radius: 1rem 1rem 0 0;
   padding: 1rem 1.5rem;
   transition: all 0.4s;
-  z-index: 100000 !important;
+  z-index: 1000000 !important;
   h5 {
     font-size: 0.875rem;
     font-weight: 700;
