@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
-import { Count, LeftArrow, List, Logo, Logout, Mines, Plus, PlusIcon, Poshtibani1, Quiz } from '../../icons/Icons'
+import { Close, CloseServices, Count, LeftArrow, List, Logo, Logout, Mines, Plus, PlusIcon, Poshtibani1, Quiz } from '../../icons/Icons'
 import { Link } from "react-router-dom"
 import IncreamentMoney from '../../IncreamentMoney/IncreamentMoney'
+import SearchInput from '../../SearchInput/SearchInput'
 const Account = () => {
 
 
     const CountData = [
-        { id: 1, image: <Count />, title: "موجودی حساب " },
-        { id: 2, image: <Plus />, title: " افزایش موجودی " },
-        { id: 3, image: <Mines />, title: " درخواست انتقال موجودی به حساب بانکی " },
-        { id: 4, image: <Count />, title: "موجودی و تراکنش‌ها" }
+        { id: 1, image: <Count />, title: "موجودی حساب " , link:'' },
+        { id: 2, image: <Plus />, title: " افزایش موجودی "  , link:''},
+        { id: 3, image: <Mines />, title: " درخواست انتقال موجودی به حساب بانکی " , link:'' },
+        { id: 4, image: <Count />, title: "موجودی و تراکنش‌ها" , link:'/Account/Transactions' }
     ]
 
 
     const ItemsAccount = [
-        { id: 1, image: <List />, title: 'لیست مسافران' },
-        { id: 1, image: <Quiz />, title: 'مرکز پشتیبانی' },
-        { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی' },
+        { id: 1, image: <List />, title: 'لیست مسافران', link: '/Account/ListOfPassengers' },
+        { id: 1, image: <Quiz />, title: 'مرکز پشتیبانی', link: '/Account/HelpCenter' },
+        { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی', link: '/Account/Ticketing' },
         { id: 1, image: <Logout />, title: 'خروج از حساب کاربری' }
     ]
 
@@ -24,8 +25,24 @@ const Account = () => {
     const [open, setOpen] = useState(false)
 
 
+    const [able, disAble] = useState(false)
+
+
     return (
         <div className='Account'>
+            <div onClick={() => { setOpen(false) }} className='baler' style={open === true ? { display: 'inline' } : { display: 'none' }}></div>
+            <div style={open === true ? { display: 'block' } : { display: 'none' }} className='IncreamentMoney'>
+                <div className='headerIncreamentMoney'>
+                    <h6> افزایش موجودی </h6>
+                    <div onClick={() => { setOpen(false) }}>
+                        <Close />
+                    </div>
+                </div>
+                <SearchInput label={'مبلغ مورد نظر'} />
+                <div className='buttonIncreamentMoney'>
+                    <div className={able === true ? 'able' : 'disAble'}>پرداخت</div>
+                </div>
+            </div>
             <div className='header'>
                 <div className='avatar'>
                     <img src='https://www.alibaba.ir/assets/images/avatar-4c776756.svg' />
@@ -42,23 +59,18 @@ const Account = () => {
                             item =>
                                 <div className='itemsCount' key={item.id}>
                                     <div className='itemCount'>
-                                        {/* {
+                                        {
                                             item.id === 2 ?
-                                                <div onClick={() => { setOpen(!open) }} className='RightItemCount'>
+                                                <Link onClick={() => { setOpen(!open) }} className='RightItemCount'>
                                                     {item.image}
                                                     <h6>{item.title}</h6>
-                                                    <IncreamentMoney classes={open === true ? 'show' : 'none'}/>
-                                                </div>
+                                                </Link>
                                                 :
-                                                <div className='RightItemCount'>
+                                                <Link to={item.link} className='RightItemCount'>
                                                     {item.image}
                                                     <h6>{item.title}</h6>
-                                                </div>
-                                        } */}
-                                        <div className='RightItemCount'>
-                                            {item.image}
-                                            <h6>{item.title}</h6>
-                                        </div>
+                                                </Link>
+                                        }
                                         <div className='LeftItemCount'>
                                             <h3>0</h3>
                                             <span>ریال</span>
@@ -107,7 +119,7 @@ const Account = () => {
                     {
                         ItemsAccount.map(
                             item =>
-                                <Link className='ItemAccount' to={''}>
+                                <Link className='ItemAccount' to={item.link}>
                                     <div className='textAccount'>
                                         {item.image}
                                         <h6>{item.title}</h6>

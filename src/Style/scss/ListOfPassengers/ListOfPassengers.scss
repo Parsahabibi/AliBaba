@@ -1,0 +1,72 @@
+.ListOfPassengers {
+    height: 100vh;
+    background-color: #F6F6F6;
+
+    .headers {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        background-color: $white;
+        padding: 16px;            
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .AddPassengers {
+            button {
+                display: flex;
+                align-items: center;
+                background-color: transparent;
+                gap: 4px;
+                color: $secondary-400;
+            }
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top:144px;
+        gap: 16px;
+        .image{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h6{
+                color: $grays-500;
+                font-weight: 700;
+            }
+            img{
+                padding-bottom: 10px;
+                width: 132px;
+                height: 111px;
+            }
+        }
+        .des{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            padding-bottom: 20px;
+            h6{
+                color: $grays-400;
+            text-align: center;
+            }
+        }
+        .button{
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                color: $secondary-400;
+                background-color: transparent;
+            }
+        }
+    }
+}

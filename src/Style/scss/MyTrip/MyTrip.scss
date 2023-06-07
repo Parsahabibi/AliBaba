@@ -1,0 +1,147 @@
+.MyTrip {
+    width: 100%;
+    background-color: $grays-100;
+    height: 100vh;
+
+    .HeaderMyTrip {}
+
+    .mainMyTrip {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 120px;
+        gap: 20px;
+
+        .contentMyTrip {
+            .mainContentMyTrip {
+                background-color: white;
+                padding: 15px;
+                border-radius: 3px;
+                box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 5px 0 rgba(0, 0, 0, .15);
+                margin-bottom: 20px;
+                .search {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding-bottom: 26px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    h4 {
+                        color: orange;
+                        font-weight: 700;
+                    }
+                }
+
+                .attention {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 18px;
+
+                    img {
+                        width: 17px;
+                        height: 17px;
+                    }
+
+                    h6 {
+                        font-size: 0.7em;
+                        font-weight: 500;
+                    }
+                }
+
+                .input {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .rightInput {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        h5 {
+                            font-weight: 300;
+                            color: #2b2f33;
+                            padding-bottom: 5px;
+                        }
+
+                        input {
+                            border: 1px solid rgba(0, 0, 0, 0.12);
+                            padding: 7px 30px;
+                            border-radius: 4px;
+                            // width: 200%;
+                            @media screen and (min-width: 1000px) {
+                                padding: 7px 60px;
+                            }
+                            @media screen and (min-width: 1100px) {
+                                padding: 7px 100px;
+                            }
+                        }
+                    }
+
+                    .leftInput {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        h5 {
+                            font-weight: 300 !important;
+                            color: #2b2f33;
+                            padding-bottom: 5px;
+                        }
+
+                        .input {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            input {
+                                border: 1px solid rgba(0, 0, 0, 0.12);
+                                padding: 7px 10px;
+                                border-radius: 4px;
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-top: 40px;
+
+                    button {
+                        width: 51%;
+                        border-radius: 6px;
+                        font-weight: 400;
+                        cursor: pointer;
+                        padding: 6px 12px;
+                        font-size: 14px;
+                        text-align: center;
+                        background-color: #4990e2;
+                        border: 1px solid #3383de;
+                        color: $white;
+
+                        &:hover {
+                            background-color: #2276d6;
+                            border-color: #1d65b7;
+                        }
+                    }
+                }
+            }
+
+            .news {
+                background-color: #d9edf7;
+                border:1px solid #bce8f1;
+                color: #4990e2;
+                padding: 15px;
+                border-radius: 3px;
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@
     background-color: $white;
   }
 
+<<<<<<< HEAD
   .mainAccount {
     background-color: $grays-100;
 
@@ -16,6 +17,27 @@
     align-items: flex-start;
     justify-content: center;
     gap: 1%;
+=======
+    .baler {
+        background-color: #4b4b4b99;
+        position: absolute;
+        width: 100%;
+        height: 105vh;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        display: none;
+    }
+
+    .mainAccount {
+        background-color: $grays-100;
+        display: flex;
+        align-items: center;
+        padding: 32px 38px;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1%;
+>>>>>>> f604b0fdec2b273be44e67190ba9f597eb5ef14d
 
     .itemsAccount {
       background-color: $white;
@@ -191,8 +213,536 @@
                 cursor: pointer;
                 background-color: $secondary-100;
                 border-radius: 8px;
+<<<<<<< HEAD
                 border: 1px solid $secondary-200;
               }
+=======
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+
+                // width: 100%;
+                .right {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+
+                    h4 {
+                        font-weight: 700;
+                    }
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    gap: 48px;
+
+                    .Balance {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
+                        h5 {
+                            color: $grays-400;
+                        }
+
+                        .count {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+
+                        .Increment {
+                            display: flex;
+                            align-items: center;
+                            color: $secondary-400;
+                            padding: 2px 5px;
+                            border: 1px solid transparent;
+
+                            h5 {
+                                color: $secondary-400;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: $secondary-100;
+                                border-radius: 8px;
+                                border: 1px solid $secondary-200
+                            }
+                        }
+                    }
+
+                    .divider {
+                        width: 1px;
+                        height: 60px;
+                        background-color: $grays-150;
+                    }
+
+                    .club {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
+                        h5 {
+                            color: $grays-400;
+                        }
+
+                        .middle {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+
+                            .point {
+                                display: flex;
+                                align-items: center;
+                                gap: 4px;
+                            }
+
+                            .room {
+                                background-color: $info-100;
+                                color: $info-500;
+                                border-radius: 0.75rem;
+
+                                h5 {
+                                    padding: 1px 12px;
+                                }
+                            }
+                        }
+
+                        .details {
+                            display: flex;
+                            color: $secondary-400;
+                            border: 1px solid transparent;
+                            padding: 2px 5px;
+
+                            h5 {
+                                color: $secondary-400;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: $secondary-100;
+                                border-radius: 8px;
+                                border: 1px solid $secondary-200
+                            }
+                        }
+                    }
+                }
+            }
+
+            .InformationsAccountDesktop {
+                background-color: $white;
+                padding: 16px 32px;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+                width: 100%;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .Informations {
+                    padding-bottom: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .Information {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                    }
+                }
+
+                .MobileNumber {
+                    padding-right: 32px;
+                    display: flex;
+                    align-items: center;
+                    gap: 32px;
+
+                    >h6 {
+                        color: $grays-400;
+                    }
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        .confirm {
+                            border-radius: 0.75rem;
+                            background-color: $success-100;
+                            color: $success-500;
+                            padding: 1px 8px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 4px;
+
+                            svg {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .ButtonEditMobile {
+                            .modalEditMobile {
+                                display: none;
+                                background-color: white;
+                                position: absolute;
+                                z-index: 99;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 35%;
+                                padding: 24px;
+                                border-radius: 8px;
+
+                                .Icon {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    cursor: pointer;
+                                }
+
+                                .ItemsModalEditMobile {
+                                    width: 75%;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    gap: 15px;
+
+                                    h6 {
+                                        color: $grays-500;
+                                        padding-bottom: 20px;
+                                    }
+
+                                    .able,
+                                    .disAble {
+                                        width: 85%;
+                                        margin: 0 auto;
+                                    }
+
+                                    .able {
+                                        background-color: $secondary-400;
+                                        color: $white;
+                                        padding: 12px 0px;
+                                        border-radius: 8px;
+                                    }
+
+                                    .disAble {
+                                        background-color: $secondary-400;
+                                        color: $white ;
+                                        opacity: 0.5;
+                                        padding: 12px 0px;
+                                        border-radius: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .Edit {
+                    padding: 16px 32px;
+                    padding-top: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // width: 100%;
+                    width: 103%;
+
+                    .AddEmail {
+                        display: flex;
+                        align-items: center;
+                        gap: 88px;
+
+                        >h6 {
+                            color: $grays-400;
+                        }
+
+                        .modalEditMobile {
+                            display: none;
+                            background-color: white;
+                            position: absolute;
+                            z-index: 99;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 35%;
+                            padding: 24px;
+                            border-radius: 8px;
+
+                            .Icon {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                cursor: pointer;
+                            }
+
+                            .ItemsModalEditMobile {
+                                width: 75%;
+                                margin: 0 auto;
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 15px;
+
+                                h6 {
+                                    color: $grays-500;
+                                    padding-bottom: 20px;
+                                }
+
+                                .able,
+                                .disAble {
+                                    width: 85%;
+                                    margin: 0 auto;
+                                }
+
+                                .able {
+                                    background-color: $secondary-400;
+                                    color: $white;
+                                    padding: 12px 0px;
+                                    border-radius: 8px;
+                                }
+
+                                .disAble {
+                                    background-color: $secondary-400;
+                                    color: $white ;
+                                    opacity: 0.5;
+                                    padding: 12px 0px;
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    .EditUserName {
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 8px 15px;
+                            border: 2px solid $secondary-400;
+                            color: $secondary-400;
+                            background-color: $white;
+                            border-radius: 8px;
+
+                            &:hover {
+                                background-color: $secondary-100;
+                            }
+                        }
+
+                        .modalEditMobile {
+                            display: none;
+                            background-color: white;
+                            position: absolute;
+                            z-index: 99;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 35%;
+                            padding: 24px;
+                            border-radius: 8px;
+
+                            .Icon {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                cursor: pointer;
+                            }
+
+                            .ItemsModalEditMobile {
+                                width: 75%;
+                                margin: 0 auto;
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 15px;
+
+                                h6 {
+                                    color: $grays-500;
+                                    padding-bottom: 20px;
+                                }
+
+                                .able,
+                                .disAble {
+                                    width: 85%;
+                                    margin: 0 auto;
+                                }
+
+                                .able {
+                                    background-color: $secondary-400;
+                                    color: $white;
+                                    padding: 12px 0px;
+                                    border-radius: 8px;
+                                }
+
+                                .disAble {
+                                    background-color: $secondary-400;
+                                    color: $white ;
+                                    opacity: 0.5;
+                                    padding: 12px 0px;
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Personal {
+                background-color: $white;
+                padding: 16px 32px;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+                width: 100%;
+
+                .PersonalInformation {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        // justify-content: space-between;
+                        h4 {
+                            color: $grays-500;
+                        }
+
+                        svg {
+                            color: $grays-500
+                        }
+                    }
+                }
+
+                .name {
+                    padding: 48px 32px;
+                    padding-bottom: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 32px;
+
+                    h6 {
+                        color: $grays-400;
+                    }
+
+                    .border {
+                        width: 14px;
+                        height: 1px;
+                        background-color: $grays-400;
+                    }
+
+                    .top,
+                    .bottom {
+                        display: flex;
+                        align-items: center;
+                        gap: 170px;
+
+                        .right {
+                            display: flex;
+                            align-items: center;
+                            gap: 32px;
+                        }
+
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            gap: 32px;
+                        }
+                    }
+
+                    .bottom {
+                        gap: 155px
+                    }
+                }
+            }
+
+            .Bank {
+                background-color: $white;
+                padding: 16px 32px;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+                width: 100%;
+
+                .BankInformation {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .dollar {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        svg {
+                            color: $grays-500;
+                        }
+                    }
+                }
+
+                .detailsBank {
+                    padding: 48px 32px;
+                    padding-bottom: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 32px;
+
+                    .border {
+                        width: 14px;
+                        height: 1px;
+                        background-color: black;
+                    }
+
+                    h6 {
+                        color: $grays-400;
+                    }
+
+                    .top {
+                        display: flex;
+                        align-items: center;
+                        gap: 155px;
+
+                        .right,
+                        .left {
+                            display: flex;
+                            align-items: center;
+                            gap: 32px;
+                        }
+
+                    }
+
+                    .bottom {
+                        display: flex;
+                        align-items: center;
+                        gap: 27px;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1220px) {
+                width: 60%;
+>>>>>>> f604b0fdec2b273be44e67190ba9f597eb5ef14d
             }
           }
         }
