@@ -5,7 +5,6 @@ const HoverButton = ({ title, icon }) => {
         <div className='HoverButton'>
             {icon}
             <h6>{title}</h6>
-
         </div>
     )
 }

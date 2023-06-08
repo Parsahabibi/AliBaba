@@ -20,6 +20,8 @@ import Transactions from "../components/Transactions/Transactions";
 import MyTrip from "../components/MyTrip/MyTrip";
 import Passengers from "../components/Passengers/Passengers";
 import DesktopTicketing from "../components/DesktopTicketing/DesktopTicketing";
+import TransactionsDesktop from "../components/TransactionsDesktop/TransactionsDesktop";
+import Loyalty from "../components/Loyalty/Loyalty";
 
 const router = createBrowserRouter([
     {
@@ -97,6 +99,14 @@ const router = createBrowserRouter([
     {
         path: "/Account/DesktopTicketing",
         element: <DesktopTicketing />,
+    },
+    {
+        path: "/Account/DesktopTransactions",
+        element: <TransactionsDesktop />,
+    },
+    {
+        path: "/Account/Loyalty",
+        element: <Loyalty />,
     },
     {
         path: "/Account/HelpCenter",

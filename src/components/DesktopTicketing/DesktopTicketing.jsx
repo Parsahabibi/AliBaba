@@ -3,6 +3,7 @@ import DesktopHeader from '../Header/DesktopHeader/DesktopHeader'
 import ItemsDashboardAccount from '../ItemsAccount/ItemsAccount'
 import HoverButton from '../HoverButton/HoverButton'
 import { Plus } from '../icons/Icons'
+import Footer from '../Footer/Footer'
 
 const DesktopTicketing = () => {
   return (
@@ -11,7 +12,7 @@ const DesktopTicketing = () => {
         <DesktopHeader />
       </div>
       <div className='mainDesktopTicketing'>
-        <ItemsDashboardAccount />
+        <ItemsDashboardAccount id={4} />
         <div className='bodyDesktopTicketing'>
           <div className='question'>
             <div className='right'>
@@ -29,6 +30,9 @@ const DesktopTicketing = () => {
             <button> ایجاد درخواست جدید </button>
           </div>
         </div>
+      </div>
+      <div className='footer' style={{ backgroundColor: 'white' }}>
+        <Footer />
       </div>
     </div>
   )

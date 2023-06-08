@@ -4,6 +4,7 @@ import ItemsAccount from '../ItemsAccount/ItemsAccount'
 import { List, Logo, Money, Poshtibani1, TravelIcon, User } from '../icons/Icons'
 import { Link } from 'react-router-dom'
 import ItemsDashboardAccount from '../ItemsAccount/ItemsAccount'
+import Footer from '../Footer/Footer'
 
 const MyTrip = () => {
 
@@ -16,7 +17,7 @@ const MyTrip = () => {
                 <DesktopHeader />
             </div>
             <div className='mainMyTrip'>
-                <ItemsDashboardAccount />
+                <ItemsDashboardAccount id={2} />
                 <div className='contentMyTrip'>
                     <div className='mainContentMyTrip'>
                         <div className='search'>
@@ -54,6 +55,9 @@ const MyTrip = () => {
                         </h5>
                     </div>
                 </div>
+            </div>
+            <div className='footer' style={{backgroundColor:'white'}}>
+                <Footer />
             </div>
         </div>
     )

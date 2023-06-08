@@ -12,12 +12,12 @@ const DesktopAccount = () => {
 
 
     const ItemsAccount = [
-        { id: 1, image: <User />, title: 'حساب کاربری', link: '' },
+        { id: 1, image: <User />, title: 'حساب کاربری', link: '/Account' },
         { id: 2, image: <TravelIcon />, title: 'سفرهای من', link: "/Account/MyTrip" },
-        { id: 3, image: <List />, title: 'لیست مسافران', link: '' },
+        { id: 3, image: <List />, title: 'لیست مسافران', link: "/Account/Passengers" },
         { id: 4, image: <Poshtibani1 />, title: 'درخواست پشتیبانی', link: "/Account/DesktopTicketing" },
-        { id: 5, image: <Money />, title: 'موجودی و تراکنش‌ها', link: '' },
-        { id: 6, image: <Logo />, title: 'باشگاه همسفران', link: '' },
+        { id: 5, image: <Money />, title: 'موجودی و تراکنش‌ها', link: "/Account/DesktopTransactions" },
+        { id: 6, image: <Logo />, title: 'باشگاه همسفران', link: "/Account/Loyalty" },
     ]
 
 

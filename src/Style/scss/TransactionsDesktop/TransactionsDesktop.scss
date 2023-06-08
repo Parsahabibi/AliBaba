@@ -1,0 +1,214 @@
+.TransactionsDesktop {
+    .bodyTransactionsDesktop {
+        background-color: $grays-100;
+        height: 84vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 32px 120px;
+        padding-bottom: 0px;
+        width: 100%;
+        gap: 12px;
+
+        .mainTransactionsDesktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+
+            .top,
+            .button {
+                padding: 16px 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .08);
+                border: 1px solid rgba(0, 0, 0, .12);
+                width: 100%;
+            }
+
+            .top {
+                .Transactions {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: $grays-500;
+                    padding-bottom: 32px;
+
+                    h4 {
+                        font-weight: 700;
+                    }
+                }
+
+                .itemsTransactions {
+                    display: flex;
+                    align-items: center;
+
+                    .right {
+                        padding-left: 45px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 8px;
+
+                        p {
+                            color: $grays-500;
+                            font-weight: 700;
+                        }
+
+                        .money {
+                            h2 {
+                                color: $success-400;
+                            }
+
+                            h6 {
+                                color: $grays-400;
+                            }
+
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        .transport {
+                            display: flex;
+                            align-items: center;
+                            gap: 17px;
+
+                            .rightTransport {
+                                h6 {
+                                    color: $grays-500
+                                }
+                            }
+
+                            .leftTRansport {
+                                display: flex;
+                                align-items: center;
+                                color: $secondary-300;
+                                gap: 4px;
+                                cursor: no-drop;
+
+                                svg {
+                                    font-weight: 700;
+                                    color: $secondary-400
+                                }
+
+                                h5 {
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+
+                    .divider {
+                        width: 1px;
+                        height: 100px;
+                        background-color: rgba(0, 0, 0, .2);
+                        margin-left: 32px;
+                    }
+
+                    .left {
+                        p {
+                            color: $grays-500;
+                            font-weight: 700;
+                            padding-bottom: 16px;
+                        }
+
+                        .buttonTransport {
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+
+                            button {
+                                padding: 10px 34px;
+                                background-color: $secondary-400;
+                                color: $white;
+                                border-radius: 8px;
+                                font: 1rem;
+
+                                &:hover {
+                                    background-color: $secondary-500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button {
+                .titleTransactions {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    color: $grays-500;
+
+                    h4 {
+                        font-weight: 700;
+                    }
+
+                    padding-bottom: 24px;
+                }
+
+                .itemsTransactions {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 150px;
+                    padding-bottom: 36px;
+
+                    .right {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: 1px solid rgba(0, 0, 0, .12);
+                        border-radius: 8px;
+                        padding: 4px;
+                        cursor: pointer ;
+
+                        .first,
+                        .second {
+                            padding: 4px 45px;
+                            border-radius: 8px;
+                        }
+
+                        .first {
+                            color: white;
+                            background-color: $secondary-400
+                        }
+                    }
+                    .margin{
+                        margin-left: 375px;
+                    }
+
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        gap: 32px;
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                .imageTransactions {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 159px;
+                        height: 159px;
+                        padding-bottom: 24px;
+                    }
+
+                    h6 {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11,16 +11,16 @@ import Accounts from "./Accounts";
 const Home = () => {
 
   return (
-    // <div className="HomePage">
-    //   <div className="DesktopHomePage">
-    //     <DesktopHomePage />
-    //   </div>
-    //   <div className="MobileHomePage">
-    //     <MobileHomePage />
-    //   </div>
-    // </div>
+    <div className="HomePage">
+      <div className="DesktopHomePage">
+        <DesktopHomePage />
+      </div>
+      <div className="MobileHomePage">
+        <MobileHomePage />
+      </div>
+    </div>
     // <MobileAccount />
-    <Accounts />
+    // <Accounts />
     // <IncreamentMoney />
     // <DesktopAccount />
     // <ButtonConfirmAndReject />

@@ -3,6 +3,7 @@ import DesktopHeader from '../Header/DesktopHeader/DesktopHeader'
 import ItemsDashboardAccount from '../ItemsAccount/ItemsAccount'
 import HoverButton from '../HoverButton/HoverButton'
 import { Plus } from '../icons/Icons'
+import Footer from '../Footer/Footer'
 
 const Passengers = () => {
     return (
@@ -11,7 +12,7 @@ const Passengers = () => {
                 <DesktopHeader />
             </div>
             <div className='mainPassengersDesktop'>
-                <ItemsDashboardAccount />
+                <ItemsDashboardAccount id={3} />
                 <div className='mainContentPassengersDesktop'>
                     <div className='searchMainPassengersDesktop'>
                         <div className='header'>
@@ -41,6 +42,9 @@ const Passengers = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='footer' style={{ backgroundColor: 'white' }}>
+                <Footer />
             </div>
         </div>
     )

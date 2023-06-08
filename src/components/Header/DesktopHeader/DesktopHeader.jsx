@@ -252,7 +252,7 @@ const DesktopHeader = () => {
                         </Link>
                     </div>
                     <div className='item'>
-                        <Link to={""}>
+                        <Link to={"/Account/MyTrip"}>
                             <button>
                                 <BuyIcon />
                                 <p>سفرهای من</p>
