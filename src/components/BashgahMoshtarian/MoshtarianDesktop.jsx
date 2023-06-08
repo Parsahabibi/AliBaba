@@ -302,7 +302,7 @@ const MoshtarianDesktop = () => {
           <div className="main-your-question">{item_your_question}</div>
         </section>
       </div>
-      <Footer IdMore="more1" />
+      <Footer IdMore="more1" IdMoreDesktop="morebashgahdesktop" />
     </div>
   );
 };

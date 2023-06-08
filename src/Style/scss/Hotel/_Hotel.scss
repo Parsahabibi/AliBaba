@@ -1,0 +1,52 @@
+@import "./HotelDesktop.scss";
+@import "./HotelMobile.scss";
+
+.card-outside,.card-inside{
+    margin-bottom: 4rem;
+}
+
+.card-hotel a{
+    @include flex(row,space-between,center);
+    width: 100%;
+    border :1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 16px;
+    img{
+        width: 38px;
+        height: 38px;
+    }
+    span{
+        margin:0 0.5rem 0 0.2rem;
+        font-size: 0.825rem;
+    }
+    p{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    svg{
+        color:$grays-300;
+    }
+    div{
+        @include flex();
+    }
+}
+.content-hotel{
+    h1{
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: .67em 0;
+        color: #000;
+    }
+    h2{
+        color: $grays-600;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 13px 0;
+    }
+    p{
+        color: $grays-500;
+        font-size: 0.875rem;
+        margin: 1rem 0 2rem 0;
+    }
+}

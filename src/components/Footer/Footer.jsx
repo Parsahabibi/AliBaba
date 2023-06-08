@@ -51,9 +51,7 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
                 <a href="https://www.alibabatravels.co/help-center/contact-us">
                   تماس با ما
                 </a>
-                <a href="https://www.alibabatravels.co/why-alibaba">
-                  چرا علی‌بابا
-                </a>
+                <Link to="/WhyAlibaba">چرا علی‌بابا</Link>
                 <a href="https://www.alibabatravels.co/insurance">
                   علی بابا پلاس
                 </a>
@@ -101,9 +99,7 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
                 </div>
               </label>
               <div className="body-d-top-middle-footer-mobile">
-                <a href="https://www.alibabatravels.co/loyalty">
-                  باشگاه همسفران
-                </a>
+                <Link to="/BashgahMoshtarian">باشگاه همسفران</Link>
                 <a href="https://www.alibabatravels.co/business">
                   فروش سازمانی
                 </a>
@@ -227,9 +223,7 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
                 <a href="https://www.alibabatravels.co/help-center/contact-us">
                   تماس با ما
                 </a>
-                <a href="https://www.alibabatravels.co/why-alibaba">
-                  چرا علی‌بابا
-                </a>
+                <Link to="/WhyAlibaba">چرا علی‌بابا</Link>
                 <a href="https://www.alibabatravels.co/insurance">
                   علی بابا پلاس
                 </a>
@@ -270,9 +264,8 @@ const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
               </div>
 
               <div className="body-d-top-middle-footer-desktop">
-                <a href="https://www.alibabatravels.co/loyalty">
-                  باشگاه همسفران
-                </a>
+                <Link to="/BashgahMoshtarian">باشگاه همسفران</Link>
+
                 <a href="https://www.alibabatravels.co/business">
                   فروش سازمانی
                 </a>

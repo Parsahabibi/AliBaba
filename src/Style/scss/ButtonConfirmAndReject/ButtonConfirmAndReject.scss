@@ -1,10 +1,13 @@
 .ButtonConfirmAndReject {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: auto auto;
     padding-top: 20%;
     gap: 16px;
+    background-color: rgb(248, 250, 251);
+        padding: 16px 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     .Reject {
         button {
             font-size: 1rem;

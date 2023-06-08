@@ -15,7 +15,7 @@ const ServicesbtnsAirplaneInside = () => {
 
   const itembtns =["یک طرفه","رفت و برگشت"];
   return (
-    <div>
+    <div className="body-btns-services">
       <BtnsServices
         handleclick={ShowBtemsBtn}
         matn="یک طرفه"

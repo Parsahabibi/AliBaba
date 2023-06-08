@@ -71,14 +71,11 @@
       }
     }
   }
- .vila-desktop{
-  display: inline;
- }
- .vila-mobile{
-  display: none;
- }
-}
 
+   .content-bus .list-blit-bus{
+    @include flex(row,space-between,center);
+  }
+}
 @media (min-width: 992px) {
   footer {
     .footer-desktop {
@@ -122,7 +119,7 @@
   .your-question {
     max-width: 992px;
   }
- 
+
   .main {
     width: 1200px;
     padding: 0 16px;
@@ -132,14 +129,9 @@
     width: 1200px;
     padding: 0 16px;
   }
-   .bashgah-moshtarian-mobile {
-    display: none;
-  }
-  .bashgah-moshtarian-desktop {
-    display: inline;
-  }
+
 }
-@media (min-width:900px) {
+@media (min-width: 900px) {
   .main {
     padding: 0 16px;
     margin-top: -76px;
@@ -147,9 +139,9 @@
   .bg-services {
     display: flex;
   }
-   .services {
-      display: inline-block;
-    }
+  .services {
+    display: inline-block;
+  }
 }
 @media (min-width: 1200px) {
   footer {
@@ -185,9 +177,22 @@
       }
     }
   }
+  .content-bus .companys{
+    overflow: hidden;
+
+  }
   .your-question {
     max-width: 1200px;
     padding: 0;
+    .main-your-question {
+      .item-your-question {
+        .body-your-question {
+          p {
+            padding: 16px 60px;
+          }
+        }
+      }
+    }
   }
   .main {
     min-width: 1200px;
@@ -233,27 +238,26 @@
   .ButtonSearch {
     width: 187px;
   }
-  .btns-ejare-vila{
-    .btn-ejare-vila{
+  .btns-ejare-vila {
+    .btn-ejare-vila {
       width: 186px;
     }
   }
   .boxs-vila {
-     .body-boxs-vila{
-      .box-vila{
-        img{
+    .body-boxs-vila {
+      .box-vila {
+        img {
           height: 240px;
         }
       }
-     }
+    }
   }
-  .slider-reserve-vila{
-    .col-slider-reserve-vila{
+  .slider-reserve-vila {
+    .col-slider-reserve-vila {
       min-width: 292px;
-      .item-slider-reserve-vila{
-        img{
+      .item-slider-reserve-vila {
+        img {
           max-width: 96px;
-
         }
       }
     }

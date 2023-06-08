@@ -1,0 +1,44 @@
+.hotel-desktop {
+  .main {
+    .card {
+      margin-top: 65px;
+      .card-outside,
+      .card-inside {
+        @include flex(row, flex-start, flex-start);
+        flex-wrap: wrap;
+        .card-hotel {
+          width: calc(33% - 16px);
+          margin: 0 8px;
+          a {
+            transition: all 0.5s ease 0s;
+            box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.08);
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 10px 2px;
+            }
+          }
+
+          span {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    .content-hotel {
+      h1 {
+        font-size: 1.25rem;
+      }
+      h2 {
+        color: rgb(43, 47, 51);
+        font-size: 1rem;
+      }
+      p {
+        line-height: 2.3;
+        color: rgb(75, 82, 89);
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

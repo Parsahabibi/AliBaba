@@ -8,6 +8,11 @@ const DropdownNumber = ({
   clickbtndecrement2,
   clickbtnincrement3,
   clickbtndecrement3,
+  classdropdown,
+  classbtn,
+  ValueAdult,
+  ValueChild,
+  ValueKid,
 }) => {
   return (
     <div className="dropdown-number">
@@ -17,13 +22,13 @@ const DropdownNumber = ({
           <span>(۱۲ سال به بالا)</span>
         </div>
         <div>
-          <div className="chose-number">
+          <div className={classdropdown + " chose-number"}>
             <div className="btn" onClick={clickbtnincrement}>
               <Add />
             </div>
-            <span>1</span>
+            <span>{ValueAdult ||1}</span>
             <div
-              className="btn btndecrement disabled"
+              className={classbtn + " btn btndecrement disabled"}
               onClick={clickbtndecrement}
             >
               <Remove />
@@ -37,13 +42,13 @@ const DropdownNumber = ({
           <span>(۲ تا ۱۲ سال)</span>
         </div>
         <div>
-          <div className="chose-number">
+          <div className={classdropdown + " chose-number"}>
             <div className="btn" onClick={clickbtnincrement2}>
               <Add />
             </div>
-            <span>0</span>
+            <span>{ValueKid ||0}</span>
             <div
-              className="btn btndecrement disabled"
+              className={classbtn + " btn btndecrement disabled"}
               onClick={clickbtndecrement2}
             >
               <Remove />
@@ -57,13 +62,13 @@ const DropdownNumber = ({
           <span>(۱۰ روز تا ۲ سال)</span>
         </div>
         <div>
-          <div className="chose-number">
+          <div className={classdropdown + " chose-number"}>
             <div className="btn" onClick={clickbtnincrement3}>
               <Add />
             </div>
-            <span>0</span>
+            <span>{ValueChild||0}</span>
             <div
-              className="btn btndecrement disabled"
+              className={classbtn + " btn btndecrement disabled"}
               onClick={clickbtndecrement3}
             >
               <Remove />
