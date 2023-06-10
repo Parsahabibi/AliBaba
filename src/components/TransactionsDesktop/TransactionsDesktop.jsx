@@ -1,15 +1,19 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import DesktopHeader from '../Header/DesktopHeader/DesktopHeader'
 import ItemsDashboardAccount from '../ItemsAccount/ItemsAccount'
 import { Download, Filter, LeftArrow } from '../icons/Icons'
 import HoverButton from '../HoverButton/HoverButton'
 import Footer from '../Footer/Footer'
+import SearchInput from '../SearchInput/SearchInput'
 
 const TransactionsDesktop = () => {
 
     const [openRight, setOpenRight] = useState(true)
     const [openLeft, setOpenLeft] = useState(false)
     const [show, setShow] = useState(false)
+
+
+    const ref = useRef('')
 
     return (
         <div className='TransactionsDesktop'>
@@ -45,7 +49,9 @@ const TransactionsDesktop = () => {
                             <div className='left'>
                                 <p>افزایش موجودی</p>
                                 <div className='buttonTransport'>
-
+                                    <div style={{border:'1px solid #E2E6E9' , borderRadius:'8px'}}>
+                                        <SearchInput refLabel={ref} label={'مبلغ مورد نظر'} />
+                                    </div>
                                     <button>پرداخت</button>
                                 </div>
                             </div>
@@ -61,9 +67,9 @@ const TransactionsDesktop = () => {
                                 <h6 onClick={() => { setOpenLeft(false); setOpenRight(true) }} className='first' style={openRight === true ? { cursor: 'pointer', backgroundColor: '#0077DB', color: '#fff' } : { backgroundColor: 'transparent', color: '#6C7680' }}> تراکنش‌ها</h6>
                                 <h6 onClick={() => { setOpenRight(false); setOpenLeft(true) }} className='second' style={openLeft === true ? { cursor: 'pointer', backgroundColor: '#0077DB', color: '#fff' } : { backgroundColor: 'transparent', color: '#6C7680' }}> درخواست‌ انتقال موجودی</h6>
                             </div>
-                            <div style={openLeft === true ? {display:'none'}:{display:'flex'}} className='left'>
+                            <div style={openLeft === true ? { display: 'none' } : { display: 'flex' }} className='left'>
                                 <HoverButton title={'فیلتر'} icon={<Filter />} />
-                                <HoverButton  title={'خروجی اکسل'} icon={<Download />} />
+                                <HoverButton title={'خروجی اکسل'} icon={<Download />} />
                             </div>
                         </div>
                         <div className='imageTransactions'>
@@ -73,7 +79,7 @@ const TransactionsDesktop = () => {
                     </div>
                 </div>
             </div>
-            <div className='footer' style={{backgroundColor:'white'}}>
+            <div className='footer' style={{ backgroundColor: 'white' }}>
                 <Footer />
             </div>
         </div>

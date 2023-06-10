@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import DesktopHeader from '../Header/DesktopHeader/DesktopHeader'
 import ItemsDashboardAccount from '../ItemsAccount/ItemsAccount'
 import HoverButton from '../HoverButton/HoverButton'
 import { Plus } from '../icons/Icons'
 import Footer from '../Footer/Footer'
+import SearchInput from '../SearchInput/SearchInput'
 
 const Passengers = () => {
+
+
+    const ref = useRef('')
+
+
     return (
         <div className='PassengersDesktop'>
             <div className='headerPassengersDesktop'>
@@ -19,7 +25,9 @@ const Passengers = () => {
                             <svg viewBox="0 0 24 24" width="1.125rem" height="1.125rem" fill="currentColor" class="ml-2"><path d="M14.25 3A6.758 6.758 0 0 1 21 9.75a6.758 6.758 0 0 1-6.75 6.75 6.713 6.713 0 0 1-3.933-1.267l-5.445 5.445a1.095 1.095 0 0 1-1.55 0 1.098 1.098 0 0 1 0-1.551l5.444-5.445A6.713 6.713 0 0 1 7.5 9.75 6.758 6.758 0 0 1 14.25 3Zm-.005 2.259A4.5 4.5 0 0 0 9.75 9.754a4.5 4.5 0 0 0 4.495 4.496 4.5 4.5 0 0 0 4.496-4.495 4.5 4.5 0 0 0-4.496-4.496Z" fill-rule="evenodd"></path></svg>
                             <h4> جستجوی مسافران </h4>
                         </div>
-                        <div className='input'></div>
+                        <div style={{border:'1px solid #E2E6E9' , borderRadius:'8px'}} className='input'>
+                            <SearchInput refLabel={ref} label={'جستجوی نام، نام خانوادگی، کد ملی و شماره پاسپورت'} />
+                        </div>
                     </div>
                     <div className='ListMainPassengersDesktop'>
                         <div className='top'>

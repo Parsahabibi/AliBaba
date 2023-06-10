@@ -98,12 +98,15 @@
                                 }
                             }
                         }
+                        @media screen and (min-width:1400px) {
+                            padding-left: 85px;
+                        }
                     }
 
                     .divider {
                         width: 1px;
                         height: 100px;
-                        background-color: rgba(0, 0, 0, .2);
+                        background-color: rgba(0, 0, 0, .12);
                         margin-left: 32px;
                     }
 
@@ -120,11 +123,11 @@
                             gap: 16px;
 
                             button {
-                                padding: 10px 34px;
+                                padding: 12px 34px;
                                 background-color: $secondary-400;
                                 color: $white;
                                 border-radius: 8px;
-                                font: 1rem;
+                                font-size: 1rem;
 
                                 &:hover {
                                     background-color: $secondary-500;
