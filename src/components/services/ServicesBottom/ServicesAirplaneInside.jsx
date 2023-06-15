@@ -289,7 +289,7 @@ const ServicesAirplaneInside = (props) => {
           });
           str = str.slice(0, -1); // حذف آخرین علامت &
           navigate(`/flight?${str}`)
-        }}>جست و جو</button>
+        }}>جستجو</button>
       </div>
       {/* </Link> */}
     </div>
