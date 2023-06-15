@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
 import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
 import SearchInput from "../../SearchInput/SearchInput";
 import { useRef } from "react";
 import DropdownNumber from "../Dropdownservices/DropdownNumber";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
+import { Navigate } from "react-router-dom";
 const ServicesAirplaneOutside = () => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
+
+
+  const [queryOne, setQueryOne] = useState({})
 
   function opendropdown() {
     dropstart.current.style.display = "inline";
@@ -211,6 +215,7 @@ const ServicesAirplaneOutside = () => {
           handleclick={opendropdown}
           refinput={inputstart}
           refLabel={Labelstart}
+          onchangequery={setQueryOne}
         />
         <DropStartLocation
           classdropdown="dropdown-services"
@@ -226,6 +231,7 @@ const ServicesAirplaneOutside = () => {
           handleclick={opendropdown2}
           refinput={inputstart2}
           refLabel={Labelstart2}
+          onchangequery={setQueryOne}
         />
         <DropStartLocation
           classdropdown="dropdown-services dropdownend"
@@ -240,12 +246,14 @@ const ServicesAirplaneOutside = () => {
           refinput={inputstart3}
           refLabel={Labelstart3}
           type="date"
+          onchangequery={setQueryOne}
         />
         <SearchInput
           label="تاریخ برگشت"
           refinput={inputstart4}
           refLabel={Labelstart4}
           type="date"
+          onchangequery={setQueryOne}
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -258,6 +266,7 @@ const ServicesAirplaneOutside = () => {
           refinput={inputnumber}
           refLabel={Labelstart5}
           handleclick={showDropdownNumber}
+          onchangequery={setQueryOne}
         />
         <DropdownNumber
           clickbtnincrement={incrementNumber}
@@ -269,7 +278,14 @@ const ServicesAirplaneOutside = () => {
         />
       </div>
       <div className="d-options-services">
-        <ButtonSearch />
+        <button className="ButtonSearch" onClick={() => {
+          let str = '';
+          Object.entries(queryOne).forEach(([key, val]) => {
+            str = str.concat(`${key}=${val}&`);
+          });
+          str = str.slice(0, -1); // حذف آخرین علامت &
+          Navigate(`/flight?${str}`)
+        }}>جست و جو</button>
       </div>
     </div>
   );

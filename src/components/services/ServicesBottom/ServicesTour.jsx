@@ -13,6 +13,12 @@ import SearchInput from "../../SearchInput/SearchInput";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 
 const ServicesTour = () => {
+
+
+  const [queryTour, setQueryTour] = useState({})
+
+
+
   const refInput1thour = useRef(0);
   const refInput2thour = useRef(0);
   const refInput3 = useRef(0);
@@ -148,6 +154,7 @@ const ServicesTour = () => {
           refLabel={refLabel1thour}
           refinput={refInput1thour}
           handleclick={opendropdown1thour}
+          onchangequery={setQueryTour}
         />
         <DropStartLocation
           classdropdown="dropdown-services"
@@ -161,6 +168,7 @@ const ServicesTour = () => {
           refLabel={refLabel2thour}
           refinput={refInput2thour}
           handleclick={opendropdown2thour}
+          onchangequery={setQueryTour}
         />
         <DropStartLocation
           classdropdown="dropdown-services dropdownend"
@@ -176,12 +184,14 @@ const ServicesTour = () => {
           refLabel={refLabel3}
           refinput={refInput3}
           type="date"
+          onchangequery={setQueryTour}
         />
         <SearchInput
           label="تاریخ برگشت"
           refLabel={refLabel4}
           refinput={refInput4}
           type="date"
+          onchangequery={setQueryTour}
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -196,6 +206,7 @@ const ServicesTour = () => {
           refLabel={refLabel5thourdesktop}
           refinput={refInput5thourdesktop}
           handleclick={OpenDropdownPassengerThour}
+          onchangequery={setQueryTour}
         />
         <div
           ref={dropThour}

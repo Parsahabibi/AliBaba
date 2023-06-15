@@ -7,10 +7,14 @@ import SearchInput from "../../SearchInput/SearchInput";
 import DropdownNumber from "../Dropdownservices/DropdownNumber";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const ServicesAirplaneInside = (props) => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
   const Labelstart = useRef(0);
+  const [query, setQuery] = useState({})
+  let navigate = useNavigate();
+
 
   function opendropdown() {
     dropstart.current.style.display = "inline";
@@ -195,7 +199,7 @@ const ServicesAirplaneInside = (props) => {
     "تبریز",
     "کیش",
   ];
-  
+
   // const data=(x)=> {
   //   console.log(x);
   // }
@@ -211,6 +215,7 @@ const ServicesAirplaneInside = (props) => {
           handleclick={opendropdown}
           refinput={inputstart}
           refLabel={Labelstart}
+          onchangequery={setQuery}
         />
         <DropStartLocation
           classdropdown="dropdown-services"
@@ -226,6 +231,7 @@ const ServicesAirplaneInside = (props) => {
           handleclick={opendropdown2}
           refinput={inputstart2}
           refLabel={Labelstart2}
+          onchangequery={setQuery}
         />
 
         <DropStartLocation
@@ -241,12 +247,14 @@ const ServicesAirplaneInside = (props) => {
           refLabel={Labelstart3}
           refinput={inputstart3}
           type="date"
+          onchangequery={setQuery}
         />
         <SearchInput
           label="تاریخ برگشت"
           refLabel={Labelstart4}
           refinput={inputstart4}
           type="date"
+          onchangequery={setQuery}
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -254,11 +262,12 @@ const ServicesAirplaneInside = (props) => {
       <div className="d-options-services">
         <SearchInput
           label="مسافران"
-          valueInput="1 مسافر"
+          valueInput='1مسافر'
           classlabel=" labelfix "
           refinput={inputnumber}
           refLabel={Labelstart5}
           handleclick={showDropdownNumber}
+          onchangequery={setQuery}
         />
         <DropdownNumber
           clickbtnincrement={incrementNumber}
@@ -272,7 +281,15 @@ const ServicesAirplaneInside = (props) => {
       {/* <Link to="/Search"> */}
 
       <div className="d-options-services">
-        <ButtonSearch />
+        {/* <ButtonSearch onClick={()=>{console.log('parsaq',query) ;}} /> */}
+        <button className="ButtonSearch" onClick={() => {
+          let str = '';
+          Object.entries(query).forEach(([key, val]) => {
+            str = str.concat(`${key}=${val}&`);
+          });
+          str = str.slice(0, -1); // حذف آخرین علامت &
+          navigate(`/flight?${str}`)
+        }}>جست و جو</button>
       </div>
       {/* </Link> */}
     </div>

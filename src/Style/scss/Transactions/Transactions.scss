@@ -15,6 +15,7 @@
         .Title {
             display: flex;
             align-items: flex-start;
+            justify-content: space-between;
             gap: 8px;
             padding-bottom: 12px;
             .arrow{
@@ -42,7 +43,7 @@
         .items {
             display: flex;
             align-items: center;
-            // justify-content: space-between;
+            justify-content: space-between;
             border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 8px;
             width: 100%;

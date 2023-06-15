@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
 import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
@@ -6,6 +6,13 @@ import SearchInput from "../../SearchInput/SearchInput";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 
 const ServicesBus = () => {
+
+
+  const [queryBus, setQueryBus] = useState({})
+
+
+
+
   const StartBus = useRef(0);
   const EndtBus = useRef(0);
   const DateBus = useRef(0);
@@ -28,7 +35,7 @@ const ServicesBus = () => {
     "اهواز",
     "مشهد",
   ];
-  
+
   function putitem(e) {
     inputstart.current.value = e.target.innerText;
     StartBus.current.classList.add("labelfix");
@@ -70,32 +77,32 @@ const ServicesBus = () => {
       inputstart2.current.value = x;
     }
   }
- window.onclick = function (e) {
-   if (inputstart.current) {
-     if (e.target !== inputstart.current) {
-       dropstart.current.style.display = "none";
-     }
-   }
+  window.onclick = function (e) {
+    if (inputstart.current) {
+      if (e.target !== inputstart.current) {
+        dropstart.current.style.display = "none";
+      }
+    }
 
-   if (inputstart2.current) {
-     if (e.target !== inputstart2.current) {
-       dropstart2.current.style.display = "none";
-     }
-   }
+    if (inputstart2.current) {
+      if (e.target !== inputstart2.current) {
+        dropstart2.current.style.display = "none";
+      }
+    }
 
-   if (inputstart2.current && inputstart.current) {
-     if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
-       document.querySelector(".switch-options-services").style.cursor =
-         "pointer";
-     }
-   }
+    if (inputstart2.current && inputstart.current) {
+      if (inputstart2.current.value !== "" && inputstart.current.value !== "") {
+        document.querySelector(".switch-options-services").style.cursor =
+          "pointer";
+      }
+    }
 
-   if (document.querySelector(".btn-services>p")) {
-     if (e.target !== document.querySelector(".btn-services>p")) {
-       document.querySelector(".items-btns-services").style.display = "none";
-     }
-   }
- };
+    if (document.querySelector(".btn-services>p")) {
+      if (e.target !== document.querySelector(".btn-services>p")) {
+        document.querySelector(".items-btns-services").style.display = "none";
+      }
+    }
+  };
 
   return (
     <div className="options-services">
@@ -105,6 +112,7 @@ const ServicesBus = () => {
           refLabel={StartBus}
           refinput={inputstart}
           handleclick={opendropdown}
+          onchangequery={setQueryBus}
         />
         <DropStartLocation
           classdropdown="dropdown-services"
@@ -120,6 +128,7 @@ const ServicesBus = () => {
           refLabel={EndtBus}
           refinput={inputstart2}
           handleclick={opendropdown2}
+          onchangequery={setQueryBus}
         />
         <DropStartLocation
           classdropdown="dropdown-services dropdownend"
@@ -130,7 +139,12 @@ const ServicesBus = () => {
       </div>
 
       <div className="border-width100 w100">
-        <SearchInput label="تاریخ حرکت" refLabel={DateBus} type="date" />
+        <SearchInput
+          label="تاریخ حرکت"
+          refLabel={DateBus}
+          type="date"
+          onchangequery={setQueryBus}
+        />
       </div>
       <div className="d-options-services">
         <ButtonSearch />

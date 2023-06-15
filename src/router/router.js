@@ -121,6 +121,13 @@ import Passengers from "../components/Passengers/Passengers";
 import DesktopTicketing from "../components/DesktopTicketing/DesktopTicketing";
 import TransactionsDesktop from "../components/TransactionsDesktop/TransactionsDesktop";
 import Loyalty from "../components/Loyalty/Loyalty";
+import FlightPage from '../pages/FlightPage.jsx'
+import AirplanOutSideDesktop from "../components/AirplaneOutSide/AirplaneOutSideDesktop";
+import TrainDesktop from "../components/Train/TrainDesktop";
+import HotelDesktop from "../components/Hotel/HotelDesktop";
+import VilaDesktop from "../components/Vila/VilaDesktop";
+import BusDesktop from "../components/Bus/BusDesktop";
+import ThourDesktop from "../components/Thour/ThourDesktop";
 
 const router = createBrowserRouter([
     {
@@ -210,6 +217,34 @@ const router = createBrowserRouter([
     {
         path: "/Account/HelpCenter",
         element: <HelpCenter />,
+    },
+    {
+        path: "/flight",
+        element: <FlightPage />,
+    },
+    {
+        path: "/AirplanOutSide",
+        element: <AirplanOutSideDesktop />,
+    },
+    {
+        path: "/Train",
+        element: <TrainDesktop />,
+    },
+    {
+        path: "/Hotel",
+        element: <HotelDesktop />,
+    },
+    {
+        path: "/Vila",
+        element: <VilaDesktop />,
+    },
+    {
+        path: "/Bus",
+        element: <BusDesktop />,
+    },
+    {
+        path: "/Thour",
+        element: <ThourDesktop />,
     },
 ])
 export default router

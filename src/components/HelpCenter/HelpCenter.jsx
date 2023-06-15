@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { AirplaneInsideServices, AirplaneOutsidServices, AlibabaIR, AparatIcon, Arrow, Bus, BusServices, Call, Enter, HamberMenu, Hotel, HotelServices, InstagramIcon, LeftArrow, LinkedinIcon, LogOut, LogoOfAlibaba, Money, Point, Poshtibani, RightArrow, TelegramIcon, Tick, Tour, TourServices, Train, TrainServices, Trip, TwitterIcon, VilaServices, YoutubeIcon } from '../icons/Icons'
 import { Link } from 'react-router-dom'
+import Card from '../Card/Card'
+import Swiper from '../Swiper/Swiper'
 // import SearchInput from '../SearchInput/SearchInput'
 // import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,9 +23,9 @@ const HelpCenter = () => {
     ]
 
     const items = [
-        { id: 1, image: <Trip />, title: 'سفرهای من', des: 'دانلود بلیط‌، استرداد یا کنسلی', icon: <LeftArrow /> },
-        { id: 2, image: <Poshtibani />, title: 'ثبت درخواست تغییرات در بلیط', des: 'ثبت درخواست تغییرات در بلیط', icon: <LeftArrow /> },
-        { id: 3, image: <Call />, title: 'خدمات تلفنی', des: 'مشاوره و ارتباط با پشتیبانی', icon: <LeftArrow /> },
+        { id: 1, image: <Trip />, title: 'سفرهای من', des: 'دانلود بلیط‌، استرداد یا کنسلی', icon: <LeftArrow />, link: "/Account/HelpCenter" },
+        { id: 2, image: <Poshtibani />, title: 'درخواست پشتیبانی', des: 'ثبت درخواست تغییرات در بلیط', icon: <LeftArrow />, link: "/Account/Ticketing" },
+        { id: 3, image: <Call />, title: 'خدمات تلفنی', des: 'مشاوره و ارتباط با پشتیبانی', icon: <LeftArrow />, link: "/Account/HelpCenter" },
     ]
 
     const ItemsQuick = [
@@ -64,6 +66,16 @@ const HelpCenter = () => {
         { id: 5, title: 'هتل', image: <HotelServices /> },
         { id: 6, title: 'اقامتگاه', image: <VilaServices /> },
         { id: 7, title: 'تور', image: <TourServices /> }
+    ]
+
+
+
+    const dataCards = [
+        {id:1 , image:'https://cdn.alibaba.ir/cms/uploads/shyngn_88ba5b5da3.png' , title:'ویزای شینگن' , des:'راهنمای دریافت ویزای شینگن'},
+        {id:2 , image:'https://cdn.alibaba.ir/cms/uploads/bar_805633b158.png' , title:'راهنمای میزان بار ' , des:'هزینه اضافه بار و میزان بار مجاز'},
+        {id:3 , image:'https://cdn.alibaba.ir/cms/uploads/arz_f8191c5571.png' , title:'ارز مسافرتی' , des:'راهنمای دریافت ارز مسافرتی'},
+        {id:4 , image:'https://cdn.alibaba.ir/cms/uploads/eward_2_1b701fe7e4.png' , title:'عوارض خروج  از کشور' , des:'عوارض خروج از کشور در سال 1401'},
+        {id:5 , image:'https://cdn.alibaba.ir/cms/uploads/wyza_dw_a82619993a.png' , title:'راهنمای  ویزا' , des:'لیست کشورهای بدون نیاز به ویزا'},
     ]
 
 
@@ -111,7 +123,7 @@ const HelpCenter = () => {
 
     return (
         <div className='HelpCenter'>
-            <div className='baler' onClick={() => { setNavbarOpen(false) }}  style={navbarOpen === true ? { display: 'inline' } : { display: 'none' }}></div>
+            <div className='baler' onClick={() => { setNavbarOpen(false) }} style={navbarOpen === true ? { display: 'inline' } : { display: 'none' }}></div>
             <div className='header'>
                 <div className='menu'>
                     <div className='hamburger' onClick={() => setNavbarOpen(true)}>
@@ -225,7 +237,7 @@ const HelpCenter = () => {
                     {
                         items.map(
                             item =>
-                                <Link to={''} className='itemHelpCenter'>
+                                <Link to={item.link} className='itemHelpCenter'>
                                     <div className='rightHelpCenter'>
                                         {item.image}
                                         <div>
@@ -290,6 +302,9 @@ const HelpCenter = () => {
                 </div>
                 <div className='helpTrip'>
                     <p> راهنمای سفر </p>
+                    <div>
+                        <Swiper cardsData={dataCards} />
+                    </div>
                 </div>
             </div>
         </div>

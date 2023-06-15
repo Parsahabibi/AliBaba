@@ -13,8 +13,7 @@ const Transactions = () => {
         <div className='Transactions'>
             <div className='headerTransactions'>
                 <div className='Title'>
-                    <Link to='/Account'><BackArrow /></Link>
-                    <h6>تراکنش‌ها و درخواست ها</h6>
+                    <Link style={{display:'flex' , alignItems:'center' , gap:'4px'}} to='/Account'><BackArrow /><h6>تراکنش‌ها و درخواست ها</h6></Link>
                     <div className='download' style={backBlueTwo === true ? {display:'none'}:{display:'flex'}} >
                         <svg viewBox="0 0 24 24" width="1.5em" fill="currentColor" data-v-2fb37d60=""><path d="M19.5 18.75a1.125 1.125 0 0 1 .108 2.245L19.5 21h-15a1.125 1.125 0 0 1-.108-2.245l.108-.005h15ZM12 3c.585 0 1.065.446 1.12 1.017l.005.108v8.803l3.157-3.155a1.125 1.125 0 0 1 1.668 1.505l-.077.085-5.077 5.078-.03.028-.016.014-.04.035-.03.023-.014.01a1.083 1.083 0 0 1-.375.181 1.116 1.116 0 0 1-.394.034l.103.004a1.128 1.128 0 0 1-.508-.12l-.015-.008a.545.545 0 0 1-.058-.033l-.021-.014a.786.786 0 0 1-.052-.034l-.038-.029-.018-.014-.03-.026a.933.933 0 0 1-.033-.03l-.022-.02-5.078-5.078a1.125 1.125 0 0 1 1.506-1.669l.085.078 3.157 3.155V4.125C10.875 3.504 11.379 3 12 3Z" fill-rule="evenodd"></path></svg>
                         <h5> خروجی اکسل </h5>

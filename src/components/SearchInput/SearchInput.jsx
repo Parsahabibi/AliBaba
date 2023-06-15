@@ -16,15 +16,71 @@ const SearchInput = ({
   refinput,
   refLabel,
   type,
+  onchangequery
+
 }) => {
+
+
+
+  const [passenger, setPassenger] = useState(0)
+
   const checkinput = (e) => {
     if (e.target.value.length >= 1) {
       refLabel.current.classList.add("labelfix");
+      setPassenger(e.target.value)
     } else {
       refLabel.current.classList.remove("labelfix");
     }
   };
+
+  useEffect(() => {
+    const setqueryparams = () => {
+
+       
+
+      if (label.includes('مبدا')) {
+        onchangequery((perv) => ({
+          ...perv,
+          trip1: refinput.current.value
+        }))
+      }
+      if (label.includes('مقصد')) {
+        onchangequery((perv) => ({
+          ...perv,
+          trip2: refinput.current.value
+        }))
+      }
+      if (label === 'مسافران') {
+        onchangequery((prev) => ({
+          ...prev,
+          pasenger: refinput.current.value
+        }))
+      }
+    }
+
+    setqueryparams()
+
+  }, [refinput.current.value])
+
+
+
   const [date, setDate] = useState("");
+
+
+  useEffect(() => {
+    const setdatelink = () => {
+      // setDate(date);
+      if (label === "تاریخ برگشت") {
+        onchangequery(prev => ({ ...prev, backDate: `${date}` }))
+      }
+      if (label === "تاریخ رفت") {
+        onchangequery(prev => ({ ...prev, goDate: `${date}` }))
+      }
+    }
+    setdatelink()
+  }, [date])
+
+
 
   const weekDays = ["ش", "ی", "د", "س", "چ", "پ", "ج"];
   const DayToday = new Date().toLocaleDateString("fa-IR");
@@ -60,13 +116,13 @@ const SearchInput = ({
           ref={refinput}
           onClick={checkinput}
           onChange={checkinput}
+        // onChange={setqueryparams}
         />
       )}
       <label
         htmlFor={id}
-        className={` ${classlabel} ${
-          date && date.toString().length > 1 && "labelfix"
-        }`}
+        className={` ${classlabel} ${date && date.toString().length > 1 && "labelfix"
+          }`}
         ref={refLabel}
       >
         {label}

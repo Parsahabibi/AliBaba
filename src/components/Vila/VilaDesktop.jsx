@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Services from "../services/Services";
@@ -24,6 +24,9 @@ import ItemSliderReserveVila from "../EjareVila/ItemSliderVila";
 import { json } from "react-router-dom";
 
 const VilaDesktop = () => {
+
+
+
   const item_services = [
     {
       check: "deactive",

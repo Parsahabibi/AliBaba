@@ -1,7 +1,7 @@
 .TransactionsDesktop {
     .bodyTransactionsDesktop {
         background-color: $grays-100;
-        height: 84vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -107,7 +107,7 @@
                         width: 1px;
                         height: 100px;
                         background-color: rgba(0, 0, 0, .12);
-                        margin-left: 32px;
+                        margin-left: 45px;
                     }
 
                     .left {
@@ -156,7 +156,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 150px;
+                    gap: 100px;
                     padding-bottom: 36px;
 
                     .right {
@@ -180,7 +180,13 @@
                         }
                     }
                     .margin{
-                        margin-left: 375px;
+                        margin-left: 286px;
+                        @media screen and (min-width:1160px){
+                            margin-left:231px;
+                        }
+                        @media screen and (min-width:1200px){
+                            margin-left:315px;
+                        }
                     }
 
                     .left {
@@ -192,6 +198,9 @@
                             width: 24px;
                             height: 24px;
                         }
+                    }
+                    @media screen and (min-width:1200px){
+                        gap:150px;
                     }
                 }
 
@@ -212,6 +221,12 @@
                     }
                 }
             }
+        }
+        @media screen and (min-width:1205px){
+            height: 97vh;
+        }
+                @media screen and (min-width:1335px){
+            height: 94vh;
         }
     }
 }

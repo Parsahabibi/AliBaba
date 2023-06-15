@@ -6,6 +6,12 @@ import SearchInput from "../../SearchInput/SearchInput";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 
 const ServicesHotel = () => {
+
+
+  const [queryHotel, setQueryHotel] = useState({})
+
+
+
   const items_dropdown = [
     "مشهد",
     "کیش",
@@ -121,6 +127,7 @@ const ServicesHotel = () => {
           refLabel={LabelVilaDesktop0}
           handleclick={OpenMenu}
           valueInput={Maghsad}
+          onchangequery={setQueryHotel}
         />
         <DropStartLocation
           classdropdown="dropdown-services w-100"
@@ -136,12 +143,14 @@ const ServicesHotel = () => {
           refinput={refinput2}
           refLabel={refLabel2}
           type="date"
+          onchangequery={setQueryHotel}
         />
         <SearchInput
           label="تاریخ خروج"
           refinput={refinput3}
           refLabel={refLabel3}
           type="date"
+          onchangequery={setQueryHotel}
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -156,6 +165,7 @@ const ServicesHotel = () => {
             NumAdult + "بزرگسال، " + NumChild + " کودک ،" + 1 + " اتاق"
           }
           handleclick={OpenDropdownPassengerThour}
+          onchangequery={setQueryHotel}
         />
         <div
           ref={dropThour}

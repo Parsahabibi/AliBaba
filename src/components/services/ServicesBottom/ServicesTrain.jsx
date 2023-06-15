@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
 import { CloseServices, PlusServices, Switch } from "../../icons/Icons";
@@ -7,6 +7,13 @@ import DropdownNumber from "../Dropdownservices/DropdownNumber";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 
 const ServicesTrain = () => {
+
+
+  const [queryTrain, setQueryTrain] = useState({})
+
+
+
+
   const dropstart1 = useRef(0);
   const inputstart1 = useRef(0);
   const Labelstart1 = useRef(0);
@@ -210,6 +217,7 @@ const ServicesTrain = () => {
           refLabel={Labelstart1}
           refinput={inputstart1}
           handleclick={opendropdown1}
+          onchangequery={setQueryTrain}
         />
         <DropStartLocation
           classdropdown="dropdown-services"
@@ -225,6 +233,7 @@ const ServicesTrain = () => {
           refLabel={Labelstart2}
           refinput={inputstart2}
           handleclick={opendropdown2}
+          onchangequery={setQueryTrain}
         />
         <DropStartLocation
           classdropdown="dropdown-services dropdownend"
@@ -239,12 +248,14 @@ const ServicesTrain = () => {
           refLabel={Labelstart3}
           refinput={inputstart3}
           type="date"
+          onchangequery={setQueryTrain}
         />
         <SearchInput
           label="تاریخ برگشت"
           refLabel={Labelstart4}
           refinput={inputstart4}
           type="date"
+          onchangequery={setQueryTrain}
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -257,6 +268,7 @@ const ServicesTrain = () => {
           refLabel={Labelstart5}
           refinput={inputnumber}
           handleclick={showDropdownNumber}
+          onchangequery={setQueryTrain}
         />
         <DropdownNumber
           clickbtnincrement={incrementNumber}

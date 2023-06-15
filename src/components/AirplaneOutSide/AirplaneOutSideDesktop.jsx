@@ -21,6 +21,8 @@ import {
 } from "../icons/Icons";
 import AirplanOutSideContent from "../HomePageContent/AirplanOutSideContent";
 const AirplanOutSideDesktop = () => {
+
+  
   const content_item_your_question_AirlanInside = [
     {
       id: "item1-questions-airplaninside",

@@ -1,5 +1,6 @@
 import React from 'react'
 import { HomeIcon, PlusIcon, TravelIcon, UserIcon } from '../icons/Icons'
+import { Link } from 'react-router-dom'
 
 const MobileFooter = () => {
     return (
@@ -38,10 +39,10 @@ const MobileFooter = () => {
                 <div>
                     <input type="radio" id='userradio' name='radio' />
                     <label htmlFor="userradio">
-                        <div>
+                        <Link style={{display:'flex' , flexDirection:'column' , justifyContent:'center' , alignItems:'center'}} to ={"/Account"}>
                             <UserIcon />
                             <h5>حساب کاربری</h5>
-                        </div>
+                        </Link>
                     </label>
                 </div>
 

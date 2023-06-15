@@ -114,6 +114,11 @@ const NumberHorofi = [
   "صد",
 ];
 const ServicesVila = () => {
+
+
+  const [queryVila, setQueryVila] = useState({})
+
+
   const [people, setpeople] = useState(1);
   const Increment = () => {
     document.querySelector(".BtnDecrementDesktop").classList.remove("disabled");
@@ -185,6 +190,8 @@ const ServicesVila = () => {
           handleclick={opendropdown}
           refinput={inputstart}
           refLabel={Labelstart}
+          onchangequery={setQueryVila}
+
         />
         <DropStartLocation
           classdropdown="dropdown-services w-100"
@@ -199,12 +206,16 @@ const ServicesVila = () => {
           refinput={inputstart2}
           refLabel={Labelstart2}
           type="date"
+          onchangequery={setQueryVila}
+
         />
         <SearchInput
           label="تاریخ خروج"
           refinput={inputstart3}
           type="date"
           refLabel={Labelstart3}
+          onchangequery={setQueryVila}
+
         />
         <PlusServices />
         {/* <CloseServices /> */}
@@ -216,6 +227,8 @@ const ServicesVila = () => {
           classlabel="labelfix"
           refinput={inputstart4}
           refLabel={Labelstart4}
+          onchangequery={setQueryVila}
+
         />
         <div className="chose-number">
           <div onClick={Increment} className="BtnIncrementDesktop">
