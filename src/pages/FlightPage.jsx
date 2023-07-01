@@ -178,7 +178,7 @@ const FlightPage = () => {
         //loader
         setTimeout(() => {
             setLoading(false);
-        }, 100);
+        }, 2000);
     }, []);
 
     return (
