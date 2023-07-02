@@ -23,14 +23,14 @@ const DesktopHeader = () => {
 
     const Ticket = [
         { id: 1, title: 'پرواز داخلی', link: "" },
-        { id: 2, title: 'پرواز خارجی', link: "" },
-        { id: 3, title: 'قطار', link: "" },
+        { id: 2, title: 'پرواز خارجی', link: "/AirplanOutSide" },
+        { id: 3, title: 'قطار', link: "/Train" },
         { id: 4, title: 'اتوبوس', link: "" },
     ]
 
     const rest = [
-        { id: 1, title: "هتل", link: "" },
-        { id: 2, title: "ویلا و اقامتگاه", link: "" },
+        { id: 1, title: "هتل", link: "/Hotel" },
+        { id: 2, title: "ویلا و اقامتگاه", link: "/Vila" },
     ]
 
 
@@ -205,7 +205,7 @@ const DesktopHeader = () => {
                         <div className='line'></div>
                     </div>
                     <div className='item'>
-                        <Link to={""}>
+                        <Link to={"/Thour"}>
                             <button>
                                 <p>تور</p>
                             </button></Link>

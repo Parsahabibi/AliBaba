@@ -5,6 +5,7 @@ import { Download, Filter, LeftArrow } from '../icons/Icons'
 import HoverButton from '../HoverButton/HoverButton'
 import Footer from '../Footer/Footer'
 import SearchInput from '../SearchInput/SearchInput'
+import NewSearchInput from '../NewSearchInput/NewSearchInput'
 
 const TransactionsDesktop = () => {
 
@@ -50,7 +51,7 @@ const TransactionsDesktop = () => {
                                 <p>افزایش موجودی</p>
                                 <div className='buttonTransport'>
                                     <div style={{border:'1px solid #E2E6E9' , borderRadius:'8px'}}>
-                                        <SearchInput refLabel={ref} label={'مبلغ مورد نظر'} />
+                                        <NewSearchInput label={'مبلغ مورد نظر'} />
                                     </div>
                                     <button>پرداخت</button>
                                 </div>

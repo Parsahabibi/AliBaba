@@ -9,8 +9,18 @@ import DropStartLocation from "../services/Dropdownservices/DropStartLocation";
 import Questions from "../Yourquestion/YourQuestion";
 import CardHotel from "./CardHotel";
 import ContentHotel from "./ContentHotel";
+import NewSearchInput from "../NewSearchInput/NewSearchInput";
 
 const HotelMobile = () => {
+
+
+
+
+  const [fix, setfix] = useState('')
+
+
+
+
   const refinput1 = useRef(0);
   const refinput2 = useRef(0);
   const refinput3 = useRef(0);
@@ -141,9 +151,11 @@ const HotelMobile = () => {
     BgVila.current.style.display = "none";
     DropdownVila.current.style.display = "none";
     setopen(false);
+    setfix('labelfix');
 
-    LabelVilaMobile0.current.classList.add("labelfix");
-    LabelVilaMobile1.current.classList.add("labelfix");
+
+    // LabelVilaMobile0.current.classList.add("labelfix");
+    // LabelVilaMobile1.current.classList.add("labelfix");
   };
   return (
     <div className="vila-mobile  hotel-mobile">
@@ -155,11 +167,13 @@ const HotelMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
             label="مقصد یا نوع اقامتگاه"
-            refinput={inputVilaMobile0}
-            refLabel={LabelVilaMobile0}
+            // refinput={inputVilaMobile0}
+            // refLabel={LabelVilaMobile0}
             valueInput={Maghsad}
+            classlabel={fix}
+
           />
         </div>
         <DropStartLocation
@@ -178,33 +192,39 @@ const HotelMobile = () => {
       <div className="services-mobile">
         <div className="item-services-mobile" onClick={OpenMenu}>
           <Location />
-          <SearchInput
+          <NewSearchInput
+            classlabel={fix}
+
             label="مقصد یا هتل (داخلی و خارجی)"
-            refinput={inputVilaMobile1}
-            refLabel={LabelVilaMobile1}
+            // refinput={inputVilaMobile1}
+            // refLabel={LabelVilaMobile1}
             valueInput={Maghsad}
           />
         </div>
         <div className="item-services-mobile border-between">
           <Date />
-          <SearchInput
+          <NewSearchInput
             label="تاریخ ورود"
-            refinput={refinput2}
-            refLabel={refLabel2}
+            classlabel={fix}
+
+            // refinput={refinput2}
+            // refLabel={refLabel2}
           />
-          <SearchInput
+          <NewSearchInput
             label="تاریخ خروج"
-            refinput={refinput3}
-            refLabel={refLabel3}
+            // refinput={refinput3}
+            // refLabel={refLabel3}
+            classlabel={fix}
+
           />
         </div>
         <div className="item-services-mobile">
-          <SearchInput
+          <NewSearchInput
             label="مسافران"
             valueInput="1 بزرگسال، 1اتاق"
             classlabel="labelfix"
-            refinput={refinput4}
-            refLabel={refLabel4}
+            // refinput={refinput4}
+            // refLabel={refLabel4}
           />
         </div>
         <div className="btn-services-mobile">

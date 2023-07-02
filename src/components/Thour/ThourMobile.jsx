@@ -19,7 +19,24 @@ import ContentBusMobile from "../Bus/ContentBusMobile.";
 import Footer from "../Footer/Footer";
 import ItemSliderReserveVila from "../EjareVila/ItemSliderVila";
 import CardHotel from "../Hotel/CardHotel";
+import NewSearchInput from "../NewSearchInput/NewSearchInput";
+
+
+
+
+
+
 const ThourMobile = () => {
+
+
+
+
+  const [fix, setfix] = useState('')
+
+
+
+
+
   const inputThourMobile0 = useRef(0);
   const LabelThourMobile0 = useRef(0);
   const inputThourMobile1 = useRef(0);
@@ -410,9 +427,9 @@ const ThourMobile = () => {
 
     BgVila.current.style.display = "none";
     DropdownVila.current.style.display = "none";
-
-    LabelThourMobile0.current.classList.add("labelfix");
-    LabelThourMobile1.current.classList.add("labelfix");
+    setfix('labelfix');
+    // LabelThourMobile0.current.classList.add("labelfix");
+    // LabelThourMobile1.current.classList.add("labelfix");
   };
 
   const DropdownVila2 = useRef(0);
@@ -429,8 +446,9 @@ const ThourMobile = () => {
     BgVila.current.style.display = "none";
     DropdownVila2.current.style.display = "none";
 
-    LabelThourMobile4.current.classList.add("labelfix");
-    LabelThourMobile2.current.classList.add("labelfix");
+    setfix('labelfix');
+    // LabelThourMobile4.current.classList.add("labelfix");
+    // LabelThourMobile2.current.classList.add("labelfix");
   };
   const CloseMenu2 = () => {
     BgVila.current.style.display = "none";
@@ -483,6 +501,10 @@ const ThourMobile = () => {
     useState("hide-passenger-thour-mobile");
 
   const dropThour = useRef(0);
+
+
+
+
   return (
     <div className="vila-mobile thour-mobile ">
       <div className="bg-vila-mobile" ref={BgVila} onClick={CloseMenu}></div>
@@ -493,10 +515,11 @@ const ThourMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+          classlabel={fix}
             label="انتخاب مبدا"
-            refinput={inputThourMobile0}
-            refLabel={LabelThourMobile0}
+            // refinput={inputThourMobile0}
+            // refLabel={LabelThourMobile0}
             valueInput={Maghsad}
           />
         </div>
@@ -513,10 +536,11 @@ const ThourMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+          classlabel={fix}
             label="انخاب مقصد"
-            refinput={inputThourMobile1}
-            refLabel={LabelThourMobile4}
+            // refinput={inputThourMobile1}
+            // refLabel={LabelThourMobile4}
             valueInput={Maghsad2}
           />
         </div>
@@ -538,10 +562,11 @@ const ThourMobile = () => {
         <div className="containder-item-services-mobile">
           <div className="item-services-mobile-train">
             <Location />
-            <SearchInput
+            <NewSearchInput
+            classlabel={fix}
               label="مبدا (شهر)"
-              refinput={inputThourMobile1}
-              refLabel={LabelThourMobile1}
+              // refinput={inputThourMobile1}
+              // refLabel={LabelThourMobile1}
               valueInput={Maghsad}
               handleclick={OpenMenu}
             />
@@ -549,10 +574,11 @@ const ThourMobile = () => {
 
           <div className="item-services-mobile-train">
             <Location />
-            <SearchInput
+            <NewSearchInput
+            classlabel={fix}
               label="مقصد (شهر)"
-              refinput={inputThourMobile2}
-              refLabel={LabelThourMobile2}
+              // refinput={inputThourMobile2}
+              // refLabel={LabelThourMobile2}
               valueInput={Maghsad2}
               handleclick={OpenMenu2}
             />
@@ -562,27 +588,27 @@ const ThourMobile = () => {
         <div className="item-services-mobile">
           <Date />
 
-          <SearchInput
+          <NewSearchInput
             label="تاریخ رفت"
-            refinput={inputThourMobile3}
-            refLabel={LabelThourMobile3}
+            // refinput={inputThourMobile3}
+            // refLabel={LabelThourMobile3}
           />
-          <SearchInput
+          <NewSearchInput
             label="تاریخ برگشت"
-            refinput={inputThourMobile5}
-            refLabel={LabelThourMobile5}
+            // refinput={inputThourMobile5}
+            // refLabel={LabelThourMobile5}
           />
         </div>
 
         <div className="d-options-services item-services-mobile">
-          <SearchInput
+          <NewSearchInput
             label="مسافران"
             valueInput={
               NumAdult + "بزرگسال، " + NumChild + " کودک ،" + 1 + " اتاق"
             }
             classlabel="labelfix"
-            refLabel={LabelThourMobile6}
-            refinput={inputThourMobile6}
+            // refLabel={LabelThourMobile6}
+            // refinput={inputThourMobile6}
             handleclick={() =>
               SetClassDropdownPassengerThour("show-passenger-thour-mobile")
             }

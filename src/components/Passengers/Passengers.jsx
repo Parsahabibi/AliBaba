@@ -5,6 +5,7 @@ import HoverButton from '../HoverButton/HoverButton'
 import { Plus } from '../icons/Icons'
 import Footer from '../Footer/Footer'
 import SearchInput from '../SearchInput/SearchInput'
+import NewSearchInput from '../NewSearchInput/NewSearchInput'
 
 const Passengers = () => {
 
@@ -26,7 +27,7 @@ const Passengers = () => {
                             <h4> جستجوی مسافران </h4>
                         </div>
                         <div style={{border:'1px solid #E2E6E9' , borderRadius:'8px'}} className='input'>
-                            <SearchInput refLabel={ref} label={'جستجوی نام، نام خانوادگی، کد ملی و شماره پاسپورت'} />
+                            <NewSearchInput label={'جستجوی نام، نام خانوادگی، کد ملی و شماره پاسپورت'} />
                         </div>
                     </div>
                     <div className='ListMainPassengersDesktop'>

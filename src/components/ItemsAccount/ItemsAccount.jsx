@@ -7,7 +7,7 @@ const ItemsDashboardAccount = ({id}) => {
 
 
     const ItemAccount = [
-        { id: 1, image: <User />, title: 'حساب کاربری', link: '/Account' },
+        { id: 1, image: <User />, title: 'حساب کاربری', link: '/Account/Profile' },
         { id: 2, image: <TravelIcon />, title: 'سفرهای من', link: "/Account/MyTrip" },
         { id: 3, image: <List />, title: 'لیست مسافران', link: "/Account/Passengers" },
         { id: 4, image: <Poshtibani1 />, title: 'درخواست پشتیبانی', link: "/Account/DesktopTicketing" },

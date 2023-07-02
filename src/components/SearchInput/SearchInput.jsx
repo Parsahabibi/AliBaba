@@ -25,19 +25,18 @@ const SearchInput = ({
   const [passenger, setPassenger] = useState(0)
 
   const checkinput = (e) => {
-    if (e.target.value.length >= 1) {
-      refLabel.current.classList.add("labelfix");
-      setPassenger(e.target.value)
-    } else {
-      refLabel.current.classList.remove("labelfix");
+    if (refLabel) {
+      if (e.target.value.length >= 1) {
+        refLabel.current.classList.add("labelfix");
+        setPassenger(e.target.value)
+      } else {
+        refLabel.current.classList.remove("labelfix");
+      }
     }
   };
 
   useEffect(() => {
     const setqueryparams = () => {
-
-       
-
       if (label.includes('مبدا')) {
         onchangequery((perv) => ({
           ...perv,

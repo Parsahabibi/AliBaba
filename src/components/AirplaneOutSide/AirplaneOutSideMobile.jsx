@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import Footer from "../Footer/Footer";
 import Questions from "../Yourquestion/YourQuestion";
 import ButtonSearch from "../ButtonSearch/ButtonSearch";
+import NewSearchInput from "../NewSearchInput/NewSearchInput";
+
+
 import {
   Add,
   ArrowRight,
@@ -23,6 +26,11 @@ import BtnsServices from "../BtnsServices/BtnsServices";
 import { Link } from "react-router-dom";
 
 const AirplanOutSideMobile = () => {
+
+
+  const [fix, setfix] = useState('')
+
+
   const content_item_your_question_AirlanInside = [
     {
       id: "item1-questions-airplaninside-mobile",
@@ -127,8 +135,10 @@ const AirplanOutSideMobile = () => {
     BgVila.current.style.display = "none";
     DropdownVila.current.style.display = "none";
 
-    LabelVilaMobile0.current.classList.add("labelfix");
-    LabelVilaMobile1.current.classList.add("labelfix");
+    setfix('labelfix');
+
+    // LabelVilaMobile0.current.classList.add("labelfix");
+    // LabelVilaMobile1.current.classList.add("labelfix");
   };
 
   const DropdownVila2 = useRef(0);
@@ -145,8 +155,10 @@ const AirplanOutSideMobile = () => {
     BgVila.current.style.display = "none";
     DropdownVila2.current.style.display = "none";
 
-    LabelVilaMobile4.current.classList.add("labelfix");
-    LabelVilaMobile2.current.classList.add("labelfix");
+    setfix('labelfix');
+
+    // LabelVilaMobile4.current.classList.add("labelfix");
+    // LabelVilaMobile2.current.classList.add("labelfix");
   };
   const CloseMenu2 = () => {
     BgVila.current.style.display = "none";
@@ -335,10 +347,11 @@ const AirplanOutSideMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
             label="انتخاب مبدا"
-            refinput={inputVilaMobile0}
-            refLabel={LabelVilaMobile0}
+            classlabel={fix}
+            // refinput={inputVilaMobile0}
+            // refLabel={LabelVilaMobile0}
             valueInput={Maghsad}
           />
         </div>
@@ -355,10 +368,11 @@ const AirplanOutSideMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+            classlabel={fix}
             label="انخاب مقصد"
-            refinput={inputVilaMobile1}
-            refLabel={LabelVilaMobile4}
+            // refinput={inputVilaMobile1}
+            // refLabel={LabelVilaMobile4}
             valueInput={Maghsad2}
           />
         </div>
@@ -422,12 +436,13 @@ const AirplanOutSideMobile = () => {
         <p>پرواز</p>
         <Link to='/'>
 
-        <ArrowRight />
+          <ArrowRight />
         </Link>
       </div>
 
       <div className="chose-parvaz">
         <div
+          onClick={() => { SetActiveChoseBtn("InSide") }}
           className={
             ActiveChoseBtn === "InSide"
               ? "item-chose-parvaz active-parvaz"
@@ -438,6 +453,7 @@ const AirplanOutSideMobile = () => {
         </div>
 
         <div
+          onClick={() => { SetActiveChoseBtn("OutSide") }}
           className={
             ActiveChoseBtn === "OutSide"
               ? "item-chose-parvaz active-parvaz"
@@ -480,10 +496,11 @@ const AirplanOutSideMobile = () => {
           <div className="container-colapse">
             <div className="item-services-mobile-train">
               <Location />
-              <SearchInput
+              <NewSearchInput
+                classlabel={fix}
                 label="مبدا (شهر، فرودگاه)"
-                refinput={inputVilaMobile1}
-                refLabel={LabelVilaMobile1}
+                // refinput={inputVilaMobile1}
+                // refLabel={LabelVilaMobile1}
                 valueInput={Maghsad}
                 handleclick={OpenMenu}
               />
@@ -491,10 +508,11 @@ const AirplanOutSideMobile = () => {
 
             <div className="item-services-mobile-train">
               <Location />
-              <SearchInput
+              <NewSearchInput
                 label="مقصد (شهر، فرودگاه)"
-                refinput={inputVilaMobile2}
-                refLabel={LabelVilaMobile2}
+                classlabel={fix}
+                // refinput={inputVilaMobile2}
+                // refLabel={LabelVilaMobile2}
                 valueInput={Maghsad2}
                 handleclick={OpenMenu2}
               />
@@ -505,10 +523,11 @@ const AirplanOutSideMobile = () => {
             <>
               <div className="item-services-mobile-train">
                 <Location />
-                <SearchInput
+                <NewSearchInput
                   label="مبدا (شهر، فرودگاه)"
-                  refinput={inputVilaMobile1}
-                  refLabel={LabelVilaMobile1}
+                  classlabel={fix}
+                  // refinput={inputVilaMobile1}
+                  // refLabel={LabelVilaMobile1}
                   valueInput={Maghsad}
                   handleclick={OpenMenu}
                 />
@@ -518,10 +537,11 @@ const AirplanOutSideMobile = () => {
               </div>
               <div className="item-services-mobile-train">
                 <Location />
-                <SearchInput
+                <NewSearchInput
                   label="مقصد (شهر، فرودگاه)"
-                  refinput={inputVilaMobile2}
-                  refLabel={LabelVilaMobile2}
+                  classlabel={fix}
+                  // refinput={inputVilaMobile2}
+                  // refLabel={LabelVilaMobile2}
                   valueInput={Maghsad2}
                   handleclick={OpenMenu2}
                 />
@@ -533,10 +553,11 @@ const AirplanOutSideMobile = () => {
         {ChoseServices === "یک طرفه" && (
           <div className="item-services-mobile">
             <Date />
-            <SearchInput
+            <NewSearchInput
+              classlabel={fix}
               label="تاریخ رفت"
-              refinput={inputVilaMobile3}
-              refLabel={LabelVilaMobile3}
+            // refinput={inputVilaMobile3}
+            // refLabel={LabelVilaMobile3}
             />
           </div>
         )}
@@ -544,15 +565,17 @@ const AirplanOutSideMobile = () => {
           <div className="item-services-mobile">
             <Date />
 
-            <SearchInput
+            <NewSearchInput
               label="تاریخ رفت"
-              refinput={inputVilaMobile3}
-              refLabel={LabelVilaMobile3}
+              classlabel={fix}
+            // refinput={inputVilaMobile3}
+            // refLabel={LabelVilaMobile3}
             />
-            <SearchInput
+            <NewSearchInput
               label="تاریخ برگشت"
-              refinput={inputVilaMobile5}
-              refLabel={LabelVilaMobile5}
+              classlabel={fix}
+            // refinput={inputVilaMobile5}
+            // refLabel={LabelVilaMobile5}
             />
           </div>
         )}
@@ -560,10 +583,11 @@ const AirplanOutSideMobile = () => {
           <div className="item-services-mobile">
             <Date />
 
-            <SearchInput
+            <NewSearchInput
+              classlabel={fix}
               label="تاریخ رفت"
-              refinput={inputVilaMobile3}
-              refLabel={LabelVilaMobile3}
+            // refinput={inputVilaMobile3}
+            // refLabel={LabelVilaMobile3}
             />
           </div>
         )}
@@ -572,12 +596,12 @@ const AirplanOutSideMobile = () => {
         <div className="item-services-mobile">
           {input ? (
             <>
-              <SearchInput
+              <NewSearchInput
                 label="تعداد خودرو"
                 valueInput={NumberHorofi[people - 1]}
                 classlabel="labelfix"
-                refinput={inputstart4}
-                refLabel={Labelstart4}
+              // refinput={inputstart4}
+              // refLabel={Labelstart4}
               />
               <div className="chose-number">
                 <div onClick={Increment} className="BtnIncrementmobile">
@@ -593,17 +617,20 @@ const AirplanOutSideMobile = () => {
               </div>
             </>
           ) : (
-            <SearchInput
+            <NewSearchInput
               label="مسافران"
               valueInput={NumberPassenger + " مسافر"}
               classlabel="labelfix"
-              refinput={inputpassenger}
+              // refinput={inputpassenger}
               handleclick={ShowDropdownPassengers}
             />
           )}
         </div>
         <div className="footer-services-mobile">
           <div
+
+            style={ActiveChoseBtn === "InSide" ? { display: 'none' } : { display: 'flex' }}
+
             className="btn-dropdown-services-mobile"
             onClick={ShowClassParvaz}
           >

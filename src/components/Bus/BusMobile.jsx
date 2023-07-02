@@ -8,8 +8,16 @@ import DropdownNumber from "../services/Dropdownservices/DropdownNumber";
 import DropStartLocation from "../services/Dropdownservices/DropStartLocation";
 import Questions from "../Yourquestion/YourQuestion";
 import ContentBusMobile from "./ContentBusMobile.";
+import NewSearchInput from "../NewSearchInput/NewSearchInput";
 
 const BusMobile = () => {
+
+
+
+
+  const [fix, setfix] = useState('')
+
+
    const content_item_your_question_Bus = [
      {
        id: "item1-questions-bus-mobile",
@@ -251,9 +259,9 @@ const BusMobile = () => {
 
      BgVila.current.style.display = "none";
      DropdownVila.current.style.display = "none";
-
-     LabelVilaMobile0.current.classList.add("labelfix");
-     LabelVilaMobile1.current.classList.add("labelfix");
+     setfix('labelfix');
+    //  LabelVilaMobile0.current.classList.add("labelfix");
+    //  LabelVilaMobile1.current.classList.add("labelfix");
    };
 
    const DropdownVila2 = useRef(0);
@@ -270,8 +278,9 @@ const BusMobile = () => {
      BgVila.current.style.display = "none";
      DropdownVila2.current.style.display = "none";
 
-     LabelVilaMobile4.current.classList.add("labelfix");
-     LabelVilaMobile2.current.classList.add("labelfix");
+     setfix('labelfix');
+    //  LabelVilaMobile4.current.classList.add("labelfix");
+    //  LabelVilaMobile2.current.classList.add("labelfix");
    };
    const CloseMenu2 = () => {
      BgVila.current.style.display = "none";
@@ -306,10 +315,11 @@ const BusMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+          classlabel={fix}
             label="انتخاب مبدا"
-            refinput={inputVilaMobile0}
-            refLabel={LabelVilaMobile0}
+            // refinput={inputVilaMobile0}
+            // refLabel={LabelVilaMobile0}
             valueInput={Maghsad}
           />
         </div>
@@ -326,10 +336,11 @@ const BusMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+          classlabel={fix}
             label="انخاب مقصد"
-            refinput={inputVilaMobile1}
-            refLabel={LabelVilaMobile4}
+            // refinput={inputVilaMobile1}
+            // refLabel={LabelVilaMobile4}
             valueInput={Maghsad2}
           />
         </div>
@@ -352,10 +363,11 @@ const BusMobile = () => {
         <div className="containder-item-services-mobile">
           <div className="item-services-mobile-train">
             <Location />
-            <SearchInput
+            <NewSearchInput
+            classlabel={fix}
               label="مبدا (شهر، پایانه)"
-              refinput={inputVilaMobile1}
-              refLabel={LabelVilaMobile1}
+              // refinput={inputVilaMobile1}
+              // refLabel={LabelVilaMobile1}
               valueInput={Maghsad}
               handleclick={OpenMenu}
             />
@@ -365,10 +377,11 @@ const BusMobile = () => {
           </div>
           <div className="item-services-mobile-train">
             <Location />
-            <SearchInput
+            <NewSearchInput
+            classlabel={fix}
               label="مقصد (شهر، پایانه)"
-              refinput={inputVilaMobile2}
-              refLabel={LabelVilaMobile2}
+              // refinput={inputVilaMobile2}
+              // refLabel={LabelVilaMobile2}
               valueInput={Maghsad2}
               handleclick={OpenMenu2}
             />
@@ -378,10 +391,11 @@ const BusMobile = () => {
         <div className="item-services-mobile">
           <Date />
 
-          <SearchInput
+          <NewSearchInput
+          classlabel={fix}
             label="تاریخ حرکت"
-            refinput={inputVilaMobile3}
-            refLabel={LabelVilaMobile3}
+            // refinput={inputVilaMobile3}
+            // refLabel={LabelVilaMobile3}
           />
         </div>
 

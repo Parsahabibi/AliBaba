@@ -1,90 +1,5 @@
 
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/Install",
-//     element: <HintInstall />,
-//   },
-//   {
-//     path: "/AirplanOutSide",
-//     element: <AirplanOutSide />,
-//   },
-//   {
-//     path: "/Vila",
-//     element: <Vila />,
-//   },
-//   {
-//     path: "/BashgahMoshtarian",
-//     element: <BashgahMoshtarian />,
-//   },
-//   {
-//     path: "/Hotel",
-//     element: <Hotel />,
-//   },
-//   {
-//     path: "/Thour",
-//     element: <Thour />,
-//   },
-//   {
-//     path: "/Train",
-//     element: <Train />,
-//   },
-//   {
-//     path: "/Bus",
-//     element: <Bus />,
-//   },
-//   {
-//     path: "/Account",
-//     element: <Accounts />,
-//   },
-//   {
-//     path: "/EditAccount",
-//     element: <EditAccount />,
-//   },
-//   {
-//     path: "/EditAccount/Information",
-//     element: <Information />,
-//   },
-//   {
-//     path: "/EditAccount/EditNumber",
-//     element: <EditNumber />,
-//   },
-//   {
-//     path: "/EditAccount/EmailAccount",
-//     element: <EmailsAccount />,
-//   },
-//   {
-//     path: "/EditAccount/EditUserName",
-//     element: <EditUsersName />,
-//   },
-//   {
-//     path: "/EditAccount/BankInformation",
-//     element: <BankInformation />,
-//   },
-//   {
-//     path: "/Account/Profile",
-//     element: <DesktopAccounts />,
-//   },
-//   {
-//     path: "/Account/CustomerClub",
-//     element: <CustomerClub />,
-//   },
-//   {
-//     path: "/Search",
-//     element: <Search />,
-//   },
-//   {
-//     path: "/WhyAlibaba",
-//     element: <WhyAlibaba />,
-//   },
-// ]);
-
-// export default router;
-
 
 
 import { createBrowserRouter } from "react-router-dom";
@@ -224,27 +139,27 @@ const router = createBrowserRouter([
     },
     {
         path: "/AirplanOutSide",
-        element: <AirplanOutSideDesktop />,
+        element: <AirplanOutSide />,
     },
     {
         path: "/Train",
-        element: <TrainDesktop />,
+        element: <Train />,
     },
     {
         path: "/Hotel",
-        element: <HotelDesktop />,
+        element: <Hotel />,
     },
     {
         path: "/Vila",
-        element: <VilaDesktop />,
+        element: <Vila/>,
     },
     {
         path: "/Bus",
-        element: <BusDesktop />,
+        element: <Bus />,
     },
     {
         path: "/Thour",
-        element: <ThourDesktop />,
+        element: <Thour />,
     },
 ])
 export default router

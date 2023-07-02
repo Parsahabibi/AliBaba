@@ -9,8 +9,15 @@ import SearchInput from "../SearchInput/SearchInput";
 import ButtonSearch from "../ButtonSearch/ButtonSearch";
 import DropStartLocation from "../services/Dropdownservices/DropStartLocation";
 import { Link } from "react-router-dom";
+import NewSearchInput from "../NewSearchInput/NewSearchInput";
 
 const VilaMobile = () => {
+
+
+  const [state, setState] = useState({})
+
+  const [fix, setfix] = useState('')
+
   const NumberHorofi = [
     "یک",
     "دو",
@@ -205,12 +212,14 @@ const VilaMobile = () => {
   const PutItem = (e) => {
     SetMaghsad(e.target.innerText);
 
+
     BgVila.current.style.display = "none";
     DropdownVila.current.style.display = "none";
     setopen(false);
 
-    LabelVilaMobile0.current.classList.add("labelfix");
-    LabelVilaMobile1.current.classList.add("labelfix");
+    setfix('labelfix');
+    // LabelVilaMobile0.current.classList.add("labelfix");
+    // LabelVilaMobile1.current.classList.add("labelfix");
   };
   return (
     <div className="vila-mobile">
@@ -222,11 +231,15 @@ const VilaMobile = () => {
         </div>
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+          valueInput={Maghsad}
+            // onchangequery={setState}
             label="مقصد یا نوع اقامتگاه"
-            refinput={inputVilaMobile0}
-            refLabel={LabelVilaMobile0}
-            valueInput={Maghsad}
+            // refinput={inputVilaMobile0}
+            // refLabel={LabelVilaMobile0}
+            // valueInput={Maghsad}
+            classlabel={fix}
+
           />
         </div>
         <DropStartLocation
@@ -244,29 +257,34 @@ const VilaMobile = () => {
       <div className="services-mobile">
         <div className="item-services-mobile">
           <Location />
-          <SearchInput
+          <NewSearchInput
+            // onchangequery={setState}
             label="مقصد یا نوع اقامتگاه"
-            refinput={inputVilaMobile1}
-            refLabel={LabelVilaMobile1}
+            // refinput={inputVilaMobile1}
+            // refLabel={LabelVilaMobile1}
             valueInput={Maghsad}
+            classlabel={fix}
             handleclick={OpenMenu}
           />
         </div>
         <div className="item-services-mobile border-between">
           <Date />
-          <SearchInput
+          <NewSearchInput
+            // onchangequery={setState}
             label="تاریخ ورود"
-            refinput={inputVilaMobile2}
-            refLabel={LabelVilaMobile2}
+            // refinput={inputVilaMobile2}
+            // refLabel={LabelVilaMobile2}
           />
-          <SearchInput
+          <NewSearchInput
+            // onchangequery={setState}
             label="تاریخ خروج"
-            refinput={inputVilaMobile3}
-            refLabel={LabelVilaMobile3}
+            // refinput={inputVilaMobile3}
+            // refLabel={LabelVilaMobile3}
           />
         </div>
         <div className="item-services-mobile">
-          <SearchInput
+          <NewSearchInput
+            // onchangequery={setState}
             label="تعداد مسافران"
             valueInput={NumberHorofi[people - 1] + " نفر "}
             classlabel="labelfix"
