@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BackArrow } from '../icons/Icons'
 import SearchInput from '../SearchInput/SearchInput'
 import { useState } from 'react'
+import NewSearchInput from '../NewSearchInput/NewSearchInput'
 
 
 
@@ -25,28 +26,28 @@ const Informations = () => {
             </Link>
             <div className='body'>
                 <div className='name'>
-                    <SearchInput label={'نام'} />
+                    <NewSearchInput label={'نام'} />
                 </div>
                 <div className='lastName'>
-                    <SearchInput label={'نام خانوادگی'} />
+                    <NewSearchInput label={'نام خانوادگی'} />
                 </div>
                 <div className='birthday'>
                     <h5>تاریخ تولد</h5>
                     <div className='inputs'>
-                        <SearchInput className='input' label={'روز'} />
-                        <SearchInput className='input' label={'ماه'} />
-                        <SearchInput className='input' label={"سال"}/>
+                        {/* <NewSearchInput className='input' label={'روز'} />
+                        <NewSearchInput className='input' label={'ماه'} /> */}
+                        <NewSearchInput style={{padding:'0px'}} className='input' label={"سال تولد"}/>
                     </div>
                 </div>
                 <div className='male'>
-                    <SearchInput valueInput={male} label={'جنسیت'} />
+                    <NewSearchInput classlabel={"labelfix"} valueInput={male} label={'جنسیت'} />
                 </div>
                 <div className='id'>
-                    <SearchInput label={"کد ملی"} />
+                    <NewSearchInput label={"کد ملی"} />
                 </div>
                 <div className='Number'>
                     <div className='number'>
-                        <SearchInput label={'شماره تلفن ضروری'} />
+                        <NewSearchInput label={'شماره تلفن ضروری'} />
                     </div>
                     <span>این شماره فقط برای زمان‌های ضروری که شماره اصلی شما در دسترس نباشد مورد استفاده قرار میگیرد.</span>
                 </div>

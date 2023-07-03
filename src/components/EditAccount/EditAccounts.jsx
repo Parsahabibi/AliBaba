@@ -6,10 +6,10 @@ const EditAccounts = () => {
 
   const ItemsEdit = [
     { id: 1, image: <Pen />, title: 'اطلاعات شخصی', des: ' مرد' , link:"/EditAccount/Information" },
-    { id: 1, image: <Pen />, title: 'شماره موبایل', des: '09197401839 ' , link:"/EditAccount/EditNumber" },
-    { id: 1, image: <LeftIcon />, title: 'افزودن آدرس ایمیل', des: '' , link:"/EditAccount/EmailAccount" },
-    { id: 1, image: <LeftIcon />, title: ' ویرایش کلمه عبور ', des: '' , link:"/EditAccount/EditUserName" },
-    { id: 1, image: <Pen />, title: 'اطلاعات حساب بانکی', des: ' جهت واریز وجه استردادها ' , link:"/EditAccount/BankInformation" },
+    { id: 2, image: <Pen />, title: 'شماره موبایل', des: '09197401839 ' , link:"/EditAccount/EditNumber" },
+    { id: 3, image: <LeftIcon />, title: 'افزودن آدرس ایمیل', des: '' , link:"/EditAccount/EmailAccount" },
+    { id: 4, image: <LeftIcon />, title: ' ویرایش کلمه عبور ', des: '' , link:"/EditAccount/EditUserName" },
+    { id: 5, image: <Pen />, title: 'اطلاعات حساب بانکی', des: ' جهت واریز وجه استردادها ' , link:"/EditAccount/BankInformation" },
   ]
 
 

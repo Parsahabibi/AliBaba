@@ -34,8 +34,9 @@
                 display: flex;
                 align-items: center;
                 width: 100%;
+                margin-right: -8px;
                 input{
-                    width: 120%;
+                    width: 106%;
                     border-radius: 8px;
                     border: 1px solid $grays-200;
                 }

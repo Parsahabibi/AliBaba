@@ -33,7 +33,7 @@ const Account = () => {
     return (
         <div className='Account'>
             <div onClick={() => { setOpen(false) }} className='baler' style={open === true ? { display: 'inline' } : { display: 'none' }}></div>
-            <div style={open === true ? { display: 'block' } : { display: 'none' }} className='IncreamentMoney'>
+            <div style={open === true ? { display: 'block' , height:'275px' } : { display: 'none' }} className='IncreamentMoney'>
                 <div className='headerIncreamentMoney'>
                     <h6> افزایش موجودی </h6>
                     <div onClick={() => { setOpen(false) }}>
