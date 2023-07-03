@@ -20,7 +20,7 @@ const Account = () => {
         { id: 1, image: <List />, title: 'لیست مسافران', link: '/Account/ListOfPassengers' },
         { id: 1, image: <Quiz />, title: 'مرکز پشتیبانی', link: '/Account/HelpCenter' },
         { id: 1, image: <Poshtibani1 />, title: 'درخواست پشتیبانی', link: '/Account/Ticketing' },
-        { id: 1, image: <Logout />, title: 'خروج از حساب کاربری' }
+        { id: 1, image: <Logout />, title: 'خروج از حساب کاربری' , link:'/' }
     ]
 
 
