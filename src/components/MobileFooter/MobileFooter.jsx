@@ -6,15 +6,16 @@ const MobileFooter = () => {
     return (
         <div>
             <section className='footer-mobile'>
-
                 <div>
-                    <input type="radio" id='homeradio' name='radio' />
-                    <label htmlFor="homeradio">
-                        <div>
-                            <HomeIcon />
-                            <h5>خانه</h5>
-                        </div>
-                    </label>
+                    <Link to={"/"}>
+                        <input type="radio" id='homeradio' name='radio' />
+                        <label htmlFor="homeradio">
+                            <div>
+                                <HomeIcon />
+                                <h5>خانه</h5>
+                            </div>
+                        </label>
+                    </Link>
                 </div>
                 <div>
                     <input type="radio" id='plusradio' name='radio' />
@@ -37,15 +38,14 @@ const MobileFooter = () => {
                 </div>
 
                 <div>
-                    <input type="radio" id='userradio' name='radio' />
+                    <input type="radio" id='userradio' name='radio' checked />
                     <label htmlFor="userradio">
-                        <Link style={{display:'flex' , flexDirection:'column' , justifyContent:'center' , alignItems:'center'}} to ={"/Account"}>
+                        <Link style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }} to={"/Account"}>
                             <UserIcon />
                             <h5>حساب کاربری</h5>
                         </Link>
                     </label>
                 </div>
-
             </section>
         </div>
     )

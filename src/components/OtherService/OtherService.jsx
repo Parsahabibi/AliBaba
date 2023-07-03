@@ -86,7 +86,7 @@ const OtherService = () => {
                 <div className='textOfApplicationAlibaba'>
                     <h4> اپلیکیشن علی‌بابا </h4>
                     <h5> همه سفرها در جیب شماست </h5>
-                    <Link to={""}>
+                    <Link to={"/Install"}>
                         <button>راهنمای نصب</button>
                     </Link>
                 </div>

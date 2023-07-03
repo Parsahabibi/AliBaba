@@ -1,6 +1,3 @@
-footer {
-    @include flex(column,flex-start,center);
-    border-top: solid 1px $grays-150;
     .footer-mobile {
         @include flex(row,space-around,center);
         width: 100%;
@@ -39,6 +36,10 @@ footer {
             transform: translateY(5px);
         }
     }
+    footer {
+    @include flex(column,flex-start,center);
+    border-top: solid 1px $grays-150;
+
     .footer-desktop{
         @include flex(column,flex-start,center);
         width: 100%;

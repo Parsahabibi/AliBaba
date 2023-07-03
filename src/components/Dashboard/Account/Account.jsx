@@ -3,6 +3,8 @@ import { Close, CloseServices, Count, LeftArrow, List, Logo, Logout, Mines, Plus
 import { Link } from "react-router-dom"
 import IncreamentMoney from '../../IncreamentMoney/IncreamentMoney'
 import SearchInput from '../../SearchInput/SearchInput'
+import NewSearchInput from '../../NewSearchInput/NewSearchInput'
+import MobileFooter from '../../MobileFooter/MobileFooter'
 const Account = () => {
 
 
@@ -38,7 +40,7 @@ const Account = () => {
                         <Close />
                     </div>
                 </div>
-                <SearchInput label={'مبلغ مورد نظر'} />
+                <NewSearchInput label={'مبلغ مورد نظر'} />
                 <div className='buttonIncreamentMoney'>
                     <div className={able === true ? 'able' : 'disAble'}>پرداخت</div>
                 </div>
@@ -130,7 +132,9 @@ const Account = () => {
                     }
                 </div>
             </div>
-            <div className='footerAccount'></div>
+            <div className='footerAccount'>
+                <MobileFooter />
+            </div>
         </div>
     )
 }
