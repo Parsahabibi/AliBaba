@@ -117,7 +117,7 @@ const Account = () => {
                         <h6>حساب کاربری علی بابا پلاس</h6>
                     </div>
                 </Link>
-                <div className='ItemsAccount'>
+                <div className='ItemsAccount' style={{marginBottom:'80px'}}>
                     {
                         ItemsAccount.map(
                             item =>
@@ -133,7 +133,7 @@ const Account = () => {
                 </div>
             </div>
             <div className='footerAccount'>
-                <MobileFooter />
+                <MobileFooter id={4} />
             </div>
         </div>
     )

@@ -7,7 +7,7 @@ import MobileFooter from '../MobileFooter/MobileFooter';
 const Footer = ({ conditional, open, IdMore, num, IdMoreDesktop }) => {
   return (
     <footer>
-      {open === true ? <MobileFooter /> : <></>}
+      {open === true ? <MobileFooter id={1} /> : <></>}
 
       <section className="footer-desktop">
         {/* <section className='top-footer-desktop'>

@@ -14,7 +14,7 @@ const InstallApplication = () => {
     // const [desktop , setDesktop] = useState(false)
 
     const LoginItems = [
-        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "" },
+        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "/A" },
         { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی", link: "" },
         { id: 3, image: <LogOut />, title: " خروج از حساب کاربری", link: "" },
     ]
@@ -95,7 +95,7 @@ const InstallApplication = () => {
       <div className="InstallApplication">
         <div className="header">
           <div className="logo">
-            <LogoOfAlibaba />
+            <Link to={'/'}><LogoOfAlibaba /></Link>
             <div className="alibabaIr">
               <AlibabaIR />
               <span> خرید بلیط، هتل، تور </span>
