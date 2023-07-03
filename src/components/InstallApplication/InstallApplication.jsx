@@ -14,9 +14,9 @@ const InstallApplication = () => {
     // const [desktop , setDesktop] = useState(false)
 
     const LoginItems = [
-        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "/A" },
-        { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی", link: "" },
-        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری", link: "" },
+        { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری", link: "/Account" },
+        { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی", link: "/Account/DesktopTicketing" },
+        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری", link: "/" },
     ]
 
 
