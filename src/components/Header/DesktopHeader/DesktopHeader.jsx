@@ -22,10 +22,10 @@ const DesktopHeader = () => {
 
 
     const Ticket = [
-        { id: 1, title: 'پرواز داخلی', link: "" },
+        { id: 1, title: 'پرواز داخلی', link: "/" },
         { id: 2, title: 'پرواز خارجی', link: "/AirplanOutSide" },
         { id: 3, title: 'قطار', link: "/Train" },
-        { id: 4, title: 'اتوبوس', link: "" },
+        { id: 4, title: 'اتوبوس', link: "/bus" },
     ]
 
     const rest = [
@@ -43,7 +43,7 @@ const DesktopHeader = () => {
     const LoginItems = [
         { id: 1, image: <Enter />, title: " اطلاعات حساب کاربری" , link:"/Account/Profile" },
         { id: 2, image: <Poshtibani />, title: " درخواست پشتیبانی" , link:"/Account/DesktopTicketing" },
-        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری" , link:"" },
+        { id: 3, image: <LogOut />, title: " خروج از حساب کاربری" , link:"/" },
     ]
 
 
