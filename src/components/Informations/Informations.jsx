@@ -15,8 +15,17 @@ const Informations = () => {
     const [male , SetMale] = useState('مرد')
 
 
+    const [able, setAble] = useState(false)
 
 
+    const handleAble = () => {
+        setAble(true)
+      }
+    
+    
+      const handleDisAble = () => {
+        setAble(false)
+      }
 
     return (
         <div className='Informations'>
@@ -26,28 +35,28 @@ const Informations = () => {
             </Link>
             <div className='body'>
                 <div className='name'>
-                    <NewSearchInput label={'نام'} />
+                    <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} label={'نام'} />
                 </div>
                 <div className='lastName'>
-                    <NewSearchInput label={'نام خانوادگی'} />
+                    <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} label={'نام خانوادگی'} />
                 </div>
                 <div className='birthday'>
                     <h5>تاریخ تولد</h5>
                     <div className='inputs'>
                         {/* <NewSearchInput className='input' label={'روز'} />
                         <NewSearchInput className='input' label={'ماه'} /> */}
-                        <NewSearchInput style={{padding:'0px'}} className='input' label={"سال تولد"}/>
+                        <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} style={{padding:'0px'}} className='input' label={"سال تولد"}/>
                     </div>
                 </div>
                 <div className='male'>
-                    <NewSearchInput classlabel={"labelfix"} valueInput={male} label={'جنسیت'} />
+                    <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} classlabel={"labelfix"} valueInput={male} label={'جنسیت'} />
                 </div>
                 <div className='id'>
-                    <NewSearchInput label={"کد ملی"} />
+                    <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} label={"کد ملی"} />
                 </div>
                 <div className='Number'>
                     <div className='number'>
-                        <NewSearchInput label={'شماره تلفن ضروری'} />
+                        <NewSearchInput func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'} label={'شماره تلفن ضروری'} />
                     </div>
                     <span>این شماره فقط برای زمان‌های ضروری که شماره اصلی شما در دسترس نباشد مورد استفاده قرار میگیرد.</span>
                 </div>

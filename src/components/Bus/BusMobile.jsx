@@ -13,7 +13,18 @@ import NewSearchInput from "../NewSearchInput/NewSearchInput";
 const BusMobile = () => {
 
 
+  const [able, setAble] = useState(false)
 
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
 
   const [fix, setfix] = useState('')
 
@@ -316,6 +327,7 @@ const BusMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           classlabel={fix}
             label="انتخاب مبدا"
             // refinput={inputVilaMobile0}
@@ -337,6 +349,7 @@ const BusMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           classlabel={fix}
             label="انخاب مقصد"
             // refinput={inputVilaMobile1}
@@ -364,6 +377,7 @@ const BusMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
               label="مبدا (شهر، پایانه)"
               // refinput={inputVilaMobile1}
@@ -378,6 +392,7 @@ const BusMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
               label="مقصد (شهر، پایانه)"
               // refinput={inputVilaMobile2}
@@ -392,6 +407,7 @@ const BusMobile = () => {
           <Date />
 
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           classlabel={fix}
             label="تاریخ حرکت"
             // refinput={inputVilaMobile3}

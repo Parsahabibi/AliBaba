@@ -30,6 +30,19 @@ const ThourMobile = () => {
 
 
 
+    const [able, setAble] = useState(false)
+
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
+
 
   const [fix, setfix] = useState('')
 
@@ -516,6 +529,7 @@ const ThourMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           classlabel={fix}
             label="انتخاب مبدا"
             // refinput={inputThourMobile0}
@@ -537,6 +551,7 @@ const ThourMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           classlabel={fix}
             label="انخاب مقصد"
             // refinput={inputThourMobile1}
@@ -563,6 +578,7 @@ const ThourMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
               label="مبدا (شهر)"
               // refinput={inputThourMobile1}
@@ -575,6 +591,7 @@ const ThourMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
               label="مقصد (شهر)"
               // refinput={inputThourMobile2}
@@ -589,11 +606,13 @@ const ThourMobile = () => {
           <Date />
 
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="تاریخ رفت"
             // refinput={inputThourMobile3}
             // refLabel={LabelThourMobile3}
           />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="تاریخ برگشت"
             // refinput={inputThourMobile5}
             // refLabel={LabelThourMobile5}
@@ -602,6 +621,7 @@ const ThourMobile = () => {
 
         <div className="d-options-services item-services-mobile">
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="مسافران"
             valueInput={
               NumAdult + "بزرگسال، " + NumChild + " کودک ،" + 1 + " اتاق"

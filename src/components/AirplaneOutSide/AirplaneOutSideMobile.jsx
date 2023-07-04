@@ -28,6 +28,20 @@ import { Link } from "react-router-dom";
 const AirplanOutSideMobile = () => {
 
 
+
+  const [able, setAble] = useState(false)
+
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
+
   const [fix, setfix] = useState('')
 
 
@@ -348,6 +362,7 @@ const AirplanOutSideMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="انتخاب مبدا"
             classlabel={fix}
             // refinput={inputVilaMobile0}
@@ -369,6 +384,7 @@ const AirplanOutSideMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
             label="انخاب مقصد"
             // refinput={inputVilaMobile1}
@@ -497,6 +513,7 @@ const AirplanOutSideMobile = () => {
             <div className="item-services-mobile-train">
               <Location />
               <NewSearchInput
+              func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                 classlabel={fix}
                 label="مبدا (شهر، فرودگاه)"
                 // refinput={inputVilaMobile1}
@@ -509,6 +526,7 @@ const AirplanOutSideMobile = () => {
             <div className="item-services-mobile-train">
               <Location />
               <NewSearchInput
+              func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                 label="مقصد (شهر، فرودگاه)"
                 classlabel={fix}
                 // refinput={inputVilaMobile2}
@@ -524,6 +542,7 @@ const AirplanOutSideMobile = () => {
               <div className="item-services-mobile-train">
                 <Location />
                 <NewSearchInput
+                func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                   label="مبدا (شهر، فرودگاه)"
                   classlabel={fix}
                   // refinput={inputVilaMobile1}
@@ -538,6 +557,7 @@ const AirplanOutSideMobile = () => {
               <div className="item-services-mobile-train">
                 <Location />
                 <NewSearchInput
+                func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                   label="مقصد (شهر، فرودگاه)"
                   classlabel={fix}
                   // refinput={inputVilaMobile2}
@@ -554,6 +574,7 @@ const AirplanOutSideMobile = () => {
           <div className="item-services-mobile">
             <Date />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
               classlabel={fix}
               label="تاریخ رفت"
             // refinput={inputVilaMobile3}
@@ -566,12 +587,14 @@ const AirplanOutSideMobile = () => {
             <Date />
 
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
               label="تاریخ رفت"
               classlabel={fix}
             // refinput={inputVilaMobile3}
             // refLabel={LabelVilaMobile3}
             />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
               label="تاریخ برگشت"
               classlabel={fix}
             // refinput={inputVilaMobile5}
@@ -584,6 +607,7 @@ const AirplanOutSideMobile = () => {
             <Date />
 
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
               classlabel={fix}
               label="تاریخ رفت"
             // refinput={inputVilaMobile3}
@@ -597,6 +621,7 @@ const AirplanOutSideMobile = () => {
           {input ? (
             <>
               <NewSearchInput
+              func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                 label="تعداد خودرو"
                 valueInput={NumberHorofi[people - 1]}
                 classlabel="labelfix"
@@ -618,6 +643,7 @@ const AirplanOutSideMobile = () => {
             </>
           ) : (
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
               label="مسافران"
               valueInput={NumberPassenger + " مسافر"}
               classlabel="labelfix"

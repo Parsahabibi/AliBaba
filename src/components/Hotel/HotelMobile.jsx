@@ -15,6 +15,19 @@ const HotelMobile = () => {
 
 
 
+  const [able, setAble] = useState(false)
+
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
+
 
   const [fix, setfix] = useState('')
 
@@ -168,6 +181,7 @@ const HotelMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="مقصد یا نوع اقامتگاه"
             // refinput={inputVilaMobile0}
             // refLabel={LabelVilaMobile0}
@@ -193,6 +207,7 @@ const HotelMobile = () => {
         <div className="item-services-mobile" onClick={OpenMenu}>
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
 
             label="مقصد یا هتل (داخلی و خارجی)"
@@ -204,6 +219,7 @@ const HotelMobile = () => {
         <div className="item-services-mobile border-between">
           <Date />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="تاریخ ورود"
             classlabel={fix}
 
@@ -211,6 +227,7 @@ const HotelMobile = () => {
             // refLabel={refLabel2}
           />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="تاریخ خروج"
             // refinput={refinput3}
             // refLabel={refLabel3}
@@ -220,6 +237,7 @@ const HotelMobile = () => {
         </div>
         <div className="item-services-mobile">
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             label="مسافران"
             valueInput="1 بزرگسال، 1اتاق"
             classlabel="labelfix"

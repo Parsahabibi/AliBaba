@@ -22,6 +22,20 @@ import NewSearchInput from "../NewSearchInput/NewSearchInput";
 const TrainMobile = () => {
 
 
+  const [able, setAble] = useState(false)
+
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
+
+
   const [fix, setfix] = useState('')
 
 
@@ -336,6 +350,7 @@ const TrainMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             classlabel={fix}
 
             label="انتخاب مبدا"
@@ -358,6 +373,7 @@ const TrainMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                       classlabel={fix}
 
             label="انخاب مقصد"
@@ -472,6 +488,7 @@ const TrainMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                         classlabel={fix}
 
               label="مبدا (شهر)"
@@ -487,6 +504,7 @@ const TrainMobile = () => {
           <div className="item-services-mobile-train">
             <Location />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                         classlabel={fix}
 
               label="مقصد (شهر)"
@@ -501,6 +519,7 @@ const TrainMobile = () => {
           <div className="item-services-mobile">
             <Date />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                         classlabel={fix}
 
               label="تاریخ رفت"
@@ -513,6 +532,7 @@ const TrainMobile = () => {
             <Date />
 
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                         classlabel={fix}
 
               label="تاریخ رفت"
@@ -520,6 +540,7 @@ const TrainMobile = () => {
             // refLabel={LabelVilaMobile3}
             />
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                         classlabel={fix}
 
               label="تاریخ برگشت"
@@ -533,6 +554,7 @@ const TrainMobile = () => {
           {input ? (
             <>
               <NewSearchInput
+              func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
                           // classlabel={fix}
 
                 label="تعداد خودرو"
@@ -556,6 +578,7 @@ const TrainMobile = () => {
             </>
           ) : (
             <NewSearchInput
+            func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             
               label="مسافران"
               valueInput={NumberPassenger + " مسافر"}

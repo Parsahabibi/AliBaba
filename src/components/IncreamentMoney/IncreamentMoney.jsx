@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Close } from '../icons/Icons'
 import SearchInput from '../SearchInput/SearchInput'
+import NewSearchInput from '../NewSearchInput/NewSearchInput'
 const IncreamentMoney = ({classes}) => {
 
 
@@ -11,6 +12,14 @@ const IncreamentMoney = ({classes}) => {
   const [open, setOpen] = useState(true)
 
 
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
 
   return (
     <div>
@@ -26,9 +35,11 @@ const IncreamentMoney = ({classes}) => {
               </div>
               <div className='Input'>
                 {/* <SearchInput label={'افزایش موچودی'}/> */}
+                <NewSearchInput label={'افزایش موجودی'} func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}/>
+
               </div>
               <div className='button'>
-                <button className={able === false ? 'Able' : 'disable'}>تایید و دریافت کد</button>
+                <button onClick={() => { able === true ? setOpen(false) : setOpen(true) }} style={{ width: '100%' }} className={able === false ? 'Able' : 'disable'}>تایید و دریافت کد</button>
               </div>
             </div>
           </div>

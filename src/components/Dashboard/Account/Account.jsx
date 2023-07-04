@@ -30,6 +30,16 @@ const Account = () => {
     const [able, disAble] = useState(false)
 
 
+    const handleAble = () => {
+        disAble(true)
+      }
+    
+    
+      const handleDisAble = () => {
+        disAble(false)
+      }
+
+
     return (
         <div className='Account'>
             <div onClick={() => { setOpen(false) }} className='baler' style={open === true ? { display: 'inline' } : { display: 'none' }}></div>
@@ -40,9 +50,9 @@ const Account = () => {
                         <Close />
                     </div>
                 </div>
-                <NewSearchInput label={'مبلغ مورد نظر'} />
+                <NewSearchInput label={'مبلغ مورد نظر'} func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}/>
                 <div className='buttonIncreamentMoney'>
-                    <div className={able === true ? 'able' : 'disAble'}>پرداخت</div>
+                    <div onClick={() => { able === true ? setOpen(false) : setOpen(true) }} className={able === true ? 'able' : 'disAble'}>پرداخت</div>
                 </div>
             </div>
             <div className='header'>

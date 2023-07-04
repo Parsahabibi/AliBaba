@@ -14,6 +14,21 @@ import NewSearchInput from "../NewSearchInput/NewSearchInput";
 const VilaMobile = () => {
 
 
+  const [able, setAble] = useState(false)
+
+
+
+  const handleAble = () => {
+    setAble(true)
+  }
+
+
+  const handleDisAble = () => {
+    setAble(false)
+  }
+
+
+
   const [state, setState] = useState({})
 
   const [fix, setfix] = useState('')
@@ -232,6 +247,7 @@ const VilaMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
           valueInput={Maghsad}
             // onchangequery={setState}
             label="مقصد یا نوع اقامتگاه"
@@ -258,6 +274,7 @@ const VilaMobile = () => {
         <div className="item-services-mobile">
           <Location />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             // onchangequery={setState}
             label="مقصد یا نوع اقامتگاه"
             // refinput={inputVilaMobile1}
@@ -270,12 +287,14 @@ const VilaMobile = () => {
         <div className="item-services-mobile border-between">
           <Date />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             // onchangequery={setState}
             label="تاریخ ورود"
             // refinput={inputVilaMobile2}
             // refLabel={LabelVilaMobile2}
           />
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             // onchangequery={setState}
             label="تاریخ خروج"
             // refinput={inputVilaMobile3}
@@ -284,6 +303,7 @@ const VilaMobile = () => {
         </div>
         <div className="item-services-mobile">
           <NewSearchInput
+          func={{ isable: handleAble, isntAlbe: handleDisAble }} type={'string'}
             // onchangequery={setState}
             label="تعداد مسافران"
             valueInput={NumberHorofi[people - 1] + " نفر "}
