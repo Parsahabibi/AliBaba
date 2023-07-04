@@ -8,6 +8,7 @@ import DropdownNumber from "../Dropdownservices/DropdownNumber";
 import DropStartLocation from "../Dropdownservices/DropStartLocation";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Modal from "../../Modal/Modal";
 const ServicesAirplaneInside = (props) => {
   const dropstart = useRef(0);
   const inputstart = useRef(0);
@@ -32,6 +33,8 @@ const ServicesAirplaneInside = (props) => {
     e.target.style.color = "#0077DB";
     e.target.style.backgroundColor = "#F2F9FF";
   }
+
+  const [showModal, setShowModal] = useState(false)
 
   const dropstart2 = useRef(0);
   const inputstart2 = useRef(0);
@@ -284,14 +287,41 @@ const ServicesAirplaneInside = (props) => {
         {/* <ButtonSearch onClick={()=>{console.log('parsaq',query) ;}} /> */}
         <button className="ButtonSearch" onClick={() => {
           let str = '';
-          Object.entries(query).forEach(([key, val]) => {
+
+          const object = Object.entries(query)
+
+
+
+
+          // object.filter
+          let arr = [];
+          object.filter(item => item[1] ? arr.push(1) : arr.push(0))
+          const result = arr.includes(0);
+          console.log(result, 'parsa')
+
+          // console.log(filter)
+
+
+          // console.log(object)
+          object.forEach(([key, val]) => {
             str = str.concat(`${key}=${val}&`);
           });
           str = str.slice(0, -1); // حذف آخرین علامت &
-          navigate(`/flight?${str}`)
+          // if (result === true) {
+          // //  alert('jbebr')
+          // <Modal /
+          // } else {
+          //   navigate(`/flight?${str}`)
+          // }
+          { result === true ? alert('لطفا تمام فرم ها را پر کنید') : navigate(`/flight?${str}`) }
+
         }}>جستجو</button>
+        {/* <div style={showModal === true ? {display:'block'}:{display:'none'}}>
+          <Modal />
+        </div> */}
       </div>
       {/* </Link> */}
+      {/* <p>nhwefggfuwefyu</p> */}
     </div>
   );
 };
