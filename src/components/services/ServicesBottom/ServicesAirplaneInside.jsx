@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import ButtonSearch from "../../ButtonSearch/ButtonSearch";
@@ -34,7 +34,7 @@ const ServicesAirplaneInside = (props) => {
     e.target.style.backgroundColor = "#F2F9FF";
   }
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModalForm, setShowModalForm] = useState(false)
 
   const dropstart2 = useRef(0);
   const inputstart2 = useRef(0);
@@ -203,6 +203,15 @@ const ServicesAirplaneInside = (props) => {
     "کیش",
   ];
 
+
+  useEffect(() => {
+    return () => {
+      setTimeout(() => {
+        setShowModalForm(false)
+      }, 4000);
+    }
+  }, [showModalForm])
+
   // const data=(x)=> {
   //   console.log(x);
   // }
@@ -285,41 +294,28 @@ const ServicesAirplaneInside = (props) => {
 
       <div className="d-options-services">
         {/* <ButtonSearch onClick={()=>{console.log('parsaq',query) ;}} /> */}
-        <button className="ButtonSearch" onClick={() => {
+        <button className="ButtonSearch" onClick={(e) => {
+          e.preventDefault()
           let str = '';
-
           const object = Object.entries(query)
 
-
-
-
-          // object.filter
           let arr = [];
           object.filter(item => item[1] ? arr.push(1) : arr.push(0))
           const result = arr.includes(0);
-          console.log(result, 'parsa')
-
-          // console.log(filter)
-
-
-          // console.log(object)
           object.forEach(([key, val]) => {
             str = str.concat(`${key}=${val}&`);
           });
           str = str.slice(0, -1); // حذف آخرین علامت &
-          // if (result === true) {
-          // //  alert('jbebr')
-          // <Modal /
-          // } else {
-          //   navigate(`/flight?${str}`)
-          // }
-          { result === true ? alert('لطفا تمام فرم ها را پر کنید') : navigate(`/flight?${str}`) }
+
+          { result === true ? setShowModalForm(true) : navigate(`/flight?${str}`) }
 
         }}>جستجو</button>
-        {/* <div style={showModal === true ? {display:'block'}:{display:'none'}}>
-          <Modal />
-        </div> */}
+
       </div>
+      {/* <div style={showModal === true ? { display: 'block' } : { display: 'none' }}>
+        <Modal />
+      </div> */}
+      {showModalForm && <Modal />}
       {/* </Link> */}
       {/* <p>nhwefggfuwefyu</p> */}
     </div>
