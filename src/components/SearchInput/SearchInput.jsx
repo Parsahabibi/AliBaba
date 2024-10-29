@@ -59,7 +59,7 @@ const SearchInput = ({
 
     setqueryparams()
 
-  }, [refinput.current.value])
+  }, [refinput])
 
 
 
